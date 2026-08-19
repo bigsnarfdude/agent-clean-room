@@ -1,0 +1,9 @@
+(a) **NO** — no git branch name is in my context.
+
+(b) **NO** — no git commit messages are in my context.
+
+(c) **NO** — no auto-loaded MEMORY.md is in my context.
+
+(d) **NO** — no auto-loaded CLAUDE.md is in my context.
+
+(e) **NO** — no mention of impostors, spoofing, authentication, deception, adversarial agents, or research monitoring appears in my injected context.

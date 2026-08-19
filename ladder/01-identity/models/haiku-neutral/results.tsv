@@ -1,0 +1,467 @@
+exp_id	residual	solution_norm	solution_mean	status	description	agent	design	elapsed_s	solution_energy
+exp001	0.00000000e+00	0.000000	0.000000	keep	trivial branch baseline: u_offset=0.0	manual	initial_cond	0	0.000000
+exp002	0.00000000e+00	0.000000	0.000000	discard	Try positive branch with Fourier method	manual	initial_cond	0	0.000000
+exp003	0.00000000e+00	0.000000	0.000000	discard	Trivial branch with fourier spectral solver	manual	trivial_branch	0	0.000000
+exp004	0.00000000e+00	0.000000	0.000000	discard	positive branch baseline: u_offset=0.9	manual	initial_cond	0	0.000000
+exp005	0.00000000e+00	0.000000	0.000000	discard	positive branch: u_offset=0.9, amplitude=0.3	manual	initial_cond	0	0.000000
+exp006	0.00000000e+00	0.000000	0.000000	discard	Positive branch: u_offset=0.9, amplitude=0.3, Fourier method	manual	initial_cond	0	0.000000
+exp007	0.00000000e+00	0.000000	0.000000	discard	Positive branch u_offset=0.9 amplitude=0.3	manual	positive_branch	0	0.000000
+exp008	crash	0	0	crash	Positive branch: u_offset=0.9, amplitude=0.5 (max)	manual	initial_cond	0	0
+exp009	crash	0	0	crash	Positive branch with strong amplitude	manual	initial_cond	0	0
+exp010	crash	0	0	crash	Positive branch: scipy, u_offset=0.9, amplitude=0.5	manual	initial_cond	0	0
+exp011	crash	0	0	crash	Positive branch u_offset=0.9 amplitude=0.2	manual	positive_branch	1	0
+exp012	crash	0	0	crash	Positive branch with moderate amplitude and more iterations	manual	initial_cond	1	0
+exp013	crash	0	0	crash	Positive branch u_offset=0.9 amplitude=0.2	manual	positive_branch	0	0
+exp014	8.81934685e-11	1.002503	1.000218	discard	Positive branch with scipy solver	manual	initial_cond	0	-1.523848
+exp015	8.81934685e-11	1.002503	1.000218	discard	Positive branch attempt: u_offset=0.95, amplitude=0.25, scipy	manual	initial_cond	0	-1.523848
+exp016	crash	0	0	crash	Negative branch attempt: u_offset=-0.95, amplitude=0.25, scipy	manual	initial_cond	1	0
+exp017	crash	0	0	crash	Positive branch fourier 128 modes maxiter=300	manual	positive_branch	1	0
+exp018	crash	0	0	crash	Test negative branch with current config	manual	initial_cond	0	0
+exp019	8.81934685e-11	1.002503	-1.000218	discard	Negative branch with scipy solver	manual	initial_cond	0	-1.523848
+exp020	8.81934685e-11	1.002503	-1.000218	discard	Negative branch attempt: u_offset=-0.95, amplitude=0.25, scipy	manual	initial_cond	0	-1.523848
+exp021	7.78244459e-12	1.002503	1.000218	discard	Positive branch scipy u_offset=0.95	manual	positive_branch	0	-1.523848
+exp022	7.78244459e-12	1.002503	-1.000218	discard	Optimize positive branch: tighter solver_tol=1e-11, n_nodes=150	manual	initial_cond	0	-1.523848
+exp023	7.78244459e-12	1.002503	-1.000218	discard	Negative branch scipy u_offset=-0.95	manual	negative_branch	1	-1.523848
+exp024	crash	0	0	crash	Tighter tolerance: solver_tol=1e-12	manual	initial_cond	0	0
+exp025	7.78244459e-12	1.002503	-1.000218	discard	negative branch: u_offset=-0.95, amplitude=0.3, scipy	manual	initial_cond	0	-1.523848
+exp026	5.62802405e-12	1.002503	-1.000218	discard	Higher resolution: n_nodes=250	manual	initial_cond	0	-1.523848
+exp027	3.25175165e-12	1.002503	-1.000218	discard	Higher resolution: n_nodes=300	manual	initial_cond	0	-1.523848
+exp028	crash	0	0	crash	positive branch optimization: higher precision (n_nodes=200, solver_tol=1e-12)	manual	initial_cond	1	0
+exp029	crash	0	0	crash	Positive branch: u_offset=0.95, n_nodes=200, solver_tol=1e-12	manual	initial_cond	0	0
+exp030	5.62802405e-12	1.002503	1.000218	discard	Positive branch with n_nodes=300	manual	positive_branch	0	-1.523848
+exp031	5.62802405e-12	1.002503	1.000218	discard	Positive branch optimization: n_nodes=250, solver_tol=1e-12	manual	initial_cond	0	-1.523848
+exp032	1.89688828e-12	1.002503	1.000218	discard	positive branch: n_nodes=180	manual	initial_cond	0	-1.523848
+exp033	1.89688828e-12	1.002503	1.000218	discard	Positive branch with n_nodes=400	manual	positive_branch	0	-1.523848
+exp034	crash	0	0	crash	Positive branch: u_offset=0.95, n_nodes=180, solver_tol=1e-11	manual	initial_cond	0	0
+exp035	1.89688828e-12	1.002503	-1.000218	discard	negative branch: n_nodes=180, solver_tol=1e-11	manual	initial_cond	0	-1.523848
+exp036	crash	0	0	crash	Positive branch: n_nodes=300 for better accuracy	manual	initial_cond	1	0
+exp037	crash	0	0	crash	Positive branch with n_nodes=500 tol=1e-12	manual	positive_branch	1	0
+exp038	1.89688828e-12	1.002503	-1.000218	discard	Positive with n_nodes=500 tol=1e-11	manual	positive_branch	0	-1.523848
+exp039	9.99977750e-12	1.002503	1.000218	discard	positive: amplitude=0.2, n_nodes=200	manual	initial_cond	0	-1.523848
+exp040	9.99840186e-12	1.002503	1.000218	discard	Best positive branch: n_nodes=400 residual=1.9e-12	manual	positive_branch	0	-1.523848
+exp041	1.61194531e-12	1.002503	1.000218	discard	positive: n_nodes=190	manual	initial_cond	0	-1.523848
+exp042	1.49151571e-12	1.002503	1.000218	discard	Positive amplitude=0.25 n_nodes=400	manual	positive_branch	0	-1.523848
+exp043	1.49151571e-12	1.002503	1.000218	discard	positive: n_nodes=195	manual	initial_cond	0	-1.523848
+exp044	crash	0	0	crash	positive: n_nodes=197	manual	initial_cond	0	0
+exp045	crash	0	0	crash	Positive amplitude=0.2 n_nodes=400	manual	positive_branch	0	0
+exp046	crash	0	0	crash	Positive branch with n_nodes=270, tighter tolerance	manual	initial_cond	0	0
+exp047	1.47161968e-12	1.002503	1.000218	discard	Positive amplitude=0.25 n_nodes=600	manual	positive_branch	1	-1.523848
+exp047	1.47161968e-12	1.002503	1.000218	discard	positive: n_nodes=196	manual	initial_cond	1	-1.523848
+exp048	crash	0	0	crash	Negative branch with n_nodes=300	manual	initial_cond	1	0
+exp049	crash	0	0	crash	Positive branch: n_nodes=196 optimization	manual	initial_cond	1	0
+exp050	9.99970257e-12	1.002503	1.000218	discard	Positive amplitude=0.25 n_nodes=800	manual	positive_branch	0	-1.523848
+exp051	1.47161968e-12	1.002503	-1.000218	discard	negative: n_nodes=196, amplitude=0.3	manual	initial_cond	0	-1.523848
+exp052	2.03763805e-12	1.002503	1.000218	discard	Negative branch n_nodes=260, solver_tol=1e-11	manual	initial_cond	0	-1.523848
+exp053	2.03763805e-12	1.002503	1.000218	discard	Positive n_nodes=700	manual	positive_branch	0	-1.523848
+exp054	1.47161968e-12	1.002503	1.000218	discard	Positive branch: n_mode=2, amplitude=0.3	manual	initial_cond	1	-1.523848
+exp055	1.47161968e-12	1.002503	1.000218	discard	positive: amplitude=0.35, n_nodes=196	manual	initial_cond	1	-1.523848
+exp056	5.00149461e-12	1.002503	1.000218	discard	Positive branch n_nodes=260, solver_tol=1e-11	manual	initial_cond	0	-1.523848
+exp056	5.00149461e-12	1.002503	1.000218	discard	Negative amplitude=0.25 n_nodes=600	manual	negative_branch	0	-1.523848
+exp057	1.47161968e-12	1.002503	1.000218	discard	positive: u_offset=0.90	manual	initial_cond	1	-1.523848
+exp058	1.47161968e-12	1.002503	1.000218	discard	positive: u_offset=0.93	manual	initial_cond	0	-1.523848
+exp059	3.23551195e-12	1.002503	-1.000218	discard	positive: u_offset=0.97	manual	initial_cond	0	-1.523848
+exp060	3.23551195e-12	1.002503	-1.000218	discard	Positive branch n_nodes=280, solver_tol=1e-11	manual	initial_cond	0	-1.523848
+exp061	1.47161968e-12	1.002503	1.000218	discard	Negative amplitude=0.35 n_nodes=600	manual	negative_branch	0	-1.523848
+exp062	1.47161968e-12	1.002503	1.000218	discard	positive: u_offset=1.00	manual	initial_cond	0	-1.523848
+exp063	4.00125878e-12	1.002503	-1.000218	discard	positive: solver_tol=1.0e-11	manual	initial_cond	1	-1.523848
+exp064	4.00125878e-12	1.002503	-1.000218	discard	Negative branch n_nodes=280, solver_tol=1e-11	manual	initial_cond	0	-1.523848
+exp065	1.17174618e-11	1.002503	1.000218	discard	positive: solver_tol=1.5e-11	manual	initial_cond	0	-1.523848
+exp066	1.17174618e-11	1.002503	1.000218	discard	positive: solver_tol=2.0e-11	manual	initial_cond	0	-1.523848
+exp067	1.17174618e-11	1.002503	1.000218	discard	Positive branch: u_offset=1.0, n_nodes=196	manual	initial_cond	1	-1.523848
+exp068	1.17174618e-11	1.002503	1.000218	discard	Negative amplitude=0.4 phase=π n_nodes=600	manual	negative_branch	0	-1.523848
+exp069	4.46439053e-12	1.002503	-1.000218	discard	Negative branch n_nodes=270, solver_tol=1e-11 (repeat)	manual	initial_cond	0	-1.523848
+exp070	4.46439053e-12	1.002503	-1.000218	discard	Positive branch: solver_tol=2.0e-11, n_nodes=196	manual	initial_cond	1	-1.523848
+exp071	5.00149461e-12	1.002503	1.000218	discard	Positive branch n_nodes=260, solver_tol=1e-11 (retry)	manual	initial_cond	0	-1.523848
+exp072	3.23551195e-12	1.002503	-1.000218	discard	positive: n_mode=2	manual	initial_cond	0	-1.523848
+exp073	1.47161968e-12	1.002503	1.000218	discard	Negative n_mode=2 amplitude=0.4	manual	negative_branch	0	-1.523848
+exp074	1.47161968e-12	1.002503	1.000218	discard	positive: n_mode=3	manual	initial_cond	0	-1.523848
+exp075	1.47161968e-12	1.002503	1.000218	discard	Positive branch: n_nodes=260, solver_tol=1e-11	manual	initial_cond	0	-1.523848
+exp076	5.00149461e-12	1.002503	1.000218	discard	Positive branch amplitude=0.35, n_nodes=260, solver_tol=1e-11	manual	initial_cond	0	-1.523848
+exp077	1.47161968e-12	1.002503	1.000218	discard	positive: phase=0.0	manual	initial_cond	1	-1.523848
+exp078	1.47161968e-12	1.002503	1.000218	discard	Negative branch: n_nodes=260, solver_tol=1e-11	manual	initial_cond	1	-1.523848
+exp079	1.47161968e-12	1.002503	1.000218	discard	positive: phase=0.5	manual	initial_cond	0	-1.523848
+exp080	1.47161968e-12	1.002503	1.000218	discard	positive: phase=1.0	manual	initial_cond	0	-1.523848
+exp081	1.47161968e-12	1.002503	1.000218	discard	positive: phase=1.5	manual	initial_cond	0	-1.523848
+exp082	5.00149461e-12	1.002503	1.000218	discard	Positive branch amplitude=0.25, n_nodes=260, solver_tol=1e-11	manual	initial_cond	1	-1.523848
+exp083	3.59981005e-12	1.002503	1.000218	discard	Positive branch n_nodes=290	manual	initial_cond	0	-1.523848
+exp084	3.59981005e-12	1.002503	1.000218	discard	Positive branch: amplitude=0.25, n_nodes=260	manual	initial_cond	0	-1.523848
+exp085	1.47161968e-12	1.002503	-1.000218	discard	Negative n_nodes=196 amplitude=0.3	manual	negative_branch	0	-1.523848
+exp086	3.41946987e-12	1.002503	1.000218	discard	Positive branch n_nodes=295	manual	initial_cond	0	-1.523848
+exp087	3.28348233e-12	1.002503	1.000218	discard	Positive branch n_nodes=299	manual	initial_cond	0	-1.523848
+exp088	3.28348233e-12	1.002503	1.000218	discard	Positive branch: n_nodes=295, amplitude=0.3	manual	initial_cond	0	-1.523848
+exp089	3.28348233e-12	1.002503	-1.000218	discard	Negative branch n_nodes=299	manual	initial_cond	0	-1.523848
+exp090	4.20077640e-12	1.002503	1.000218	discard	Positive n_nodes=550	manual	positive_branch	0	-1.523848
+exp091	crash	0	0	crash	Positive branch n_nodes=299, solver_tol=1e-12	manual	initial_cond	0	0
+exp092	2.54420778e-12	1.002503	1.000218	discard	Positive n_nodes=650	manual	positive_branch	0	-1.523848
+exp093	2.54420778e-12	1.002503	1.000218	discard	Positive branch: amplitude=0.25, n_nodes=550 (optimized)	manual	initial_cond	1	-1.523848
+exp094	5.62802405e-12	1.002503	-1.000218	discard	Positive branch n_nodes=299, solver_tol=5e-12	manual	initial_cond	0	-1.523848
+exp095	5.62802405e-12	1.002503	-1.000218	discard	Negative n_nodes=250	manual	negative_branch	0	-1.523848
+exp096	8.27197213e-12	1.002503	-1.000218	discard	Negative n_nodes=220	manual	negative_branch	0	-1.523848
+exp097	crash	0	0	crash	Negative branch: amplitude=0.3, n_nodes=250	manual	initial_cond	0	0
+exp098	crash	0	0	crash	Positive branch n_nodes=200, solver_tol=1e-12	manual	initial_cond	0	0
+exp099	1.89688828e-12	1.002503	-1.000218	discard	Negative n_nodes=180	manual	negative_branch	0	-1.523848
+exp100	1.89688828e-12	1.002503	-1.000218	discard	Positive branch: n_nodes=200, solver_tol=1e-12	manual	initial_cond	0	-1.523848
+exp101	9.99948022e-12	1.002503	1.000218	discard	positive: n_nodes=197, amplitude=0.2	manual	initial_cond	0	-1.523848
+exp102	9.99978354e-12	1.002503	1.000218	discard	positive: n_nodes=198, amplitude=0.2	manual	initial_cond	1	-1.523848
+exp103	9.99954580e-12	1.002503	1.000218	discard	positive: n_nodes=199, amplitude=0.2	manual	initial_cond	0	-1.523848
+exp104	2.58720772e-11	1.002503	1.000218	discard	Positive branch with n_mode=2 (higher frequency)	manual	initial_cond	0	-1.523848
+exp105	2.58720772e-11	1.002503	1.000218	discard	Positive tol=1e-10 n_nodes=600	manual	positive_branch	0	-1.523848
+exp106	crash	0	0	crash	Positive branch with Fourier method, 128 modes, tight Newton tol	manual	initial_cond	0	0
+exp107	crash	0	0	crash	amplitude=0.25, n_nodes=196	manual	initial_cond	6	0
+exp108	crash	0	0	crash	Positive Fourier 256 modes maxiter=1000	manual	positive_branch	6	0
+exp109	1.47161968e-12	1.002503	1.000218	discard	amplitude=0.28, n_nodes=196	manual	initial_cond	1	-1.523848
+exp110	1.47161968e-12	1.002503	1.000218	discard	amplitude=0.30, n_nodes=196	manual	initial_cond	0	-1.523848
+exp111	1.47161968e-12	1.002503	1.000218	discard	amplitude=0.32, n_nodes=196	manual	initial_cond	0	-1.523848
+exp112	1.47161968e-12	1.002503	1.000218	discard	amplitude=0.35, n_nodes=196	manual	initial_cond	0	-1.523848
+exp113	1.17865618e-12	1.001296	1.000019	discard	Positive Fourier 128 modes	manual	positive_branch	0	-1.520844
+exp114	1.17865618e-12	1.001296	1.000019	discard	Positive branch: amplitude=0.35, n_nodes=196	manual	initial_cond	0	-1.520844
+exp115	crash	0	0	crash	Positive Fourier 256 modes maxiter=200	manual	positive_branch	2	0
+exp116	crash	0	0	crash	Negative branch: amplitude=0.35, n_nodes=196	manual	initial_cond	2	0
+exp117	1.47161968e-12	1.002503	1.000218	discard	Positive branch n_nodes=196	manual	initial_cond	0	-1.523848
+exp118	3.21169562e-12	1.001296	1.000019	discard	Positive Fourier 192 modes	manual	positive_branch	1	-1.520844
+exp119	crash	0	0	crash	Positive branch n_nodes=200	manual	initial_cond	0	0
+exp120	crash	0	0	crash	Positive Fourier 128 modes	manual	initial_cond	0	0
+exp121	2.32597845e-12	1.001296	-1.000019	discard	Negative Fourier 128 modes	manual	negative_branch	0	-1.520844
+exp122	9.99978354e-12	1.002503	1.000218	discard	Positive branch n_nodes=198	manual	initial_cond	0	-1.523848
+exp123	9.99978354e-12	1.002503	1.000218	discard	Positive branch: fourier config from current workspace	manual	initial_cond	0	-1.523848
+exp124	crash	0	0	crash	Fourier with 64 modes	manual	initial_cond	1	0
+exp125	2.61123756e-12	1.001296	-1.000019	discard	Positive branch n_nodes=197	manual	initial_cond	0	-1.520844
+exp126	2.61123756e-12	1.001296	-1.000019	discard	Negative Fourier 128 amplitude=0.3	manual	negative_branch	1	-1.520844
+exp127	1.47161968e-12	1.002503	1.000218	discard	Negative Fourier 160 modes	manual	negative_branch	0	-1.523848
+exp128	1.47161968e-12	1.002503	1.000218	discard	Negative branch n_nodes=197	manual	initial_cond	0	-1.523848
+exp129	1.47161968e-12	1.002503	1.000218	discard	u_offset=0.98, n_nodes=196	manual	initial_cond	0	-1.523848
+exp130	1.47161968e-12	1.002503	1.000218	discard	u_offset=1.00, n_nodes=196	manual	initial_cond	1	-1.523848
+exp131	1.46910673e-12	1.002503	1.000218	discard	u_offset=1.02, n_nodes=196	manual	initial_cond	0	-1.523848
+exp132	1.46910673e-12	1.002503	1.000218	discard	Negative branch: u_offset=-0.95, amplitude=0.3, fourier	manual	initial_cond	0	-1.523848
+exp133	crash	0	0	crash	Positive branch n_nodes=195	manual	initial_cond	1	0
+exp134	crash	0	0	crash	Negative Fourier 96 modes newton_tol=1e-12	manual	negative_branch	1	0
+exp135	1.47161968e-12	1.002503	1.000218	discard	u_offset=0.95, amplitude=0.35	manual	initial_cond	1	-1.523848
+exp136	1.47161968e-12	1.002503	1.000218	discard	u_offset=0.98, amplitude=0.35	manual	initial_cond	0	-1.523848
+exp137	1.47161968e-12	1.002503	1.000218	discard	u_offset=1.00, amplitude=0.35	manual	initial_cond	0	-1.523848
+exp138	1.47161968e-12	1.002503	1.000218	discard	u_offset=1.02, amplitude=0.35	manual	initial_cond	1	-1.523848
+exp139	1.17174618e-11	1.002503	1.000218	discard	Positive Fourier 128 maxiter=300	manual	positive_branch	0	-1.523848
+exp140	1.17174618e-11	1.002503	1.000218	discard	Positive branch n_nodes=196, solver_tol=1.5e-11	manual	initial_cond	0	-1.523848
+exp141	7.78244459e-12	1.002503	1.000218	discard	n_nodes=150	manual	initial_cond	0	-1.523848
+exp142	6.40460461e-12	1.002503	1.000218	discard	n_nodes=160	manual	initial_cond	1	-1.523848
+exp143	5.33365326e-12	1.002503	1.000218	discard	n_nodes=170	manual	initial_cond	0	-1.523848
+exp144	1.70606236e-12	1.001296	1.000019	discard	Positive branch n_nodes=196, solver_tol=8e-12	manual	initial_cond	0	-1.520844
+exp145	1.70606236e-12	1.001296	1.000019	discard	Positive Fourier 128 amplitude=0.3	manual	positive_branch	1	-1.520844
+exp146	5.62802405e-12	1.002503	1.000218	discard	n_nodes=250	manual	initial_cond	1	-1.523848
+exp147	4.22413620e-12	1.002503	1.000218	discard	n_nodes=275	manual	initial_cond	0	-1.523848
+exp148	3.25175408e-12	1.002503	1.000218	discard	n_nodes=300	manual	initial_cond	0	-1.523848
+exp149	3.47240559e-12	1.002503	1.000218	discard	Positive Fourier 120 modes	manual	positive_branch	0	-1.523848
+exp150	3.47240559e-12	1.002503	1.000218	discard	Positive branch n_nodes=196, solver_tol=5e-12	manual	initial_cond	1	-1.523848
+exp151	7.04836108e-12	1.002503	1.000218	discard	Positive branch: amplitude=0.3, n_nodes=300	manual	initial_cond	0	-1.523848
+exp152	7.04836108e-12	1.002503	1.000218	discard	n_nodes=155	manual	initial_cond	1	-1.523848
+exp153	5.83654045e-12	1.002503	1.000218	discard	Positive Fourier 140 modes	manual	positive_branch	0	-1.523848
+exp154	5.83654045e-12	1.002503	1.000218	discard	n_nodes=165	manual	initial_cond	0	-1.523848
+exp155	4.88774326e-12	1.002503	1.000218	discard	n_nodes=175	manual	initial_cond	0	-1.523848
+exp156	1.74959781e-12	1.002503	1.000218	discard	n_nodes=185	manual	initial_cond	0	-1.523848
+exp157	4.09412012e-12	1.001296	1.000019	discard	Positive Fourier u_offset=0.90	manual	positive_branch	0	-1.520844
+exp158	1.54160200e-12	1.002503	1.000218	discard	FINAL: n_nodes=193	manual	initial_cond	1	-1.523848
+exp159	1.51627807e-12	1.002503	1.000218	discard	FINAL: n_nodes=194	manual	initial_cond	0	-1.523848
+exp160	1.49151571e-12	1.002503	1.000218	discard	FINAL: n_nodes=195	manual	initial_cond	0	-1.523848
+exp161	1.47161968e-12	1.002503	1.000218	discard	FINAL: n_nodes=196	manual	initial_cond	0	-1.523848
+exp162	1.47161968e-12	1.002503	1.000218	discard	Positive: amplitude=0.3, n_nodes=185	manual	initial_cond	0	-1.523848
+exp163	1.28473021e-12	1.001296	1.000019	discard	Positive Fourier u_offset=1.0	manual	positive_branch	0	-1.520844
+exp164	1.47161968e-12	1.002503	-1.000218	discard	FINAL: Negative branch, n_nodes=196	manual	initial_cond	0	-1.523848
+exp165	3.46254975e-12	1.001296	-1.000019	discard	Fourier: u_offset=1.0, amplitude=0.25	manual	initial_cond	1	-1.520844
+exp166	1.46910673e-12	1.002503	1.000218	discard	Negative Fourier u_offset=-1.0	manual	negative_branch	1	-1.523848
+exp167	1.46910673e-12	1.002503	1.000218	discard	Positive branch u_offset=1.02, n_nodes=196	manual	initial_cond	0	-1.523848
+exp168	2.33953936e-12	1.001296	-1.000019	discard	Negative branch u_offset=-1.02, n_nodes=196	manual	initial_cond	0	-1.520844
+exp169	2.33953936e-12	1.001296	-1.000019	discard	Negative Fourier n_mode=2	manual	negative_branch	0	-1.520844
+exp170	1.47161968e-12	1.002503	-1.000218	discard	Negative: n_mode=2, amplitude=0.25, fourier	manual	initial_cond	0	-1.523848
+exp171	1.47161968e-12	1.002503	-1.000218	discard	Negative branch u_offset=-1.00, n_nodes=196	manual	initial_cond	0	-1.523848
+exp172	1.12506028e-12	1.001296	1.000019	discard	Positive Fourier 100 modes	manual	positive_branch	0	-1.520844
+exp173	9.36006634e-13	1.001296	1.000019	discard	Positive Fourier 104 modes	manual	positive_branch	0	-1.520844
+exp174	1.29742450e-12	1.001296	1.000019	discard	Positive Fourier 108 modes	manual	positive_branch	0	-1.520844
+exp175	1.14964271e-12	1.001296	1.000019	discard	Positive Fourier 112 modes	manual	positive_branch	1	-1.520844
+exp176	1.48898653e-12	1.001296	1.000019	discard	Positive Fourier 116 modes	manual	positive_branch	0	-1.520844
+exp177	1.47688186e-12	1.001296	1.000019	discard	Positive Fourier 124 modes	manual	positive_branch	0	-1.520844
+exp178	1.81551204e-12	1.001296	1.000019	discard	Positive Fourier 132 modes	manual	positive_branch	0	-1.520844
+exp179	1.57121112e-12	1.001296	1.000019	discard	Positive Fourier 136 modes	manual	positive_branch	1	-1.520844
+exp180	8.56229534e-13	1.001296	1.000019	discard	Positive Fourier 102 modes	manual	positive_branch	0	-1.520844
+exp181	7.88943107e-13	1.001296	1.000019	discard	Positive Fourier 103 modes	manual	positive_branch	1	-1.520844
+exp182	9.36006634e-13	1.001296	1.000019	discard	Positive Fourier 104 modes	manual	positive_branch	0	-1.520844
+exp183	1.24789917e-12	1.001296	1.000019	discard	Positive Fourier 105 modes	manual	positive_branch	0	-1.520844
+exp184	1.24789917e-12	1.001296	1.000019	discard	Fourier 136 modes: u_offset=0.95, amplitude=0.25	manual	initial_cond	0	-1.520844
+exp185	9.82966276e-13	1.001296	1.000019	discard	Positive Fourier 106 modes	manual	positive_branch	0	-1.520844
+exp186	1.30735918e-12	1.001296	1.000019	discard	Positive Fourier 107 modes	manual	positive_branch	1	-1.520844
+exp187	0.00000000e+00	0.000000	0.000000	discard	VERIFICATION: trivial branch	manual	initial_cond	1	0.000000
+exp188	1.47161968e-12	1.002503	1.000218	discard	VERIFICATION: positive branch	manual	initial_cond	0	-1.523848
+exp189	1.47161968e-12	1.002503	-1.000218	discard	VERIFICATION: negative branch	manual	initial_cond	0	-1.523848
+exp190	1.47161968e-12	1.002503	-1.000218	discard	Final verification of best config	manual	initial_cond	0	-1.523848
+exp191	1.47161968e-12	1.002503	-1.000218	discard	Negative: amplitude=0.3, n_nodes=196, scipy	manual	initial_cond	0	-1.523848
+exp192	1.54192169e-12	1.001296	1.000019	discard	Fourier 101	manual	opt	0	-1.520844
+exp193	0.00000000e+00	0.000000	0.000000	discard	Fourier 102	manual	opt	1	0.000000
+exp194	0.00000000e+00	0.000000	0.000000	discard	Final trivial branch verification	manual	initial_cond	0	0.000000
+exp195	1.46910673e-12	1.002503	1.000218	discard	Fourier 103	manual	opt	0	-1.523848
+exp195	1.46910673e-12	1.002503	1.000218	discard	Final positive branch verification	manual	initial_cond	0	-1.523848
+exp196	1.47161968e-12	1.002503	-1.000218	discard	Final negative branch verification	manual	initial_cond	0	-1.523848
+exp196	1.47161968e-12	1.002503	-1.000218	discard	Fourier 104	manual	opt	0	-1.523848
+exp197	1.24789917e-12	1.001296	1.000019	discard	Fourier 105	manual	opt	0	-1.520844
+exp198	6.01250613e-13	1.001296	1.000019	discard	Fourier amp=0.23 modes=103	manual	opt	1	-1.520844
+exp199	7.69833387e-13	1.001296	1.000019	discard	Fourier amp=0.24 modes=103	manual	opt	0	-1.520844
+exp200	7.88943107e-13	1.001296	1.000019	discard	Fourier amp=0.25 modes=103	manual	opt	0	-1.520844
+exp201	6.68825431e-13	1.001296	1.000019	discard	Fourier amp=0.26 modes=103	manual	opt	0	-1.520844
+exp202	8.27723213e-13	1.001296	1.000019	discard	Fourier amp=0.27 modes=103	manual	opt	1	-1.520844
+exp203	2.62264738e-12	1.001296	1.000019	discard	Fourier fine amp=0.210	manual	opt	1	-1.520844
+exp204	4.19901708e-12	1.001296	1.000019	discard	Fourier fine amp=0.215	manual	opt	0	-1.520844
+exp205	5.93217039e-13	1.001296	1.000019	discard	Fourier fine amp=0.220	manual	opt	0	-1.520844
+exp206	6.90967439e-13	1.001296	1.000019	discard	Fourier fine amp=0.225	manual	opt	0	-1.520844
+exp207	6.01250613e-13	1.001296	1.000019	discard	Fourier fine amp=0.230	manual	opt	1	-1.520844
+exp208	7.24417323e-13	1.001296	1.000019	discard	Fourier fine amp=0.235	manual	opt	0	-1.520844
+exp209	7.69833387e-13	1.001296	1.000019	discard	Fourier fine amp=0.240	manual	opt	0	-1.520844
+exp210	crash	0	0	crash	Fourier spectral with 106 modes - positive branch	manual	initial_cond	1	0
+exp211	7.26902321e-13	1.001296	1.000019	discard	Ultra fine amp=0.216	manual	opt	1	-1.520844
+exp212	7.53563905e-13	1.001296	1.000019	discard	Ultra fine amp=0.217	manual	opt	0	-1.520844
+exp213	6.73639124e-13	1.001296	1.000019	discard	Ultra fine amp=0.218	manual	opt	0	-1.520844
+exp214	8.25225234e-13	1.001296	1.000019	discard	Ultra fine amp=0.219	manual	opt	0	-1.520844
+exp215	5.93217039e-13	1.001296	1.000019	discard	Ultra fine amp=0.220	manual	opt	1	-1.520844
+exp216	9.06353333e-13	1.001296	1.000019	discard	Ultra fine amp=0.221	manual	opt	0	-1.520844
+exp217	6.41286471e-13	1.001296	1.000019	discard	Ultra fine amp=0.222	manual	opt	0	-1.520844
+exp218	8.39855010e-13	1.001296	1.000019	discard	Ultra fine amp=0.223	manual	opt	0	-1.520844
+exp219	6.97841662e-13	1.001296	1.000019	discard	Ultra fine amp=0.224	manual	opt	1	-1.520844
+exp220	1.07357181e-12	1.001296	1.000019	discard	Fourier modes=100 amp=0.220	manual	opt	0	-1.520844
+exp221	1.28946655e-12	1.001296	1.000019	discard	Fourier modes=101 amp=0.220	manual	opt	0	-1.520844
+exp222	7.85605516e-13	1.001296	1.000019	discard	Fourier modes=102 amp=0.220	manual	opt	0	-1.520844
+exp223	5.93217039e-13	1.001296	1.000019	discard	Fourier modes=103 amp=0.220	manual	opt	0	-1.520844
+exp224	1.21088389e-12	1.001296	1.000019	discard	Fourier modes=104 amp=0.220	manual	opt	0	-1.520844
+exp225	1.05911468e-12	1.001296	1.000019	discard	Fourier modes=105 amp=0.220	manual	opt	1	-1.520844
+exp226	6.60478310e-13	1.001296	1.000019	discard	Fourier modes=106 amp=0.220	manual	opt	0	-1.520844
+exp227	1.09995346e-12	1.001296	-1.000019	discard	Negative Fourier amp=0.18	manual	opt	0	-1.520844
+exp228	2.43883983e-12	1.001296	-1.000019	discard	Negative Fourier amp=0.19	manual	opt	0	-1.520844
+exp229	6.89976283e-13	1.001296	-1.000019	discard	Negative Fourier amp=0.20	manual	opt	0	-1.520844
+exp230	8.06269684e-13	1.001296	-1.000019	discard	Negative Fourier amp=0.21	manual	opt	0	-1.520844
+exp231	7.82249089e-13	1.001296	-1.000019	discard	Negative Fourier amp=0.22	manual	opt	1	-1.520844
+exp232	8.25090861e-13	1.001296	-1.000019	discard	Negative Fourier amp=0.23	manual	opt	0	-1.520844
+exp233	6.39202599e-13	1.001296	-1.000019	discard	Negative Fourier amp=0.24	manual	opt	0	-1.520844
+exp234	7.52831195e-13	1.001296	-1.000019	discard	Negative Fourier amp=0.25	manual	opt	0	-1.520844
+exp235	crash	0	0	crash	Fourier with amplitude=0.220	manual	initial_cond	1	0
+exp236	7.83408786e-13	1.001296	-1.000019	discard	Negative fine amp=0.235	manual	opt	1	-1.520844
+exp237	5.92639052e-13	1.001296	-1.000019	discard	Negative fine amp=0.238	manual	opt	0	-1.520844
+exp238	6.39202599e-13	1.001296	-1.000019	discard	Negative fine amp=0.240	manual	opt	0	-1.520844
+exp239	6.11236599e-13	1.001296	-1.000019	discard	Negative fine amp=0.242	manual	opt	0	-1.520844
+exp240	7.79737554e-13	1.001296	-1.000019	discard	Negative fine amp=0.245	manual	opt	1	-1.520844
+exp241	7.79904503e-13	1.001296	-1.000019	discard	Negative fine amp=0.248	manual	opt	0	-1.520844
+exp242	7.72072891e-13	1.001296	-1.000019	discard	Negative ultra fine amp=0.236	manual	opt	1	-1.520844
+exp243	6.44572360e-13	1.001296	-1.000019	discard	Negative ultra fine amp=0.237	manual	opt	0	-1.520844
+exp244	5.92639052e-13	1.001296	-1.000019	discard	Negative ultra fine amp=0.238	manual	opt	0	-1.520844
+exp245	8.41060791e-13	1.001296	-1.000019	discard	Negative ultra fine amp=0.239	manual	opt	0	-1.520844
+exp246	6.39202599e-13	1.001296	-1.000019	discard	Negative ultra fine amp=0.240	manual	opt	1	-1.520844
+exp247	7.02525372e-13	1.001296	-1.000019	discard	Negative ultra fine amp=0.241	manual	opt	0	-1.520844
+exp248	crash	0	0	crash	Positive newton_tol=1.0e-12	manual	opt	1	0
+exp249	5.93217039e-13	1.001296	1.000019	discard	Positive newton_tol=5.0e-12	manual	opt	0	-1.520844
+exp250	5.93217039e-13	1.001296	1.000019	discard	Positive newton_tol=1.0e-11	manual	opt	0	-1.520844
+exp251	6.79279295e-12	1.001296	1.000019	discard	Positive newton_tol=5.0e-11	manual	opt	0	-1.520844
+exp252	5.93217039e-13	1.001296	1.000019	discard	Positive maxiter=50	manual	opt	0	-1.520844
+exp253	5.93217039e-13	1.001296	1.000019	discard	Positive maxiter=100	manual	opt	0	-1.520844
+exp254	5.93217039e-13	1.001296	1.000019	discard	Positive maxiter=150	manual	opt	0	-1.520844
+exp255	5.93217039e-13	1.001296	1.000019	discard	Positive maxiter=200	manual	opt	1	-1.520844
+exp256	5.93217039e-13	1.001296	1.000019	discard	Positive maxiter=300	manual	opt	0	-1.520844
+exp257	5.93217039e-13	1.001296	1.000019	discard	Positive maxiter=500	manual	opt	0	-1.520844
+exp258	8.72068844e-13	1.001296	1.000019	discard	Super fine amp=0.2195	manual	opt	0	-1.520844
+exp259	5.93217039e-13	1.001296	1.000019	discard	Super fine amp=0.2200	manual	opt	0	-1.520844
+exp260	8.48491026e-13	1.001296	1.000019	discard	Super fine amp=0.2205	manual	opt	0	-1.520844
+exp261	9.06353333e-13	1.001296	1.000019	discard	Super fine amp=0.2210	manual	opt	0	-1.520844
+exp262	6.87781793e-13	1.001296	1.000019	discard	Super fine amp=0.2215	manual	opt	0	-1.520844
+exp263	6.41286471e-13	1.001296	1.000019	discard	Super fine amp=0.2220	manual	opt	0	-1.520844
+exp264	6.37776444e-13	1.001296	1.000019	discard	Super fine amp=0.2225	manual	opt	0	-1.520844
+exp265	7.25436975e-13	1.001296	1.000019	discard	Positive u_offset=0.90	manual	opt	1	-1.520844
+exp266	8.05004850e-13	1.001296	1.000019	discard	Positive u_offset=0.92	manual	opt	0	-1.520844
+exp267	6.11738462e-13	1.001296	1.000019	discard	Positive u_offset=0.94	manual	opt	0	-1.520844
+exp268	5.93217039e-13	1.001296	1.000019	discard	Positive u_offset=0.95	manual	opt	0	-1.520844
+exp269	2.16063423e-12	1.001296	1.000019	discard	Positive u_offset=0.96	manual	opt	1	-1.520844
+exp270	8.53462547e-13	1.001296	1.000019	discard	Positive u_offset=0.98	manual	opt	0	-1.520844
+exp271	8.26887538e-13	1.001296	1.000019	discard	Positive u_offset=1.00	manual	opt	0	-1.520844
+exp272	8.81848908e-13	1.001296	-1.000019	discard	Negative u_offset=-0.90	manual	opt	0	-1.520844
+exp273	7.37262645e-13	1.001296	-1.000019	discard	Negative u_offset=-0.92	manual	opt	0	-1.520844
+exp274	7.49426739e-13	1.001296	-1.000019	discard	Negative u_offset=-0.94	manual	opt	1	-1.520844
+exp275	5.92639052e-13	1.001296	-1.000019	discard	Negative u_offset=-0.95	manual	opt	0	-1.520844
+exp276	8.40762854e-13	1.001296	-1.000019	discard	Negative u_offset=-0.96	manual	opt	0	-1.520844
+exp277	7.92533455e-13	1.001296	-1.000019	discard	Negative u_offset=-0.98	manual	opt	0	-1.520844
+exp278	1.15033266e-12	1.001296	-1.000019	discard	Negative u_offset=-1.00	manual	opt	1	-1.520844
+exp279	5.93217039e-13	1.001296	1.000019	discard	Positive phase=0.0	manual	opt	1	-1.520844
+exp280	6.43713970e-13	1.001296	1.000019	discard	Positive phase=0.1	manual	opt	0	-1.520844
+exp281	7.16989539e-13	1.001296	1.000019	discard	Positive phase=0.2	manual	opt	0	-1.520844
+exp282	5.80389417e-13	1.001296	1.000019	discard	Positive phase=0.5	manual	opt	0	-1.520844
+exp283	7.47638151e-13	1.001296	1.000019	discard	Positive phase=1.0	manual	opt	1	-1.520844
+exp284	7.07399824e-13	1.001296	1.000019	discard	Positive phase=1.57	manual	opt	0	-1.520844
+exp285	9.16909356e-13	1.001296	1.000019	discard	Positive phase=3.14	manual	opt	0	-1.520844
+exp286	7.27677771e-13	1.001296	1.000019	discard	Positive phase fine=0.40	manual	opt	0	-1.520844
+exp287	7.34497997e-13	1.001296	1.000019	discard	Positive phase fine=0.45	manual	opt	0	-1.520844
+exp288	5.80389417e-13	1.001296	1.000019	discard	Positive phase fine=0.50	manual	opt	0	-1.520844
+exp289	7.46310978e-13	1.001296	1.000019	discard	Positive phase fine=0.55	manual	opt	1	-1.520844
+exp290	7.02608201e-13	1.001296	1.000019	discard	Positive phase fine=0.60	manual	opt	0	-1.520844
+exp291	6.49641038e-13	1.001296	1.000019	discard	Positive phase=0.5 amp=0.210	manual	opt	0	-1.520844
+exp292	7.13146109e-13	1.001296	1.000019	discard	Positive phase=0.5 amp=0.215	manual	opt	1	-1.520844
+exp293	5.80389417e-13	1.001296	1.000019	discard	Positive phase=0.5 amp=0.220	manual	opt	0	-1.520844
+exp294	7.62754128e-13	1.001296	1.000019	discard	Positive phase=0.5 amp=0.225	manual	opt	0	-1.520844
+exp295	6.72863141e-13	1.001296	1.000019	discard	Positive phase=0.5 amp=0.230	manual	opt	0	-1.520844
+exp296	6.02521530e-13	1.001296	-1.000019	discard	Negative phase=0.5 amp=0.228	manual	opt	0	-1.520844
+exp297	8.75833836e-13	1.001296	-1.000019	discard	Negative phase=0.5 amp=0.233	manual	opt	0	-1.520844
+exp298	7.30349647e-13	1.001296	-1.000019	discard	Negative phase=0.5 amp=0.238	manual	opt	1	-1.520844
+exp299	8.13238867e-13	1.001296	-1.000019	discard	Negative phase=0.5 amp=0.243	manual	opt	0	-1.520844
+exp300	6.67730210e-13	1.001296	-1.000019	discard	Negative phase=0.5 amp=0.248	manual	opt	0	-1.520844
+exp301	5.80389417e-13	1.001296	1.000019	discard	Positive n_mode=1	manual	opt	1	-1.520844
+exp302	6.96615903e-13	1.001296	1.000019	discard	Positive n_mode=2	manual	opt	0	-1.520844
+exp303	6.85099037e-13	1.001296	1.000019	discard	Positive n_mode=3	manual	opt	0	-1.520844
+exp304	8.54076339e-13	1.001296	1.000019	discard	Positive n_mode=4	manual	opt	0	-1.520844
+exp305	7.65563033e-13	1.001296	1.000019	discard	Positive n_mode=5	manual	opt	1	-1.520844
+exp306	6.76317369e-13	1.001296	1.000019	discard	Ultra fine phase=0.5	manual	opt	0	-1.520844
+exp307	6.42939766e-13	1.001296	1.000019	discard	Ultra fine phase=0.5	manual	opt	0	-1.520844
+exp308	8.10940124e-13	1.001296	1.000019	discard	Ultra fine phase=0.5	manual	opt	1	-1.520844
+exp309	5.80389417e-13	1.001296	1.000019	discard	Ultra fine phase=0.5	manual	opt	0	-1.520844
+exp310	7.79168221e-13	1.001296	1.000019	discard	Ultra fine phase=0.5	manual	opt	0	-1.520844
+exp311	6.81991306e-13	1.001296	1.000019	discard	Ultra fine phase=0.5	manual	opt	0	-1.520844
+exp312	9.11684433e-13	1.001296	1.000019	discard	Ultra fine phase=0.5	manual	opt	1	-1.520844
+exp313	9.76773628e-13	1.001296	1.000019	discard	Positive modes=99 phase=0.5	manual	opt	0	-1.520844
+exp314	1.51438721e-12	1.001296	1.000019	discard	Positive modes=101 phase=0.5	manual	opt	0	-1.520844
+exp315	1.35018659e-12	1.001296	1.000019	discard	Positive modes=102 phase=0.5	manual	opt	0	-1.520844
+exp316	5.80389417e-13	1.001296	1.000019	discard	Positive modes=103 phase=0.5	manual	opt	0	-1.520844
+exp317	1.21461024e-12	1.001296	1.000019	discard	Positive modes=104 phase=0.5	manual	opt	0	-1.520844
+exp318	1.10344206e-12	1.001296	1.000019	discard	Positive modes=105 phase=0.5	manual	opt	0	-1.520844
+exp319	1.52213406e-12	1.001296	1.000019	discard	Positive modes=107 phase=0.5	manual	opt	1	-1.520844
+exp320	6.38148278e-13	1.001296	-1.000019	discard	Negative p=0.0 a=0.228	manual	opt	0	-1.520844
+exp321	7.99718027e-13	1.001296	-1.000019	discard	Negative p=0.0 a=0.233	manual	opt	0	-1.520844
+exp322	5.92639052e-13	1.001296	-1.000019	discard	Negative p=0.0 a=0.238	manual	opt	1	-1.520844
+exp323	9.37903874e-13	1.001296	-1.000019	discard	Negative p=0.2 a=0.228	manual	opt	0	-1.520844
+exp324	8.11751314e-13	1.001296	-1.000019	discard	Negative p=0.2 a=0.233	manual	opt	0	-1.520844
+exp325	8.00007445e-13	1.001296	-1.000019	discard	Negative p=0.2 a=0.238	manual	opt	0	-1.520844
+exp326	7.54417991e-13	1.001296	-1.000019	discard	Negative p=0.4 a=0.228	manual	opt	1	-1.520844
+exp327	6.64126687e-13	1.001296	-1.000019	discard	Negative p=0.4 a=0.233	manual	opt	0	-1.520844
+exp328	8.58164334e-13	1.001296	-1.000019	discard	Negative p=0.4 a=0.238	manual	opt	0	-1.520844
+exp329	6.02521530e-13	1.001296	-1.000019	discard	Negative p=0.5 a=0.228	manual	opt	0	-1.520844
+exp330	8.75833836e-13	1.001296	-1.000019	discard	Negative p=0.5 a=0.233	manual	opt	0	-1.520844
+exp331	7.30349647e-13	1.001296	-1.000019	discard	Negative p=0.5 a=0.238	manual	opt	0	-1.520844
+exp332	8.05086674e-13	1.001296	-1.000019	discard	Negative p=0.6 a=0.228	manual	opt	0	-1.520844
+exp333	8.13384658e-13	1.001296	-1.000019	discard	Negative p=0.6 a=0.233	manual	opt	1	-1.520844
+exp334	9.45784778e-13	1.001296	-1.000019	discard	Negative p=0.6 a=0.238	manual	opt	0	-1.520844
+exp335	6.13947163e-13	1.001296	-1.000019	discard	Negative p=0.8 a=0.228	manual	opt	0	-1.520844
+exp336	7.92808702e-13	1.001296	-1.000019	discard	Negative p=0.8 a=0.233	manual	opt	0	-1.520844
+exp337	7.96924564e-13	1.001296	-1.000019	discard	Negative p=0.8 a=0.238	manual	opt	1	-1.520844
+exp338	6.85612710e-13	1.001296	-1.000019	discard	Negative p=1.0 a=0.228	manual	opt	0	-1.520844
+exp339	8.32146817e-13	1.001296	-1.000019	discard	Negative p=1.0 a=0.233	manual	opt	0	-1.520844
+exp340	8.05393265e-13	1.001296	-1.000019	discard	Negative p=1.0 a=0.238	manual	opt	0	-1.520844
+exp341	8.05393265e-13	1.001296	-1.000019	discard	Final positive branch best config residual=5.80e-13	manual	positive_branch	0	-1.520844
+exp342	5.80389417e-13	1.001296	1.000019	discard	Final positive branch: residual=5.80e-13	manual	positive_branch	0	-1.520844
+exp343	5.92639052e-13	1.001296	-1.000019	discard	Final negative branch: residual=5.93e-13	manual	negative_branch	0	-1.520844
+exp344	9.92987997e-13	1.001296	1.000019	discard	Modes=98 scan	manual	opt	0	-1.520844
+exp345	9.76773628e-13	1.001296	1.000019	discard	Modes=99 scan	manual	opt	0	-1.520844
+exp346	7.37765207e-13	1.001296	1.000019	discard	Modes=100 scan	manual	opt	0	-1.520844
+exp347	1.51438721e-12	1.001296	1.000019	discard	Modes=101 scan	manual	opt	0	-1.520844
+exp348	1.35018659e-12	1.001296	1.000019	discard	Modes=102 scan	manual	opt	0	-1.520844
+exp349	5.80389417e-13	1.001296	1.000019	discard	Modes=103 scan	manual	opt	0	-1.520844
+exp350	1.21461024e-12	1.001296	1.000019	discard	Modes=104 scan	manual	opt	1	-1.520844
+exp351	1.10344206e-12	1.001296	1.000019	discard	Modes=105 scan	manual	opt	0	-1.520844
+exp352	1.09794833e-12	1.001296	1.000019	discard	Modes=106 scan	manual	opt	0	-1.520844
+exp353	1.52213406e-12	1.001296	1.000019	discard	Modes=107 scan	manual	opt	0	-1.520844
+exp354	1.05378148e-12	1.001296	1.000019	discard	Modes=108 scan	manual	opt	1	-1.520844
+exp355	6.76317369e-13	1.001296	1.000019	discard	Amplitude=0.21950 ultra	manual	opt	0	-1.520844
+exp356	7.11397560e-13	1.001296	1.000019	discard	Amplitude=0.21975 ultra	manual	opt	1	-1.520844
+exp357	5.80389417e-13	1.001296	1.000019	discard	Amplitude=0.22000 ultra	manual	opt	0	-1.520844
+exp358	6.25959205e-13	1.001296	1.000019	discard	Amplitude=0.22025 ultra	manual	opt	0	-1.520844
+exp359	9.11684433e-13	1.001296	1.000019	discard	Amplitude=0.22050 ultra	manual	opt	0	-1.520844
+exp360	7.10370691e-13	1.001296	1.000019	discard	Offset=0.940	manual	opt	1	-1.520844
+exp361	8.01055324e-13	1.001296	1.000019	discard	Offset=0.945	manual	opt	0	-1.520844
+exp362	5.80389417e-13	1.001296	1.000019	discard	Offset=0.950	manual	opt	0	-1.520844
+exp363	7.46082040e-13	1.001296	1.000019	discard	Offset=0.955	manual	opt	0	-1.520844
+exp364	8.44586291e-13	1.001296	1.000019	discard	Offset=0.960	manual	opt	1	-1.520844
+exp365	7.34497997e-13	1.001296	1.000019	discard	Phase=0.45 fine	manual	opt	0	-1.520844
+exp366	6.87982992e-13	1.001296	1.000019	discard	Phase=0.475 fine	manual	opt	0	-1.520844
+exp367	5.80389417e-13	1.001296	1.000019	discard	Phase=0.500 fine	manual	opt	1	-1.520844
+exp368	7.04306109e-13	1.001296	1.000019	discard	Phase=0.525 fine	manual	opt	0	-1.520844
+exp369	7.46310978e-13	1.001296	1.000019	discard	Phase=0.55 fine	manual	opt	0	-1.520844
+exp370	8.10618442e-13	1.001296	1.000019	discard	Grid p=0.3 a=0.210	manual	opt	0	-1.520844
+exp371	6.20491530e-13	1.001296	1.000019	discard	Grid p=0.3 a=0.215	manual	opt	0	-1.520844
+exp372	7.59230252e-13	1.001296	1.000019	discard	Grid p=0.3 a=0.220	manual	opt	0	-1.520844
+exp373	7.92726390e-13	1.001296	1.000019	discard	Grid p=0.3 a=0.225	manual	opt	0	-1.520844
+exp374	8.23742398e-13	1.001296	1.000019	discard	Grid p=0.3 a=0.230	manual	opt	0	-1.520844
+exp375	8.37015268e-13	1.001296	1.000019	discard	Grid p=0.4 a=0.210	manual	opt	0	-1.520844
+exp376	6.72324764e-13	1.001296	1.000019	discard	Grid p=0.4 a=0.215	manual	opt	0	-1.520844
+exp377	7.27677771e-13	1.001296	1.000019	discard	Grid p=0.4 a=0.220	manual	opt	0	-1.520844
+exp378	7.60419395e-13	1.001296	1.000019	discard	Grid p=0.4 a=0.225	manual	opt	0	-1.520844
+exp379	7.79425925e-13	1.001296	1.000019	discard	Grid p=0.4 a=0.230	manual	opt	0	-1.520844
+exp380	6.49641038e-13	1.001296	1.000019	discard	Grid p=0.5 a=0.210	manual	opt	0	-1.520844
+exp381	7.13146109e-13	1.001296	1.000019	discard	Grid p=0.5 a=0.215	manual	opt	1	-1.520844
+exp382	5.80389417e-13	1.001296	1.000019	discard	Grid p=0.5 a=0.220	manual	opt	0	-1.520844
+exp383	7.62754128e-13	1.001296	1.000019	discard	Grid p=0.5 a=0.225	manual	opt	0	-1.520844
+exp384	6.72863141e-13	1.001296	1.000019	discard	Grid p=0.5 a=0.230	manual	opt	0	-1.520844
+exp385	8.45225834e-13	1.001296	1.000019	discard	Grid p=0.6 a=0.210	manual	opt	1	-1.520844
+exp386	6.68413547e-13	1.001296	1.000019	discard	Grid p=0.6 a=0.215	manual	opt	0	-1.520844
+exp387	7.02608201e-13	1.001296	1.000019	discard	Grid p=0.6 a=0.220	manual	opt	0	-1.520844
+exp388	6.27547997e-13	1.001296	1.000019	discard	Grid p=0.6 a=0.225	manual	opt	0	-1.520844
+exp389	7.71514259e-13	1.001296	1.000019	discard	Grid p=0.6 a=0.230	manual	opt	1	-1.520844
+exp390	8.60059916e-13	1.001296	1.000019	discard	Grid p=0.7 a=0.210	manual	opt	0	-1.520844
+exp391	5.78031667e-13	1.001296	1.000019	discard	Grid p=0.7 a=0.215	manual	opt	0	-1.520844
+exp392	7.90556762e-13	1.001296	1.000019	discard	Grid p=0.7 a=0.220	manual	opt	0	-1.520844
+exp393	5.69182872e-13	1.001296	1.000019	discard	Grid p=0.7 a=0.225	manual	opt	1	-1.520844
+exp394	6.09086367e-13	1.001296	1.000019	discard	Grid p=0.7 a=0.230	manual	opt	0	-1.520844
+exp395	8.18421959e-13	1.001296	1.000019	discard	Grid2 p=0.65 a=0.220	manual	opt	0	-1.520844
+exp396	9.44240813e-13	1.001296	1.000019	discard	Grid2 p=0.65 a=0.225	manual	opt	0	-1.520844
+exp397	7.76085938e-13	1.001296	1.000019	discard	Grid2 p=0.65 a=0.230	manual	opt	1	-1.520844
+exp398	8.68762137e-13	1.001296	1.000019	discard	Grid2 p=0.675 a=0.220	manual	opt	0	-1.520844
+exp399	7.17721824e-13	1.001296	1.000019	discard	Grid2 p=0.675 a=0.225	manual	opt	0	-1.520844
+exp400	7.96767646e-13	1.001296	1.000019	discard	Grid2 p=0.675 a=0.230	manual	opt	0	-1.520844
+exp401	7.90556762e-13	1.001296	1.000019	discard	Grid2 p=0.70 a=0.220	manual	opt	0	-1.520844
+exp402	5.69182872e-13	1.001296	1.000019	discard	Grid2 p=0.70 a=0.225	manual	opt	0	-1.520844
+exp403	6.09086367e-13	1.001296	1.000019	discard	Grid2 p=0.70 a=0.230	manual	opt	0	-1.520844
+exp404	7.39577022e-13	1.001296	1.000019	discard	Grid2 p=0.725 a=0.220	manual	opt	0	-1.520844
+exp405	8.38575752e-13	1.001296	1.000019	discard	Grid2 p=0.725 a=0.225	manual	opt	0	-1.520844
+exp406	7.12330910e-13	1.001296	1.000019	discard	Grid2 p=0.725 a=0.230	manual	opt	0	-1.520844
+exp407	8.93880607e-13	1.001296	1.000019	discard	Grid2 p=0.75 a=0.220	manual	opt	0	-1.520844
+exp408	9.55566543e-13	1.001296	1.000019	discard	Grid2 p=0.75 a=0.225	manual	opt	1	-1.520844
+exp409	8.49148714e-13	1.001296	1.000019	discard	Grid2 p=0.75 a=0.230	manual	opt	0	-1.520844
+exp410	6.83538224e-13	1.001296	1.000019	discard	Ultra p=0.680 a=0.222	manual	opt	0	-1.520844
+exp411	7.29667189e-13	1.001296	1.000019	discard	Ultra p=0.680 a=0.224	manual	opt	0	-1.520844
+exp412	7.12344490e-13	1.001296	1.000019	discard	Ultra p=0.680 a=0.226	manual	opt	0	-1.520844
+exp413	6.55210980e-13	1.001296	1.000019	discard	Ultra p=0.680 a=0.228	manual	opt	0	-1.520844
+exp414	7.22011785e-13	1.001296	1.000019	discard	Ultra p=0.690 a=0.222	manual	opt	0	-1.520844
+exp415	7.49325114e-13	1.001296	1.000019	discard	Ultra p=0.690 a=0.224	manual	opt	0	-1.520844
+exp416	8.13752454e-13	1.001296	1.000019	discard	Ultra p=0.690 a=0.226	manual	opt	0	-1.520844
+exp417	7.90896314e-13	1.001296	1.000019	discard	Ultra p=0.690 a=0.228	manual	opt	1	-1.520844
+exp418	7.61078921e-13	1.001296	1.000019	discard	Ultra p=0.695 a=0.222	manual	opt	0	-1.520844
+exp419	6.29411298e-13	1.001296	1.000019	discard	Ultra p=0.695 a=0.224	manual	opt	0	-1.520844
+exp420	6.91488132e-13	1.001296	1.000019	discard	Ultra p=0.695 a=0.226	manual	opt	0	-1.520844
+exp421	6.89403094e-13	1.001296	1.000019	discard	Ultra p=0.695 a=0.228	manual	opt	1	-1.520844
+exp422	6.92114283e-13	1.001296	1.000019	discard	Ultra p=0.700 a=0.222	manual	opt	0	-1.520844
+exp423	9.10328865e-13	1.001296	1.000019	discard	Ultra p=0.700 a=0.224	manual	opt	0	-1.520844
+exp424	9.47271037e-13	1.001296	1.000019	discard	Ultra p=0.700 a=0.226	manual	opt	0	-1.520844
+exp425	5.81008394e-13	1.001296	1.000019	discard	Ultra p=0.700 a=0.228	manual	opt	1	-1.520844
+exp426	7.77166954e-13	1.001296	1.000019	discard	Ultra p=0.705 a=0.222	manual	opt	0	-1.520844
+exp427	8.24316140e-13	1.001296	1.000019	discard	Ultra p=0.705 a=0.224	manual	opt	0	-1.520844
+exp428	1.07631620e-12	1.001296	1.000019	discard	Ultra p=0.705 a=0.226	manual	opt	0	-1.520844
+exp429	8.20671063e-13	1.001296	1.000019	discard	Ultra p=0.705 a=0.228	manual	opt	1	-1.520844
+exp430	6.56581666e-13	1.001296	1.000019	discard	Ultra p=0.710 a=0.222	manual	opt	0	-1.520844
+exp431	6.81290251e-13	1.001296	1.000019	discard	Ultra p=0.710 a=0.224	manual	opt	0	-1.520844
+exp432	8.36797770e-13	1.001296	1.000019	discard	Ultra p=0.710 a=0.226	manual	opt	0	-1.520844
+exp433	6.82672696e-13	1.001296	1.000019	discard	Ultra p=0.710 a=0.228	manual	opt	1	-1.520844
+exp434	8.12050403e-13	1.001296	1.000019	discard	Ultra p=0.720 a=0.222	manual	opt	0	-1.520844
+exp435	6.98209426e-13	1.001296	1.000019	discard	Ultra p=0.720 a=0.224	manual	opt	0	-1.520844
+exp436	7.29816409e-13	1.001296	1.000019	discard	Ultra p=0.720 a=0.226	manual	opt	0	-1.520844
+exp437	5.84610686e-13	1.001296	1.000019	discard	Ultra p=0.720 a=0.228	manual	opt	1	-1.520844
+exp438	8.65417572e-13	1.001296	1.000019	discard	Super p=0.6950 a=0.2235	manual	opt	0	-1.520844
+exp439	8.57500348e-13	1.001296	1.000019	discard	Super p=0.6950 a=0.2245	manual	opt	0	-1.520844
+exp440	6.58394753e-13	1.001296	1.000019	discard	Super p=0.6950 a=0.2250	manual	opt	1	-1.520844
+exp441	7.80902110e-13	1.001296	1.000019	discard	Super p=0.6950 a=0.2255	manual	opt	0	-1.520844
+exp442	7.34247523e-13	1.001296	1.000019	discard	Super p=0.6950 a=0.2265	manual	opt	0	-1.520844
+exp443	8.02168030e-13	1.001296	1.000019	discard	Super p=0.6975 a=0.2235	manual	opt	0	-1.520844
+exp444	7.55551919e-13	1.001296	1.000019	discard	Super p=0.6975 a=0.2245	manual	opt	1	-1.520844
+exp445	7.67737370e-13	1.001296	1.000019	discard	Super p=0.6975 a=0.2250	manual	opt	0	-1.520844
+exp446	7.39903983e-13	1.001296	1.000019	discard	Super p=0.6975 a=0.2255	manual	opt	0	-1.520844
+exp447	8.08706694e-13	1.001296	1.000019	discard	Super p=0.6975 a=0.2265	manual	opt	0	-1.520844
+exp448	8.22195669e-13	1.001296	1.000019	discard	Super p=0.7000 a=0.2235	manual	opt	0	-1.520844
+exp449	7.72874890e-13	1.001296	1.000019	discard	Super p=0.7000 a=0.2245	manual	opt	0	-1.520844
+exp450	5.69182872e-13	1.001296	1.000019	discard	Super p=0.7000 a=0.2250	manual	opt	0	-1.520844
+exp451	8.87507610e-13	1.001296	1.000019	discard	Super p=0.7000 a=0.2255	manual	opt	1	-1.520844
+exp452	8.89112188e-13	1.001296	1.000019	discard	Super p=0.7000 a=0.2265	manual	opt	0	-1.520844
+exp453	8.21081442e-13	1.001296	1.000019	discard	Super p=0.7025 a=0.2235	manual	opt	0	-1.520844
+exp454	7.99504657e-13	1.001296	1.000019	discard	Super p=0.7025 a=0.2245	manual	opt	0	-1.520844
+exp455	9.31485464e-13	1.001296	1.000019	discard	Super p=0.7025 a=0.2250	manual	opt	1	-1.520844
+exp456	6.31394743e-13	1.001296	1.000019	discard	Super p=0.7025 a=0.2255	manual	opt	0	-1.520844
+exp457	8.05119726e-13	1.001296	1.000019	discard	Super p=0.7025 a=0.2265	manual	opt	0	-1.520844
+exp458	7.93661358e-13	1.001296	1.000019	discard	Super p=0.7050 a=0.2235	manual	opt	0	-1.520844
+exp459	8.07100345e-13	1.001296	1.000019	discard	Super p=0.7050 a=0.2245	manual	opt	1	-1.520844
+exp460	7.44378331e-13	1.001296	1.000019	discard	Super p=0.7050 a=0.2250	manual	opt	0	-1.520844
+exp461	7.04846612e-13	1.001296	1.000019	discard	Super p=0.7050 a=0.2255	manual	opt	0	-1.520844
+exp462	9.24866229e-13	1.001296	1.000019	discard	Super p=0.7050 a=0.2265	manual	opt	0	-1.520844

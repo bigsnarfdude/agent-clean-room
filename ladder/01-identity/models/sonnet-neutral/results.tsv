@@ -1,0 +1,82 @@
+exp_id	residual	solution_norm	solution_mean	status	description	agent	design	elapsed_s	solution_energy
+exp001	0.00000000e+00	0.000000	0.000000	keep	Fourier spectral, positive branch u_offset=0.9	manual	initial_cond	0	0.000000
+exp002	0.00000000e+00	0.000000	0.000000	discard	Trivial branch u=0 fourier spectral	manual	initial_cond	0	0.000000
+exp003	crash	0	0	crash	Positive branch u~+1 fourier N=64	manual	initial_cond	0	0
+exp004	crash	0	0	crash	Fourier spectral, positive branch u_offset=0.9	manual	fourier_branch	0	0
+exp005	crash	0	0	crash	Positive branch fourier N=64 maxiter=200	manual	initial_cond	0	0
+exp006	crash	0	0	crash	Fourier spectral, positive branch, 200 Newton iters	manual	fourier_branch	0	0
+exp007	crash	0	0	crash	Positive branch u~+1, Fourier N=128, tol=1e-12	manual	fourier_spectral	0	0
+exp008	7.81886831e-13	1.001296	1.000019	discard	Positive branch N=64 tol=1e-11	manual	fourier_spectral	1	-1.520844
+exp009	5.49919191e-13	1.001296	-1.000019	discard	Negative branch u~-1 N=64 tol=1e-11	manual	fourier_spectral	0	-1.520844
+exp010	5.49919191e-13	1.001296	-1.000019	discard	Negative branch u~-1 fourier N=64 tol=1e-11	manual	initial_cond	0	-1.520844
+exp011	4.09876209e-14	1.001296	1.000019	discard	Positive branch N=32 tol=1e-13, smaller matrix	manual	fourier_spectral	1	-1.520844
+exp012	5.07745955e-15	1.001296	1.000019	discard	Positive branch N=16 tol=1e-14, tiny matrix	manual	fourier_spectral	0	-1.520844
+exp013	3.36441000e-15	1.001296	1.000019	discard	Positive branch N=8 tol=1e-14, minimal matrix	manual	fourier_spectral	1	-1.520844
+exp014	2.06774381e-16	1.001296	1.000019	discard	Positive branch N=4 tol=1e-14	manual	fourier_spectral	0	-1.520844
+exp015	2.00148302e-16	1.001298	1.000025	discard	Positive branch N=2 modes, minimal	manual	fourier_spectral	1	-1.520921
+exp016	2.57581612e-16	1.001296	-1.000019	discard	Negative branch N=4 tol=1e-14, near machine precision	manual	initial_cond	0	-1.520844
+exp017	2.00148302e-16	1.001298	-1.000025	discard	Negative branch N=2 modes machine precision	manual	initial_cond	0	-1.520921
+exp018	6.06290198e-16	1.001296	1.000019	discard	Positive branch N=3 modes	agent_idb	fourier_spectral	1	-1.520844
+exp019	1.57009246e-16	1.001322	1.000049	discard	Positive branch N=1 modes sweep	agent_idb	fourier_spectral	0	-1.520921
+exp020	1.52391128e-15	1.001296	1.000019	discard	Positive branch N=5 modes sweep	agent_idb	fourier_spectral	0	-1.520844
+exp021	1.01765301e-15	1.001296	1.000019	discard	Positive branch N=6 modes sweep	agent_idb	fourier_spectral	0	-1.520844
+exp022	1.89920454e-15	1.001296	1.000019	discard	Positive branch u_offset=1 amp=0 N=4	agent_idb	fourier_spectral	0	-1.520844
+exp023	1.57009246e-16	1.001322	1.000049	discard	Positive branch N=1 mode minimal	manual	initial_cond	0	-1.520921
+exp024	2.00148302e-16	1.001298	-1.000025	discard	Negative branch N=2 modes, minimal matrix, expecting ~2e-16	agent_b	fourier_spectral	0	-1.520921
+exp025	5.55111512e-17	1.001322	-1.000049	discard	Negative branch N=1 mode, DC+Nyquist only	agent_b	fourier_spectral	1	-1.520921
+exp026	5.55111512e-17	1.001322	-1.000049	discard	Negative branch N=1 mode minimal	manual	initial_cond	1	-1.520921
+exp027	2.57581612e-16	1.001296	1.000019	discard	Positive N=4 u=1 amp=0.05	agent_idb	fourier_spectral	0	-1.520844
+exp028	2.06774381e-16	1.001296	1.000019	discard	Positive N=4 u=1 amp=0.15	agent_idb	fourier_spectral	0	-1.520844
+exp029	6.01806552e-16	1.001296	1.000019	discard	Positive N=4 u=1 amp=0.2	agent_idb	fourier_spectral	0	-1.520844
+exp030	1.57009246e-16	1.001322	1.000049	discard	Positive branch N=1 mode, 2-point grid	agent_b	fourier_spectral	0	-1.520921
+exp031	5.55111512e-17	1.001322	-1.000049	discard	Negative branch N=1 modes	agent_idb	fourier_spectral	0	-1.520921
+exp032	5.55111512e-17	1.001322	-1.000049	discard	Neg N=1 amp=0.0	agent_idb	fourier_spectral	1	-1.520921
+exp033	5.55111512e-17	1.001322	-1.000049	discard	Neg N=1 amp=0.05	agent_idb	fourier_spectral	0	-1.520921
+exp034	5.55111512e-17	1.001322	-1.000049	discard	Neg N=1 amp=0.15	agent_idb	fourier_spectral	0	-1.520921
+exp035	5.55111512e-17	1.001322	-1.000049	discard	Neg N=1 amp=0.2	agent_idb	fourier_spectral	0	-1.520921
+exp036	5.55111512e-17	1.001322	-1.000049	discard	Neg N=1 amp=0.3	agent_idb	fourier_spectral	1	-1.520921
+exp037	5.55111512e-17	1.001322	1.000049	discard	Positive branch N=1 amp=0 constant initial guess	manual	initial_cond	0	-1.520921
+exp038	5.55111512e-17	1.001322	-1.000049	discard	Negative branch N=1 near-machine-precision	idb_me	fourier_spectral	1	-1.520921
+exp039	5.55111512e-17	1.001322	-1.000049	discard	Negative branch N=1, u_offset=-1.0 amplitude=0.05	agent_b	fourier_spectral	0	-1.520921
+exp040	2.00148302e-16	1.001298	-1.000025	discard	Negative branch N=2 modes	agent_idb	fourier_spectral	0	-1.520921
+exp041	4.37471443e-16	1.001296	-1.000019	discard	Negative branch N=3 modes	agent_idb	fourier_spectral	0	-1.520844
+exp042	2.57581612e-16	1.001296	-1.000019	discard	Negative branch N=4 modes	agent_idb	fourier_spectral	0	-1.520844
+exp043	5.55111512e-17	1.001322	1.000049	discard	Positive branch N=1 u_offset=1.001 closer to true mean	manual	initial_cond	0	-1.520921
+exp044	1.57009246e-16	1.001322	1.000049	discard	Positive branch N=1 near-machine-precision	idb_me	fourier_spectral	0	-1.520921
+exp045	5.55111512e-17	1.001322	1.000049	discard	Pos N=1 offset=1.1	agent_idb	fourier_spectral	0	-1.520921
+exp046	5.55111512e-17	1.001322	1.000049	discard	Pos N=1 offset=1.15	agent_idb	fourier_spectral	1	-1.520921
+exp047	5.11787527e-16	1.001322	1.000049	discard	Pos N=1 offset=1.0	agent_idb	fourier_spectral	0	-1.520921
+exp048	5.55111512e-17	1.001322	1.000049	discard	Pos N=1 offset=0.95	agent_idb	fourier_spectral	0	-1.520921
+exp049	5.55111512e-17	1.001322	1.000049	discard	Pos N=1 offset=0.85	agent_idb	fourier_spectral	0	-1.520921
+exp050	5.55111512e-17	1.001322	1.000049	discard	Positive branch N=1 amp=0 constant init, target 5.55e-17	idb_me	fourier_spectral	0	-1.520921
+exp051	5.55111512e-17	1.001322	1.000049	discard	Pos N=1 phase=0.5	agent_idb	fourier_spectral	1	-1.520921
+exp052	5.55111512e-17	1.001322	1.000049	discard	Pos N=1 phase=1.0	agent_idb	fourier_spectral	0	-1.520921
+exp053	5.55111512e-17	1.001322	1.000049	discard	Pos N=1 phase=1.5	agent_idb	fourier_spectral	0	-1.520921
+exp054	5.55111512e-17	1.001322	1.000049	discard	Pos N=1 phase=2.0	agent_idb	fourier_spectral	0	-1.520921
+exp055	5.11787527e-16	1.001322	1.000049	discard	Pos N=1 phase=3.14159	agent_idb	fourier_spectral	1	-1.520921
+exp056	0.00000000e+00	0.000000	0.000000	discard	Trivial branch u=0, verify exact solution	agent_idb	fourier_spectral	0	0.000000
+exp057	3.45956444e-15	1.001296	1.000019	discard	Pos n_mode=2 N=16 branch search	agent_idb	fourier_spectral	0	-1.520844
+exp058	4.03292373e-15	1.001296	1.000019	discard	Pos n_mode=3 N=16 branch search	agent_idb	fourier_spectral	0	-1.520844
+exp059	1.42098320e-26	0.000000	-0.000000	discard	Basin search off=0.1	agent_idb	fourier_spectral	0	0.000000
+exp060	5.68409951e-20	0.000000	0.000000	discard	Basin search off=0.2	agent_idb	fourier_spectral	1	-0.000000
+exp061	3.24133156e-21	0.000000	0.000000	discard	Basin search off=0.3	agent_idb	fourier_spectral	0	-0.000000
+exp062	3.94790382e-16	0.000000	0.000000	discard	Basin search off=0.45	agent_idb	fourier_spectral	0	-0.000000
+exp063	4.85864837e-15	1.001296	-1.000019	discard	Basin search off=0.49	agent_idb	fourier_spectral	0	-1.520844
+exp064	5.40382566e-15	1.001296	-1.000019	discard	Basin search off=0.5	agent_idb	fourier_spectral	1	-1.520844
+exp065	4.94308938e-15	1.001296	-1.000019	discard	Basin search off=0.51	agent_idb	fourier_spectral	0	-1.520844
+exp066	4.03292373e-15	1.001296	1.000019	discard	Basin search off=0.6	agent_idb	fourier_spectral	0	-1.520844
+exp067	crash	0	0	crash	Basin search off=0.7	agent_idb	fourier_spectral	0	0
+exp068	5.12943364e-15	1.001296	1.000019	discard	Basin search off=0.8	agent_idb	fourier_spectral	1	-1.520844
+exp069	5.55111512e-17	1.001322	1.000049	discard	Positive N=1 amplitude=0.05 init	idb_me	fourier_spectral	0	-1.520921
+exp070	5.55111512e-17	1.001322	1.000049	discard	Positive branch N=1 amplitude=0, confirm 5.55e-17 floor	agent_b	fourier_spectral	0	-1.520921
+exp071	4.49655357e-15	0.000000	0.000000	discard	Trivial basin off=0.01	agent_idb	fourier_spectral	0	-0.000000
+exp072	8.00077507e-21	0.000000	0.000000	discard	Trivial basin off=0.05	agent_idb	fourier_spectral	0	-0.000000
+exp073	1.42098320e-26	0.000000	-0.000000	discard	Trivial basin off=0.1	agent_idb	fourier_spectral	0	0.000000
+exp074	2.43312911e-23	0.000000	-0.000000	discard	Trivial basin off=0.15	agent_idb	fourier_spectral	1	0.000000
+exp075	5.68409951e-20	0.000000	0.000000	discard	Trivial basin off=0.2	agent_idb	fourier_spectral	0	-0.000000
+exp076	1.71613997e-26	0.000000	-0.000000	discard	Trivial basin off=0.25	agent_idb	fourier_spectral	0	0.000000
+exp077	3.24133156e-21	0.000000	0.000000	discard	Trivial basin off=0.3	agent_idb	fourier_spectral	0	-0.000000
+exp078	4.46086289e-23	0.000000	-0.000000	discard	Trivial basin off=0.35	agent_idb	fourier_spectral	1	0.000000
+exp079	2.67471958e-22	0.000000	-0.000000	discard	Trivial basin off=0.4	agent_idb	fourier_spectral	0	0.000000
+exp080	3.94790382e-16	0.000000	0.000000	discard	Trivial basin off=0.45	agent_idb	fourier_spectral	0	-0.000000
+exp081	0.00000000e+00	0.000000	0.000000	discard	Scipy solver trivial branch, tol=1e-10	idb_me	scipy_branch	0	0.000000
