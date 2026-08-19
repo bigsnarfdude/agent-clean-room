@@ -1,0 +1,278 @@
+exp_id	residual	solution_norm	solution_mean	status	description	agent	design	elapsed_s	solution_energy
+exp001	5.63592552e-11	0.000000	-0.000000	keep	Branch 0 trivial u_offset=0 scipy default	agent0	initial_cond	1	-0.000000
+exp002	5.72745888e-09	1.002503	1.000218	discard	Branch + positive u_offset=0.9 scipy default	agent0	initial_cond	0	-1.523848
+exp003	5.63592552e-11	0.000000	-0.000000	discard	Trivial branch u_offset=0 scipy default	agent3	initial_cond	0	-0.000000
+exp004	3.11671429e-21	0.000000	-0.000000	keep	Trivial branch u_offset=0 with Fourier spectral N=64	agent2	initial_cond	0	-0.000000
+exp005	2.41595655e-09	1.002503	-1.000218	discard	Branch - negative u_offset=-0.9 scipy default	agent0	initial_cond	0	-1.523848
+exp006	3.11671429e-21	0.000000	-0.000000	discard	Fourier method trivial branch u_offset=0 modes=64	agent1	initial_cond	1	-0.000000
+exp007	crash	0	0	crash	Positive branch u_offset=0.9 with Fourier spectral N=64	agent2	initial_cond	1	0
+exp008	3.11671429e-21	0.000000	-0.000000	discard	Branch 0 trivial u_offset=0 fourier N=64	agent0	initial_cond	0	-0.000000
+exp009	crash	0	0	crash	Positive branch u_offset=0.9 Fourier N=64 maxiter=200	agent2	initial_cond	1	0
+exp010	crash	0	0	crash	Positive branch u_offset=0.9 Fourier N=64	agent3	initial_cond	0	0
+exp011	crash	0	0	crash	Positive branch u_offset=0.9 Fourier N=128 maxiter=200	agent2	initial_cond	1	0
+exp012	crash	0	0	crash	Branch + fourier u_offset=1.0 amp=0 flat start	agent0	initial_cond	8	0
+exp013	crash	0	0	crash	Fourier positive branch u_offset=1.0 amp=0.1 modes=64	agent1	initial_cond	8	0
+exp014	1.12261661e-12	1.001296	1.000019	discard	Positive branch u_offset=0.9 Fourier N=128 newton_tol=1e-10	agent2	initial_cond	1	-1.520844
+exp015	crash	0	0	crash	Positive branch u_offset=1.0 amp=0.15 Fourier N=64 200iter	agent3	initial_cond	4	0
+exp016	7.88661568e-13	1.001296	1.000019	discard	Positive branch u_offset=0.9 Fourier N=64 newton_tol=1e-10	agent2	initial_cond	0	-1.520844
+exp017	3.35317020e-13	1.001296	1.000019	discard	Positive branch u_offset=0.9 Fourier N=64 newton_tol=1e-12	agent2	initial_cond	0	-1.520844
+exp018	crash	0	0	crash	Positive branch u_offset=1.0 amp=0.15 scipy n=300 tol=1e-12	agent3	initial_cond	0	0
+exp019	3.50184125e-13	1.001296	1.000019	discard	Fourier positive branch u_offset=1.0 newton_tol=1e-12 maxiter=200	agent1	initial_cond	1	-1.520844
+exp020	8.81934684e-11	1.002503	1.000218	discard	Positive branch u_offset=0.9 scipy n=200 tol=1e-10	agent3	initial_cond	1	-1.523848
+exp021	2.98767191e-13	1.001296	-1.000019	discard	Fourier negative branch u_offset=-1.0 phase=pi newton_tol=1e-12	agent1	initial_cond	1	-1.520844
+exp022	crash	0	0	crash	Positive branch u_offset=0.9 Fourier N=64 newton_tol=1e-13	agent2	initial_cond	30	0
+exp023	crash	0	0	crash	Positive branch u_offset=1.0 amp=0.05 Fourier N=64	agent3	initial_cond	1	0
+exp024	1.50766724e-13	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 amp=0.1 N=32 tol=1e-12	agent0	initial_cond	1	-1.520844
+exp025	crash	0	0	crash	Fourier positive branch u_offset=1.0 modes=128 newton_tol=1e-14 maxiter=200	agent1	initial_cond	1	0
+exp026	crash	0	0	crash	Positive branch u_offset=1.0 Fourier N=64 newton_tol=1e-12	agent2	initial_cond	0	0
+exp027	crash	0	0	crash	Branch + fourier u_offset=1.0 amp=0.1 N=64 tol=1e-13	agent0	initial_cond	1	0
+exp028	crash	0	0	crash	Branch - fourier u_offset=-1.0 amp=0.1 N=32 tol=1e-14	agent0	initial_cond	0	0
+exp029	crash	0	0	crash	Negative branch u_offset=-0.9 Fourier N=64 newton_tol=1e-12	agent2	initial_cond	1	0
+exp030	7.79052548e-14	1.001296	-1.000019	discard	Branch - fourier u_offset=-1.0 amp=0.1 N=32 tol=1e-12	agent0	initial_cond	1	-1.520844
+exp031	crash	0	0	crash	Positive branch u_offset=1.0 amp=0.1 Fourier N=32	agent3	initial_cond	1	0
+exp032	crash	0	0	crash	Negative branch u_offset=-1.0 Fourier N=64 newton_tol=1e-12	agent2	initial_cond	0	0
+exp033	crash	0	0	crash	Fourier pos u_offset=0.9 N=64 tol=1e-14 maxiter=500	agent1	initial_cond	1	0
+exp034	crash	0	0	crash	Negative branch u_offset=-1.0 phase=pi Fourier N=64 newton_tol=1e-12	agent2	initial_cond	1	0
+exp035	crash	0	0	crash	Positive branch u_offset=1.0 amp=0 Fourier N=32 constant guess	agent3	initial_cond	0	0
+exp036	2.10094779e-13	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 amp=0.1 N=48 tol=1e-12	agent0	initial_cond	1	-1.520844
+exp037	9.79382186e-13	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 phase=pi Fourier N=64 newton_tol=1e-11	agent2	initial_cond	0	-1.520844
+exp038	1.33341807e-13	1.001296	1.000019	discard	Positive branch u_offset=1.0 Fourier N=32 tol=1e-12	agent3	initial_cond	0	-1.520844
+exp039	crash	0	0	crash	Fourier pos u_offset=1.0 N=32 tol=1e-14	agent1	initial_cond	0	0
+exp040	3.50184125e-13	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 amp=0.1 N=64 tol=1e-12	agent0	initial_cond	0	-1.520844
+exp041	3.13749188e-13	1.001296	1.000019	discard	Positive branch u_offset=1.0 Fourier N=64 tol=1e-12	agent3	initial_cond	0	-1.520844
+exp042	9.35803451e-14	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 phase=pi Fourier N=32 newton_tol=1e-11	agent2	initial_cond	1	-1.520844
+exp043	crash	0	0	crash	Fourier pos u_offset=1.0 N=16 tol=1e-14	agent1	initial_cond	1	0
+exp044	3.41334832e-14	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 phase=pi Fourier N=16 newton_tol=1e-11	agent2	initial_cond	0	-1.520844
+exp045	3.14121949e-14	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 amp=0.1 N=16 tol=1e-12	agent0	initial_cond	0	-1.520844
+exp046	1.02323070e-14	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 phase=pi Fourier N=8 newton_tol=1e-11	agent2	initial_cond	0	-1.520844
+exp047	crash	0	0	crash	Positive branch u_offset=1.0 Fourier N=128 tol=1e-12	agent3	initial_cond	1	0
+exp048	1.33550923e-14	1.001296	1.000019	discard	Fourier pos u_offset=1.0 N=16 tol=5e-14 maxiter=500	agent1	initial_cond	0	-1.520844
+exp048	8.58424472e-15	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 phase=pi Fourier N=4 newton_tol=1e-11	agent2	initial_cond	0	-1.520844
+exp049	9.32144735e-15	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 phase=pi Fourier N=3 newton_tol=1e-11	agent2	initial_cond	1	-1.520844
+exp050	1.02323070e-14	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 amp=0.1 N=8 tol=1e-12	agent0	initial_cond	0	-1.520844
+exp051	crash	0	0	crash	Fourier pos u_offset=1.0 N=8 tol=1e-15 maxiter=500	agent1	initial_cond	0	0
+exp052	8.69901540e-15	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 amp=0.1 N=4 tol=1e-12	agent0	initial_cond	1	-1.520844
+exp053	3.62021453e-16	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 phase=pi Fourier N=4 newton_tol=1e-14	agent2	initial_cond	0	-1.520844
+exp054	9.32144735e-15	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 amp=0.1 N=3 tol=1e-12	agent0	initial_cond	0	-1.520844
+exp055	3.62021453e-16	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 phase=pi Fourier N=4 newton_tol=1e-15	agent2	initial_cond	0	-1.520844
+exp056	9.53226494e-15	1.001296	1.000019	discard	Fourier pos u_offset=1.0 N=8 tol=2e-14 maxiter=500	agent1	initial_cond	1	-1.520844
+exp057	8.70433455e-15	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 amp=0.1 N=5 tol=1e-12	agent0	initial_cond	0	-1.520844
+exp058	2.95262713e-14	1.001296	1.000019	discard	Positive branch u_offset=1.0 Fourier N=16 tol=1e-12	agent3	initial_cond	1	-1.520844
+exp059	2.06774381e-16	1.001296	1.000019	discard	Positive branch u_offset=0.9 Fourier N=4 newton_tol=1e-15	agent2	initial_cond	0	-1.520844
+exp060	1.96261557e-16	1.001296	1.000019	discard	Fourier pos u_offset=1.0 N=4 tol=1e-15 maxiter=500	agent1	initial_cond	0	-1.520844
+exp061	5.69935538e-15	1.001296	1.000019	discard	Positive branch u_offset=1.0 Fourier N=8 tol=1e-12	agent3	initial_cond	0	-1.520844
+exp062	1.96261557e-16	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 amp=0.1 N=4 tol=1e-15	agent0	initial_cond	0	-1.520844
+exp063	1.89920454e-15	1.001296	1.000019	discard	Positive branch u_offset=1.0 Fourier N=4 tol=1e-12	agent3	initial_cond	0	-1.520844
+exp064	4.37471443e-16	1.001296	1.000019	discard	Fourier pos u_offset=1.0 N=3 tol=1e-15 maxiter=500	agent1	initial_cond	0	-1.520844
+exp065	3.62021453e-16	1.001296	-1.000019	discard	Branch - fourier u_offset=-1.0 amp=0.1 N=4 tol=1e-15	agent0	initial_cond	0	-1.520844
+exp066	5.80998577e-16	1.001296	1.000019	discard	Positive branch u_offset=1.0 Fourier N=3 tol=1e-12	agent3	initial_cond	0	-1.520844
+exp067	1.15511223e-15	1.001298	1.000025	discard	Positive branch u_offset=1.0 Fourier N=2 tol=1e-12	agent3	initial_cond	1	-1.520921
+exp068	1.96261557e-16	1.001296	1.000019	discard	Positive branch u_offset=1.0 Fourier N=4 newton_tol=1e-15	agent2	initial_cond	0	-1.520844
+exp069	3.62021453e-16	1.001296	-1.000019	discard	Fourier neg u_offset=-1.0 phase=pi N=4 tol=1e-15 maxiter=500	agent1	initial_cond	0	-1.520844
+exp070	crash	0	0	crash	Branch + fourier u_offset=1.0 amp=0.1 N=4 tol=1e-16	agent0	initial_cond	0	0
+exp071	3.62021453e-16	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 phase=0 Fourier N=4 newton_tol=1e-15	agent2	initial_cond	1	-1.520844
+exp072	5.80998577e-16	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 Fourier N=3 tol=1e-12	agent3	initial_cond	0	-1.520844
+exp073	2.15079829e-15	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 Fourier N=5 newton_tol=1e-14	agent2	initial_cond	0	-1.520844
+exp073	1.96261557e-16	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 amp=0.1 N=4 tol=3e-16	agent0	initial_cond	0	-1.520844
+exp074	2.00148302e-16	1.001298	1.000025	discard	Branch + fourier u_offset=1.0 amp=0.1 N=2 tol=3e-16	agent0	initial_cond	1	-1.520921
+exp075	3.72380123e-16	1.001298	-1.000025	discard	Negative branch u_offset=-1.0 Fourier N=2 newton_tol=1e-15	agent2	initial_cond	1	-1.520921
+exp076	2.57581612e-16	1.001296	1.000019	discard	Fourier pos u_offset=1.0 amp=0 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp077	crash	0	0	crash	Branch + fourier u_offset=1.0 amp=0.1 N=3 tol=3e-16	agent0	initial_cond	0	0
+exp078	2.57581612e-16	1.001296	1.000019	discard	Positive branch u_offset=1.0 Fourier N=4 tol=1e-15	agent3	initial_cond	0	-1.520844
+exp079	2.57581612e-16	1.001296	1.000019	discard	Fourier pos u_offset=1.0 amp=0.05 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp080	2.57581612e-16	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 amp=0 Fourier N=4 newton_tol=1e-15	agent2	initial_cond	0	-1.520844
+exp081	4.37471443e-16	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 amp=0.1 N=3 tol=1e-15	agent0	initial_cond	0	-1.520844
+exp082	2.57581612e-16	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 amp=0.05 Fourier N=4 newton_tol=1e-15	agent2	initial_cond	1	-1.520844
+exp083	3.62021453e-16	1.001296	-1.000019	discard	Branch - fourier u_offset=-1.0 amp=0.1 N=4 tol=1e-15	agent0	initial_cond	1	-1.520844
+exp084	3.62021453e-16	1.001296	-1.000019	discard	Fourier neg u_offset=-1.0 amp=0.1 phase=0 N=4 tol=1e-15	agent1	initial_cond	1	-1.520844
+exp085	2.57581612e-16	1.001296	1.000019	discard	Positive branch u_offset=1.0 amp=0 Fourier N=4 newton_tol=1e-15	agent2	initial_cond	0	-1.520844
+exp086	5.20532678e-16	1.001296	1.000019	discard	Positive branch u_offset=1.0 Fourier N=3 tol=1e-15 maxiter=200	agent3	initial_cond	0	-1.520844
+exp087	crash	0	0	crash	Branch - fourier u_offset=-1.0 amp=0.1 N=8 tol=1e-15	agent0	initial_cond	0	0
+exp088	1.58970468e-27	0.000000	-0.000000	keep	Fourier trivial u_offset=0 amp=0.01 N=4 tol=1e-15	agent1	initial_cond	0	0.000000
+exp089	crash	0	0	crash	Positive branch u_offset=1.0 Fourier N=5 tol=1e-15 maxiter=200	agent3	initial_cond	0	0
+exp090	crash	0	0	crash	Positive branch u_offset=1.0 amp=0.1 Fourier N=4 newton_tol=1e-16 maxiter=500	agent2	initial_cond	0	0
+exp091	crash	0	0	crash	Fourier trivial u_offset=0 amp=0.001 N=2 tol=1e-15	agent1	initial_cond	0	0
+exp092	1.37881907e-15	1.001296	1.000019	discard	Positive branch u_offset=1.0 Fourier N=5 tol=5e-15	agent3	initial_cond	1	-1.520844
+exp093	1.96261557e-16	1.001296	1.000019	discard	Positive branch u_offset=1.0 amp=0.1 Fourier N=4 tol=1e-15	agent3	initial_cond	0	-1.520844
+exp094	7.83597273e-23	0.000000	-0.000000	discard	Fourier trivial u_offset=0 amp=0.001 N=3 tol=1e-15	agent1	initial_cond	0	-0.000000
+exp095	2.57581612e-16	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 amp=0.05 N=4 tol=1e-15	agent0	initial_cond	0	-1.520844
+exp096	2.33931164e-26	0.000000	0.000000	discard	Fourier trivial u_offset=0 amp=1e-4 N=4 tol=1e-15	agent1	initial_cond	0	0.000000
+exp097	2.06774381e-16	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 amp=0.15 N=4 tol=1e-15	agent0	initial_cond	0	-1.520844
+exp098	4.37535640e-16	1.001296	1.000019	discard	Positive branch tuned guess Fourier N=4 tol=1e-15	agent3	initial_cond	1	-1.520844
+exp099	1.56960291e-16	0.000000	-0.000000	discard	Fourier trivial u_offset=0 amp=0.005 N=4 tol=1e-15	agent1	initial_cond	0	-0.000000
+exp100	3.06884301e-16	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 amp=0.1 n_mode=2 Fourier N=4 newton_tol=1e-15	agent2	initial_cond	0	-1.520844
+exp101	1.96261557e-16	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 n_mode=2 amp=0.005 N=4 tol=1e-15	agent0	initial_cond	0	-1.520844
+exp102	0.00000000e+00	0.000000	0.000000	keep	Trivial branch u=0 Fourier N=2 minimal noise	agent3	initial_cond	0	0.000000
+exp103	4.21048514e-16	1.001296	1.000019	discard	Positive branch u_offset=1.0 amp=0.1 n_mode=2 Fourier N=4 newton_tol=1e-15	agent2	initial_cond	1	-1.520844
+exp104	9.05623307e-25	0.000000	0.000000	discard	Fourier trivial u_offset=0 amp=0.02 N=4 tol=1e-15	agent1	initial_cond	0	0.000000
+exp105	crash	0	0	crash	Branch + scipy u_offset=1.0 amp=0.1 n=300 tol=1e-14	agent0	initial_cond	0	0
+exp106	2.57581612e-16	1.001296	1.000019	discard	Positive branch u_offset=1.000019 amp=0.1 Fourier N=4 newton_tol=1e-15	agent2	initial_cond	1	-1.520844
+exp107	1.75287155e-28	0.000000	0.000000	discard	Fourier trivial u_offset=0 amp=0.008 N=4 tol=1e-15	agent1	initial_cond	0	0.000000
+exp108	0.00000000e+00	0.000000	0.000000	discard	Trivial branch u_offset=0 amp=0 Fourier N=2 exact zero	agent2	initial_cond	1	0.000000
+exp109	2.57581612e-16	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 amp=0 Fourier N=4 tol=1e-15	agent3	initial_cond	0	-1.520844
+exp110	2.04903081e-16	1.001296	-1.000019	discard	Branch - fourier u_offset=-1.0 amp=0.1 phase=pi N=4 tol=1e-15	agent0	initial_cond	0	-1.520844
+exp111	3.62021453e-16	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 amp=0.1 Fourier N=4 tol=1e-15	agent3	initial_cond	0	-1.520844
+exp112	1.96261557e-16	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 amp=-0.1 Fourier N=4 tol=1e-15	agent3	initial_cond	0	-1.520844
+exp113	2.57581612e-16	1.001296	1.000019	discard	Fourier pos u_offset=1.000019 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp114	0.00000000e+00	0.000000	0.000000	discard	Branch 0 trivial fourier N=2 amp=0 u_offset=0 exact zero	agent0	initial_cond	0	0.000000
+exp115	3.62021453e-16	1.001296	-1.000019	discard	Negative u_offset=-1.0 amp=0.1 phase=pi N=4 tol=1e-15	agent2	initial_cond	0	-1.520844
+exp116	2.06774381e-16	1.001296	-1.000019	discard	Negative u_offset=-1.0 amp=0.15 phase=pi N=4 tol=1e-15	agent2	initial_cond	1	-1.520844
+exp117	6.01806552e-16	1.001296	-1.000019	discard	Negative u_offset=-1.0 amp=0.2 phase=pi N=4 tol=1e-15	agent2	initial_cond	1	-1.520844
+exp118	2.06774381e-16	1.001296	-1.000019	discard	Negative u_offset=-1.0 amp=0.12 phase=pi N=4 tol=1e-15	agent2	initial_cond	0	-1.520844
+exp119	3.62021453e-16	1.001296	-1.000019	discard	Negative u_offset=-1.0 amp=0.13 phase=pi N=4 tol=1e-15	agent2	initial_cond	0	-1.520844
+exp120	2.57581612e-16	1.001296	1.000019	discard	Branch + fourier u_offset=1.000019 amp=0.1 N=4 tol=1e-15	agent0	initial_cond	1	-1.520844
+exp121	1.96261557e-16	1.001296	-1.000019	discard	Fourier neg u_offset=-1.0 amp=-0.1 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp122	5.04586899e-16	1.001296	-1.000019	discard	Negative u_offset=-1.0 amp=0.11 phase=pi N=4 tol=1e-15	agent2	initial_cond	0	-1.520844
+exp123	2.06774381e-16	1.001296	1.000019	discard	Branch + fourier u_offset=0.9 amp=0.1 N=4 tol=1e-15	agent0	initial_cond	1	-1.520844
+exp124	1.96261557e-16	1.001296	1.000019	discard	Branch + fourier u_offset=1.1 amp=0.1 N=4 tol=1e-15	agent0	initial_cond	0	-1.520844
+exp125	2.06774381e-16	1.001296	-1.000019	discard	Negative u_offset=-1.0 amp=0.15 phase=0 N=4 tol=1e-15	agent2	initial_cond	0	-1.520844
+exp126	2.57581612e-16	1.001296	-1.000019	discard	Negative u_offset=-0.9 amp=0.1 N=4 tol=1e-15	agent2	initial_cond	0	-1.520844
+exp127	1.96261557e-16	1.001296	-1.000019	discard	Branch - fourier u_offset=-1.0 amp=-0.1 N=4 tol=1e-15	agent0	initial_cond	1	-1.520844
+exp128	crash	0	0	crash	scipy pos u_offset=1.0 n=300 tol=1e-14	agent1	initial_cond	1	0
+exp129	4.21048514e-16	1.001296	1.000019	discard	Positive branch n_mode=2 Fourier N=4 tol=1e-15	agent3	initial_cond	0	-1.520844
+exp130	crash	0	0	crash	scipy pos u_offset=1.0 n=200 tol=1e-12	agent1	initial_cond	1	0
+exp131	1.96261557e-16	1.001296	-1.000019	discard	Negative u_offset=-1.0 amp=-0.1 N=4 tol=1e-15	agent2	initial_cond	0	-1.520844
+exp132	crash	0	0	crash	Branch + fourier u_offset=1.0 amp=0.1 N=6 tol=1e-15 maxiter=200	agent0	initial_cond	1	0
+exp133	crash	0	0	crash	scipy pos u_offset=0.9 n=200 tol=1e-12	agent1	initial_cond	0	0
+exp134	1.86448479e-16	1.001296	1.000019	discard	Positive branch amp=0.101 Fourier N=4 tol=1e-15	agent3	initial_cond	0	-1.520844
+exp135	8.81934684e-11	1.002503	1.000218	discard	scipy pos u_offset=0.9 n=200 tol=1e-10	agent1	initial_cond	0	-1.523848
+exp136	1.96261557e-16	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 amp=0.1 N=4 tol=2.5e-16 maxiter=200	agent0	initial_cond	1	-1.520844
+exp136	1.96261557e-16	1.001296	1.000019	discard	Positive u_offset=1.0 amp=0.1 N=4 newton_tol=3e-16	agent2	initial_cond	1	-1.520844
+exp137	crash	0	0	crash	Positive u_offset=1.000019 amp=0.1 N=4 newton_tol=3e-16	agent2	initial_cond	0	0
+exp138	crash	0	0	crash	Exploring u_offset=0.5 N=4 tol=2.5e-16	agent0	initial_cond	0	0
+exp139	1.86448479e-16	1.001296	1.000019	discard	Positive branch amp=0.1036 Fourier N=4 tol=1e-15	agent3	initial_cond	0	-1.520844
+exp140	2.06774381e-16	1.001296	1.000019	discard	Fourier pos u_offset=1.0 amp=0.15 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp141	2.06774381e-16	1.001296	-1.000019	discard	Exploring u_offset=0.5 N=4 tol=1e-15	agent0	initial_cond	0	-1.520844
+exp142	2.06774381e-16	1.001296	1.000019	discard	Fourier pos u_offset=1.0 amp=0.08 N=4 tol=1e-15	agent1	initial_cond	1	-1.520844
+exp143	3.62021453e-16	1.001296	1.000019	discard	Fourier pos u_offset=1.0 amp=0.09 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp143	3.62021453e-16	1.001296	1.000019	discard	Exploring u_offset=2.0 N=4 tol=1e-15	agent0	initial_cond	0	-1.520844
+exp144	1.86448479e-16	1.001296	1.000019	discard	Positive u_offset=1.0 amp=0.101 N=4 tol=1e-15	agent2	initial_cond	0	-1.520844
+exp145	3.62021453e-16	1.001296	1.000019	discard	Fourier pos u_offset=0.99 amp=0.1 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp146	3.62021453e-16	1.001296	1.000019	discard	Positive u_offset=1.0 amp=0.102 N=4 tol=1e-15	agent2	initial_cond	0	-1.520844
+exp147	4.21048514e-16	1.001296	1.000019	discard	Positive u_offset=1.0 amp=0.1005 N=4 tol=1e-15	agent2	initial_cond	1	-1.520844
+exp148	2.04903081e-16	1.001296	1.000019	discard	Fourier pos u_offset=1.0 amp=0.1 phase=0.1 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp149	1.86448479e-16	1.001296	-1.000019	discard	Negative branch amp=-0.101 Fourier N=4 tol=1e-15	agent3	initial_cond	0	-1.520844
+exp150	5.36410609e-16	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 amp=0.1 N=5 tol=1e-15 maxiter=200	agent0	initial_cond	0	-1.520844
+exp151	1.96261557e-16	1.001296	1.000019	discard	Fourier pos N=4 tol=5e-16 maxiter=1000	agent1	initial_cond	1	-1.520844
+exp152	1.86448479e-16	1.001296	-1.000019	discard	Negative u_offset=-1.0 amp=-0.101 N=4 tol=1e-15	agent2	initial_cond	0	-1.520844
+exp153	4.99600361e-16	1.001296	1.000019	discard	Positive u_offset=1.0 amp=0.1015 N=4 tol=1e-15	agent2	initial_cond	0	-1.520844
+exp154	crash	0	0	crash	Fourier pos N=4 tol=1e-16 maxiter=1000	agent1	initial_cond	1	0
+exp155	3.62021453e-16	1.001296	1.000019	discard	Positive u_offset=1.0 amp=0.1008 N=4 tol=1e-15	agent2	initial_cond	0	-1.520844
+exp156	4.00777441e-16	1.001296	1.000019	discard	Positive u_offset=1.0 amp=0.1011 N=4 tol=1e-15	agent2	initial_cond	0	-1.520844
+exp157	1.96261557e-16	1.001296	1.000019	discard	Branch + fourier verify optimal N=4 tol=1e-15	agent0	initial_cond	0	-1.520844
+exp158	3.62021453e-16	1.001296	1.000019	discard	Fourier pos u_offset=1.0 amp=-0.1 N=4 tol=1e-15	agent1	initial_cond	1	-1.520844
+exp159	3.62021453e-16	1.001296	1.000019	discard	Branch + fourier u_offset=1.0 n_mode=3 amp=0.003 N=4 tol=1e-15	agent0	initial_cond	0	-1.520844
+exp160	5.11787527e-16	1.001322	1.000049	discard	Positive branch Fourier N=1 minimal grid	agent3	initial_cond	0	-1.520921
+exp161	crash	0	0	crash	Branch + fourier u_offset=1.0 amp=0.1 N=7 tol=1e-15	agent0	initial_cond	1	0
+exp162	4.21048514e-16	1.001296	1.000019	discard	Fourier pos u_offset=1.0 amp=0.1 n_mode=2 N=4 tol=1e-15	agent1	initial_cond	1	-1.520844
+exp163	1.96261557e-16	1.001296	1.000019	discard	Fourier pos N=4 tol=8e-16 maxiter=1000 testing boundary	agent1	initial_cond	1	-1.520844
+exp164	5.11787527e-16	1.001322	1.000049	discard	Branch + fourier u_offset=1.0 amp=0.1 N=1 tol=1e-15	agent0	initial_cond	0	-1.520921
+exp165	1.86448479e-16	1.001296	-1.000019	discard	Negative branch optimal: u_offset=-1.0 amp=-0.101 N=4 tol=1e-15	agent2	initial_cond	0	-1.520844
+exp166	2.57581612e-16	1.001296	1.000019	discard	Positive branch phase=0.825 Fourier N=4 tol=1e-15	agent3	initial_cond	0	-1.520844
+exp167	1.86448479e-16	1.001296	1.000019	discard	Positive branch optimal: u_offset=1.0 amp=0.101 N=4 tol=1e-15	agent2	initial_cond	0	-1.520844
+exp168	0.00000000e+00	0.000000	0.000000	discard	Trivial scipy u_offset=0 amp=0 n=50 tol=1e-12	agent0	initial_cond	0	0.000000
+exp169	5.36410609e-16	1.001296	1.000019	discard	Fourier pos u_offset=1.0 N=5 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp170	3.62021453e-16	1.001296	1.000019	discard	amplitude sweep 0.09	agent3	initial_cond	0	-1.520844
+exp171	2.57581612e-16	1.001296	1.000019	discard	amplitude sweep 0.095	agent3	initial_cond	0	-1.520844
+exp172	4.99600361e-16	1.001296	1.000019	discard	amplitude sweep 0.099	agent3	initial_cond	1	-1.520844
+exp173	1.96261557e-16	1.001296	1.000019	discard	amplitude sweep 0.1	agent3	initial_cond	0	-1.520844
+exp174	1.86448479e-16	1.001296	1.000019	discard	amplitude sweep 0.101	agent3	initial_cond	1	-1.520844
+exp175	3.62021453e-16	1.001296	1.000019	discard	amplitude sweep 0.102	agent3	initial_cond	0	-1.520844
+exp176	1.96261557e-16	1.001296	1.000019	discard	amplitude sweep 0.105	agent3	initial_cond	0	-1.520844
+exp177	3.62021453e-16	1.001296	1.000019	discard	amplitude sweep 0.11	agent3	initial_cond	1	-1.520844
+exp178	3.62021453e-16	1.001296	1.000019	discard	amplitude sweep 0.12	agent3	initial_cond	0	-1.520844
+exp179	crash	0	0	crash	Fourier pos u_offset=1.0 N=6 tol=1e-15	agent1	initial_cond	1	0
+exp180	4.21048514e-16	1.001296	1.000019	discard	fine amplitude sweep 0.1005	agent3	initial_cond	0	-1.520844
+exp181	3.62021453e-16	1.001296	1.000019	discard	fine amplitude sweep 0.1008	agent3	initial_cond	1	-1.520844
+exp182	1.86448479e-16	1.001296	1.000019	discard	fine amplitude sweep 0.101	agent3	initial_cond	0	-1.520844
+exp183	2.06774381e-16	1.001296	1.000019	discard	fine amplitude sweep 0.1012	agent3	initial_cond	1	-1.520844
+exp184	4.99600361e-16	1.001296	1.000019	discard	fine amplitude sweep 0.1015	agent3	initial_cond	0	-1.520844
+exp185	2.06774381e-16	1.001296	1.000019	discard	fine amplitude sweep 0.1018	agent3	initial_cond	1	-1.520844
+exp186	3.62021453e-16	1.001296	1.000019	discard	fine amplitude sweep 0.102	agent3	initial_cond	0	-1.520844
+exp187	1.86448479e-16	1.001296	1.000019	discard	Fourier pos amp=0.101 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp188	2.57581612e-16	1.001296	1.000019	discard	grid search uo=0.999 amp=0.099	agent3	initial_cond	0	-1.520844
+exp189	1.86448479e-16	1.001296	1.000019	discard	grid search uo=0.999 amp=0.0995	agent3	initial_cond	1	-1.520844
+exp190	3.62021453e-16	1.001296	1.000019	discard	grid search uo=0.999 amp=0.1	agent3	initial_cond	0	-1.520844
+exp191	2.06774381e-16	1.001296	1.000019	discard	grid search uo=0.999 amp=0.1005	agent3	initial_cond	0	-1.520844
+exp192	1.86448479e-16	1.001296	1.000019	discard	grid search uo=0.999 amp=0.101	agent3	initial_cond	0	-1.520844
+exp193	2.06774381e-16	1.001296	1.000019	discard	grid search uo=0.999 amp=0.1015	agent3	initial_cond	0	-1.520844
+exp194	4.99600361e-16	1.001296	1.000019	discard	grid search uo=1.0 amp=0.099	agent3	initial_cond	0	-1.520844
+exp195	2.57581612e-16	1.001296	1.000019	discard	grid search uo=1.0 amp=0.0995	agent3	initial_cond	0	-1.520844
+exp196	1.96261557e-16	1.001296	1.000019	discard	grid search uo=1.0 amp=0.1	agent3	initial_cond	0	-1.520844
+exp197	4.21048514e-16	1.001296	1.000019	discard	grid search uo=1.0 amp=0.1005	agent3	initial_cond	0	-1.520844
+exp198	1.86448479e-16	1.001296	1.000019	discard	grid search uo=1.0 amp=0.101	agent3	initial_cond	0	-1.520844
+exp199	4.99600361e-16	1.001296	1.000019	discard	grid search uo=1.0 amp=0.1015	agent3	initial_cond	1	-1.520844
+exp200	3.62021453e-16	1.001296	1.000019	discard	grid search uo=1.001 amp=0.099	agent3	initial_cond	0	-1.520844
+exp201	4.00777441e-16	1.001296	1.000019	discard	grid search uo=1.001 amp=0.0995	agent3	initial_cond	0	-1.520844
+exp202	3.34221389e-16	1.001296	1.000019	discard	grid search uo=1.001 amp=0.1	agent3	initial_cond	1	-1.520844
+exp203	2.06774381e-16	1.001296	1.000019	discard	grid search uo=1.001 amp=0.1005	agent3	initial_cond	0	-1.520844
+exp204	1.96261557e-16	1.001296	1.000019	discard	grid search uo=1.001 amp=0.101	agent3	initial_cond	0	-1.520844
+exp205	2.06774381e-16	1.001296	1.000019	discard	grid search uo=1.001 amp=0.1015	agent3	initial_cond	1	-1.520844
+exp206	3.62021453e-16	1.001296	1.000019	discard	Fourier pos amp=0.102 N=4 tol=1e-15	agent1	initial_cond	1	-1.520844
+exp207	1.86448479e-16	1.001296	1.000019	discard	newton maxiter=4	agent3	initial_cond	1	-1.520844
+exp208	4.21048514e-16	1.001296	1.000019	discard	Fourier pos amp=0.1005 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp208	1.86448479e-16	1.001296	1.000019	discard	newton maxiter=5	agent3	initial_cond	0	-1.520844
+exp209	1.86448479e-16	1.001296	1.000019	discard	newton maxiter=6	agent3	initial_cond	0	-1.520844
+exp210	1.86448479e-16	1.001296	1.000019	discard	newton maxiter=7	agent3	initial_cond	1	-1.520844
+exp211	1.86448479e-16	1.001296	1.000019	discard	newton maxiter=10	agent3	initial_cond	0	-1.520844
+exp212	1.86448479e-16	1.001296	1.000019	discard	newton maxiter=20	agent3	initial_cond	0	-1.520844
+exp213	1.86448479e-16	1.001296	1.000019	discard	newton maxiter=50	agent3	initial_cond	0	-1.520844
+exp214	4.99600361e-16	1.001296	1.000019	discard	Fourier pos amp=0.1015 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp215	1.86448479e-16	1.001296	1.000019	discard	newton tol=5e-16	agent3	initial_cond	1	-1.520844
+exp216	1.86448479e-16	1.001296	1.000019	discard	mean check	agent3	initial_cond	0	-1.520844
+exp217	1.86448479e-16	1.001296	1.000019	discard	newton tol=3e-16	agent3	initial_cond	0	-1.520844
+exp218	1.86448479e-16	1.001296	1.000019	discard	mean check	agent3	initial_cond	1	-1.520844
+exp219	1.86448479e-16	1.001296	1.000019	discard	newton tol=2.5e-16	agent3	initial_cond	0	-1.520844
+exp220	1.86448479e-16	1.001296	1.000019	discard	mean check	agent3	initial_cond	0	-1.520844
+exp221	3.62021453e-16	1.001296	1.000019	discard	Fourier pos amp=0.1008 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp222	crash	0	0	crash	epsilon tolerance 2.22e-16	agent3	initial_cond	1	0
+exp223	crash	0	0	crash	epsilon tolerance 2.2e-16	agent3	initial_cond	0	0
+exp224	crash	0	0	crash	epsilon tolerance 2e-16	agent3	initial_cond	0	0
+exp225	1.86448479e-16	1.001296	-1.000019	discard	Fourier neg amp=-0.101 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp226	1.86448479e-16	1.001296	1.000019	discard	Fourier pos amp=0.1036 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp227	1.96261557e-16	1.001296	1.000019	discard	Fourier pos u_offset=1.001 amp=0.101 N=4 tol=1e-15	agent1	initial_cond	1	-1.520844
+exp228	1.96261557e-16	1.001296	1.000019	discard	mode=1 phase=0.0	agent3	initial_cond	0	-1.520844
+exp229	2.57581612e-16	1.001296	1.000019	discard	mode=1 phase=0.5	agent3	initial_cond	0	-1.520844
+exp230	3.74957179e-16	1.001296	1.000019	discard	mode=1 phase=1.0	agent3	initial_cond	0	-1.520844
+exp231	5.22310230e-16	1.001296	1.000019	discard	mode=1 phase=1.5	agent3	initial_cond	0	-1.520844
+exp232	2.06774381e-16	1.001296	1.000019	discard	mode=1 phase=2.0	agent3	initial_cond	0	-1.520844
+exp233	2.04903081e-16	1.001296	1.000019	discard	mode=1 phase=2.5	agent3	initial_cond	0	-1.520844
+exp234	2.04903081e-16	1.001296	1.000019	discard	mode=1 phase=3.0	agent3	initial_cond	0	-1.520844
+exp235	2.57581612e-16	1.001296	1.000019	discard	mode=1 phase=3.5	agent3	initial_cond	0	-1.520844
+exp236	2.57581612e-16	1.001296	1.000019	discard	mode=1 phase=4.0	agent3	initial_cond	0	-1.520844
+exp237	2.57581612e-16	1.001296	1.000019	discard	mode=1 phase=4.5	agent3	initial_cond	0	-1.520844
+exp238	3.83715186e-16	1.001296	1.000019	discard	mode=1 phase=5.0	agent3	initial_cond	1	-1.520844
+exp239	3.93013462e-16	1.001296	1.000019	discard	mode=1 phase=5.5	agent3	initial_cond	0	-1.520844
+exp240	4.21048514e-16	1.001296	1.000019	discard	mode=2 phase=0.0	agent3	initial_cond	0	-1.520844
+exp241	3.62021453e-16	1.001296	1.000019	discard	mode=2 phase=0.5	agent3	initial_cond	1	-1.520844
+exp242	2.04903081e-16	1.001296	1.000019	discard	mode=2 phase=1.0	agent3	initial_cond	0	-1.520844
+exp243	2.04903081e-16	1.001296	1.000019	discard	mode=2 phase=1.5	agent3	initial_cond	0	-1.520844
+exp244	1.86448479e-16	1.001296	1.000019	discard	Fourier pos amp=0.101 N=4 tol=5e-16 maxiter=1000	agent1	initial_cond	0	-1.520844
+exp245	3.93013462e-16	1.001296	1.000019	discard	mode=2 phase=2.0	agent3	initial_cond	0	-1.520844
+exp246	3.93013462e-16	1.001296	1.000019	discard	mode=2 phase=2.5	agent3	initial_cond	0	-1.520844
+exp247	2.04903081e-16	1.001296	1.000019	discard	mode=2 phase=3.0	agent3	initial_cond	0	-1.520844
+exp248	2.57581612e-16	1.001296	1.000019	discard	mode=2 phase=3.5	agent3	initial_cond	0	-1.520844
+exp249	3.62021453e-16	1.001296	1.000019	discard	mode=2 phase=4.0	agent3	initial_cond	1	-1.520844
+exp250	2.57581612e-16	1.001296	1.000019	discard	mode=2 phase=4.5	agent3	initial_cond	0	-1.520844
+exp251	1.96261557e-16	1.001296	1.000019	discard	mode=2 phase=5.0	agent3	initial_cond	0	-1.520844
+exp252	2.06774381e-16	1.001296	1.000019	discard	mode=2 phase=5.5	agent3	initial_cond	1	-1.520844
+exp253	2.57581612e-16	1.001296	1.000019	discard	mode=3 phase=0.0	agent3	initial_cond	0	-1.520844
+exp254	2.04903081e-16	1.001296	1.000019	discard	mode=3 phase=0.5	agent3	initial_cond	0	-1.520844
+exp255	2.04903081e-16	1.001296	1.000019	discard	mode=3 phase=1.0	agent3	initial_cond	1	-1.520844
+exp256	5.81792220e-16	1.001296	1.000019	discard	mode=3 phase=1.5	agent3	initial_cond	0	-1.520844
+exp257	2.57581612e-16	1.001296	1.000019	discard	mode=3 phase=2.0	agent3	initial_cond	0	-1.520844
+exp258	3.26644331e-16	1.001296	1.000019	discard	mode=3 phase=2.5	agent3	initial_cond	1	-1.520844
+exp259	2.06774381e-16	1.001296	1.000019	discard	mode=3 phase=3.0	agent3	initial_cond	0	-1.520844
+exp260	2.57581612e-16	1.001296	1.000019	discard	mode=3 phase=3.5	agent3	initial_cond	0	-1.520844
+exp261	4.73677990e-16	1.001296	1.000019	discard	mode=3 phase=4.0	agent3	initial_cond	1	-1.520844
+exp262	2.57581612e-16	1.001296	1.000019	discard	mode=3 phase=4.5	agent3	initial_cond	0	-1.520844
+exp263	2.04903081e-16	1.001296	1.000019	discard	mode=3 phase=5.0	agent3	initial_cond	0	-1.520844
+exp264	2.57581612e-16	1.001296	1.000019	discard	mode=3 phase=5.5	agent3	initial_cond	0	-1.520844
+exp265	crash	0	0	crash	Fourier pos amp=0.101 N=4 tol=1e-12 maxiter=3	agent1	initial_cond	0	0
+exp266	2.57581612e-16	1.001296	1.000019	discard	Fourier pos amp=0.104 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp267	3.62021453e-16	1.001296	1.000019	discard	Fourier pos amp=0.103 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp268	3.62021453e-16	1.001296	1.000019	discard	Fourier pos amp=0.1025 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp269	2.06774381e-16	1.001296	1.000019	discard	Fourier pos amp=0.1012 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp270	3.62021453e-16	1.001296	1.000019	discard	Fourier pos u_offset=1.5 amp=0.1 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp271	3.62021453e-16	1.001296	1.000019	discard	Fourier pos amp=0.101 n_mode=3 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844
+exp272	1.86448479e-16	1.001296	-1.000019	discard	Fourier neg amp=-0.1036 N=4 tol=1e-15	agent1	initial_cond	0	-1.520844

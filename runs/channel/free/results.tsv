@@ -1,0 +1,72 @@
+exp_id	residual	solution_norm	solution_mean	status	description	agent	design	elapsed_s	solution_energy
+exp001	5.63592552e-11	0.000000	-0.000000	keep	trivial branch, u_offset=0.0, default config	agent0	initial_cond	0	-0.000000
+exp002	5.63592552e-11	0.000000	-0.000000	discard	trivial branch u_offset=0.0 baseline	agent1	initial_cond	0	-0.000000
+exp003	5.72745888e-09	1.002503	1.000218	discard	positive branch u_offset=0.9 baseline	agent1	initial_cond	0	-1.523848
+exp004	5.72745888e-09	1.002503	1.000218	discard	positive branch, u_offset=0.9	agent0	initial_cond	1	-1.523848
+exp005	2.41595655e-09	1.002503	-1.000218	discard	negative branch u_offset=-0.9 baseline	agent1	initial_cond	0	-1.523848
+exp006	2.41595655e-09	1.002503	-1.000218	discard	negative branch, u_offset=-0.9	agent0	initial_cond	0	-1.523848
+exp007	8.81934684e-11	1.002503	1.000218	discard	positive branch u_offset=0.9 n_nodes=200 tol=1e-10	agent1	solver_param	0	-1.523848
+exp008	8.81934685e-11	1.002503	-1.000218	discard	negative branch u_offset=-0.9 n_nodes=200 tol=1e-10	agent1	solver_param	0	-1.523848
+exp009	2.98337043e-13	0.000000	-0.000000	keep	trivial branch u_offset=0.0 n_nodes=200 tol=1e-10	agent1	solver_param	0	-0.000000
+exp010	8.81934684e-11	1.002503	1.000218	discard	positive branch, n_nodes=200, tol=1e-10	agent0	solver_param	0	-1.523848
+exp011	2.98147269e-13	0.000000	-0.000000	keep	trivial branch u_offset=0.0 n_nodes=300 tol=1e-10	agent1	solver_param	0	-0.000000
+exp012	8.81934685e-11	1.002503	-1.000218	discard	negative branch, n_nodes=200, tol=1e-10	agent0	solver_param	0	-1.523848
+exp013	2.60019365e-11	1.002503	1.000218	discard	positive branch u_offset=0.9 n_nodes=300 tol=1e-10	agent1	solver_param	1	-1.523848
+exp013	2.98337043e-13	0.000000	-0.000000	discard	trivial branch, n_nodes=200, tol=1e-10	agent0	solver_param	1	-0.000000
+exp014	2.98147269e-13	0.000000	-0.000000	discard	trivial branch, n_nodes=300, tol=1e-10	agent0	solver_param	1	-0.000000
+exp015	8.58922841e-11	1.002503	-1.000218	discard	negative branch u_offset=-0.9 n_nodes=300 tol=1e-10	agent1	solver_param	1	-1.523848
+exp016	0.00000000e+00	0.000000	0.000000	keep	trivial branch, n_nodes=300, tol=1e-10, amplitude=0	agent0	initial_cond	1	0.000000
+exp017	8.77448543e-11	1.002503	1.000218	discard	positive branch u_offset=1.0 amp=0.15 n_nodes=300 tol=1e-10	agent1	initial_cond	0	-1.523848
+exp018	2.60019365e-11	1.002503	1.000218	discard	positive branch, n_nodes=300, tol=1e-10, amplitude=0	agent0	initial_cond	0	-1.523848
+exp019	2.60019365e-11	1.002503	-1.000218	discard	negative branch, n_nodes=300, tol=1e-10, amplitude=0	agent0	initial_cond	1	-1.523848
+exp020	8.77450245e-11	1.002503	1.000218	discard	positive branch u_offset=1.0 amp=0 flat IC n_nodes=300 tol=1e-10	agent1	initial_cond	1	-1.523848
+exp021	8.77450245e-11	1.002503	1.000218	discard	positive branch, u_offset=1.0, n_nodes=300, tol=1e-10, amp=0	agent0	initial_cond	1	-1.523848
+exp022	2.60019365e-11	1.002503	1.000218	discard	positive branch, u_offset=0.9, amp=0.05, mode=1	agent0	perturbation	1	-1.523848
+exp023	3.11671429e-21	0.000000	-0.000000	discard	FOURIER spectral solver, trivial branch u_offset=0.0, 64 modes	agent1	solver_param	0	-0.000000
+exp024	crash	0	0	crash	FOURIER spectral solver, positive branch u_offset=0.9, 64 modes	agent1	solver_param	0	0
+exp025	crash	0	0	crash	FOURIER spectral solver, positive branch u_offset=1.0, 64 modes	agent1	solver_param	0	0
+exp026	crash	0	0	crash	positive branch, Fourier spectral solver, 64 modes, Newton tol=1e-14	agent0	solver_param	0	0
+exp027	crash	0	0	crash	FOURIER spectral solver, positive branch u_offset=1.0, 64 modes, 200 iter	agent1	solver_param	19	0
+exp028	3.50184125e-13	1.001296	1.000019	discard	FOURIER spectral, pos branch u_offset=1.0, 64 modes, tol=1e-12	agent1	solver_param	0	-1.520844
+exp029	7.36934988e-14	1.001296	1.000019	discard	positive branch, Fourier spectral 32 modes, Newton tol=1e-12	agent0	solver_param	0	-1.520844
+exp030	3.19748230e-13	1.001296	-1.000019	discard	FOURIER spectral, neg branch u_offset=-1.0, 64 modes, tol=1e-12	agent1	solver_param	0	-1.520844
+exp031	7.36934988e-14	1.001296	-1.000019	discard	negative branch, Fourier spectral 32 modes, Newton tol=1e-12	agent0	solver_param	0	-1.520844
+exp032	1.58263841e-20	0.000000	-0.000000	discard	FOURIER spectral, trivial branch, 128 modes, tol=1e-12	agent1	solver_param	0	-0.000000
+exp033	0.00000000e+00	0.000000	0.000000	discard	trivial branch, Fourier spectral 32 modes, Newton tol=1e-12	agent0	solver_param	0	0.000000
+exp034	crash	0	0	crash	FOURIER spectral, pos branch, 128 modes, tol=1e-12	agent1	solver_param	0	0
+exp035	crash	0	0	crash	FOURIER spectral, pos branch u_offset=1.0, 32 modes, tol=1e-14	agent1	solver_param	1	0
+exp036	1.50766724e-13	1.001296	1.000019	discard	FOURIER spectral, pos branch u_offset=1.0, 32 modes, tol=1e-12	agent1	solver_param	0	-1.520844
+exp037	7.79052548e-14	1.001296	-1.000019	discard	FOURIER spectral, neg branch u_offset=-1.0, 32 modes, tol=1e-12	agent1	solver_param	1	-1.520844
+exp038	5.55111512e-17	1.001322	1.000049	discard	BREAKTHROUGH: Fourier spectral 1 mode, Newton tol=1e-14, residual~5.6e-17	agent0	solver_param	0	-1.520921
+exp039	1.09020246e-14	1.001296	-1.000019	discard	FOURIER spectral, neg branch u_offset=-1.0, 16 modes, tol=1e-12	agent1	solver_param	0	-1.520844
+exp040	5.55111512e-17	1.001322	-1.000049	discard	BREAKTHROUGH: Fourier spectral 1 mode, Newton tol=1e-14, negative branch	agent0	solver_param	0	-1.520921
+exp041	3.14121949e-14	1.001296	1.000019	discard	FOURIER spectral, pos branch u_offset=1.0, 16 modes, tol=1e-12	agent1	solver_param	0	-1.520844
+exp042	0.00000000e+00	0.000000	0.000000	discard	trivial branch, Fourier spectral 1 mode, Newton tol=1e-14	agent0	solver_param	0	0.000000
+exp043	2.00145301e-22	0.000000	0.000000	discard	FOURIER spectral, trivial branch, 16 modes, tol=1e-12	agent1	solver_param	1	0.000000
+exp044	1.02323070e-14	1.001296	1.000019	discard	FOURIER spectral, pos branch u_offset=1.0, 8 modes	agent1	solver_param	0	-1.520844
+exp045	3.88532027e-15	1.001296	-1.000019	discard	FOURIER spectral, neg branch u_offset=-1.0, 8 modes	agent1	solver_param	0	-1.520844
+exp046	3.62021453e-16	1.001296	-1.000019	discard	FOURIER spectral, neg branch u_offset=-1.0, 4 modes	agent1	solver_param	1	-1.520844
+exp047	8.69901540e-15	1.001296	1.000019	discard	FOURIER spectral, pos branch u_offset=1.0, 4 modes	agent1	solver_param	0	-1.520844
+exp048	5.20532678e-16	1.001296	-1.000019	discard	FOURIER spectral, neg branch, 3 modes	agent1	solver_param	0	-1.520844
+exp049	3.72380123e-16	1.001298	-1.000025	discard	FOURIER spectral, neg branch, 2 modes	agent1	solver_param	0	-1.520921
+exp050	1.59654222e-29	0.000000	-0.000000	discard	trivial branch via Fourier 1-mode, u_offset=0.3, residual~1.6e-29	agent0	solver_param	0	-0.000000
+exp051	8.74806584e-15	1.001296	-1.000019	discard	FOURIER neg branch, 4 modes, phase=pi for correct perturbation sign	agent1	initial_cond	0	-1.520844
+exp052	0.00000000e+00	0.000000	0.000000	discard	trivial branch via Fourier 1-mode, u_offset=0.2	agent0	solver_param	0	0.000000
+exp053	3.62021453e-16	1.001296	-1.000019	discard	FOURIER neg branch, 4 modes, newton_tol=1e-15	agent1	solver_param	1	-1.520844
+exp054	crash	0	0	crash	FOURIER neg branch, 5 modes	agent1	solver_param	0	0
+exp055	2.15079829e-15	1.001296	-1.000019	discard	FOURIER neg branch, 5 modes, tol=1e-14	agent1	solver_param	0	-1.520844
+exp056	1.96261557e-16	1.001296	1.000019	discard	FOURIER pos branch, 4 modes, tol=1e-15	agent1	solver_param	0	-1.520844
+exp057	5.55111512e-17	1.001322	1.000049	discard	positive branch BEST: Fourier 1-mode, amp=0, tol=1e-14	agent0	solver_param	0	-1.520921
+exp058	5.55111512e-17	1.001322	-1.000049	discard	negative branch BEST: Fourier 1-mode, amp=0, tol=1e-14	agent0	solver_param	0	-1.520921
+exp059	5.55111512e-17	1.001322	1.000049	discard	FOURIER pos branch, 1 mode, amp=0, tol=1e-15	agent1	solver_param	0	-1.520921
+exp060	5.55111512e-17	1.001322	-1.000049	discard	FOURIER neg branch, 1 mode, amp=0, tol=1e-15	agent1	solver_param	0	-1.520921
+exp061	0.00000000e+00	0.000000	0.000000	discard	FOURIER trivial branch, 1 mode, amp=0, tol=1e-15	agent1	solver_param	0	0.000000
+exp062	5.55111512e-17	1.001322	1.000049	discard	positive branch, u_offset=1.000218 (exact mean from scipy)	agent0	initial_cond	0	-1.520921
+exp063	5.11787527e-16	1.001322	1.000049	discard	positive branch, analytic IC: u=1+0.1*cos(θ) from perturbation theory	agent0	initial_cond	0	-1.520921
+exp064	2.60019365e-11	1.002503	1.000218	discard	positive branch, scipy baseline best: n=300, tol=1e-10, amp=0	agent0	solver_param	0	-1.523848
+exp065	0.00000000e+00	0.000000	0.000000	discard	BEST trivial: Fourier 1-mode, exact 0.0 residual	agent1	solver_param	0	0.000000
+exp066	5.55111512e-17	1.001322	1.000049	discard	BEST positive: Fourier 1-mode, 5.55e-17 residual	agent1	solver_param	0	-1.520921
+exp067	5.55111512e-17	1.001322	-1.000049	discard	BEST negative: Fourier 1-mode, 5.55e-17 residual	agent1	solver_param	0	-1.520921
+exp068	0.00000000e+00	0.000000	0.000000	discard	ablation: trivial branch, Fourier 8 modes for comparison	agent0	ablation	0	0.000000
+exp069	1.68652198e-18	0.000000	0.000000	discard	bifurcation edge: u_offset=0.474, near trivial-nontrivial boundary	agent0	branch_search	0	-0.000000
+exp070	1.85747253e-15	0.000000	0.000000	discard	scipy at bifurcation edge: u_offset=0.474	agent0	branch_search	0	-0.000000

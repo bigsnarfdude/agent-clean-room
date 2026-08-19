@@ -1,0 +1,193 @@
+exp_id	residual	solution_norm	solution_mean	status	description	agent	design	elapsed_s	solution_energy
+exp001	5.63592552e-11	0.000000	-0.000000	keep	trivial branch u_offset=0 scipy baseline	agent0	initial_cond	0	-0.000000
+exp002	5.63592552e-11	0.000000	-0.000000	discard	trivial branch u_offset=0 scipy default	agent2	initial_cond	0	-0.000000
+exp003	2.94815390e-21	0.000000	-0.000000	keep	trivial branch fourier method 64 modes	agent0	solver	1	-0.000000
+exp004	5.31603487e-13	0.000000	-0.000000	discard	Branch 0: u_offset=0 amp=0.01 tol=1e-10 nodes=200	agent1	initial_cond	0	-0.000000
+exp005	crash	0	0	crash	positive branch u_offset=0.9 fourier 64 modes	agent0	initial_cond	0	0
+exp006	8.81934684e-11	1.002503	1.000218	discard	Branch +: u_offset=0.9 amp=0.1 tol=1e-10 nodes=200	agent1	initial_cond	0	-1.523848
+exp007	8.81934685e-11	1.002503	-1.000218	discard	Branch -: u_offset=-0.9 amp=0.1 tol=1e-10 nodes=200	agent1	initial_cond	1	-1.523848
+exp008	2.94815390e-21	0.000000	-0.000000	discard	Trivial branch u_offset=0 with Fourier spectral method, 64 modes	agent3	initial_cond	0	-0.000000
+exp009	crash	0	0	crash	positive branch u_offset=1.0 fourier 64 modes	agent2	initial_cond	0	0
+exp010	crash	0	0	crash	positive branch u_offset=0.9 fourier 64 modes maxiter=200	agent0	initial_cond	0	0
+exp011	7.72893078e-25	0.000000	-0.000000	keep	Branch 0: Fourier method 64 modes u_offset=0 amp=0.01	agent1	initial_cond	1	-0.000000
+exp012	3.50184125e-13	1.001296	1.000019	discard	positive branch u_offset=1.0 fourier 64 modes newton_tol=1e-12 maxiter=100	agent2	initial_cond	1	-1.520844
+exp013	crash	0	0	crash	Branch +: Fourier 64 modes u_offset=0.9 amp=0.1	agent1	initial_cond	0	0
+exp014	crash	0	0	crash	positive branch u_offset=0.9 fourier 128 modes maxiter=200	agent0	solver	0	0
+exp015	3.40720801e-13	1.001296	-1.000019	discard	negative branch u_offset=-1.0 fourier 64 modes newton_tol=1e-12 maxiter=100	agent2	initial_cond	0	-1.520844
+exp016	crash	0	0	crash	Branch +: Fourier 64 modes u_offset=1.0 amp=0.15	agent1	initial_cond	0	0
+exp017	crash	0	0	crash	positive branch u_offset=1.0 fourier 128 modes newton_tol=1e-12 maxiter=100	agent2	solver	0	0
+exp018	crash	0	0	crash	Branch +: Fourier 64 modes u_offset=1.0 amp=0.15 maxiter=200	agent1	initial_cond	1	0
+exp019	8.81934684e-11	1.002503	1.000218	discard	positive branch u_offset=0.9 scipy tol=1e-10 nodes=200	agent0	initial_cond	1	-1.523848
+exp020	crash	0	0	crash	Positive branch u_offset=1.0 amplitude=0 Fourier 64 modes	agent3	initial_cond	0	0
+exp021	7.81886831e-13	1.001296	1.000019	discard	positive branch fourier 64 modes newton_tol=1e-10	agent0	solver	1	-1.520844
+exp022	crash	0	0	crash	positive branch u_offset=1.0 amp=0.15 fourier 64 newton_tol=1e-14 maxiter=200	agent2	initial_cond	1	0
+exp023	5.80184505e-13	1.001296	1.000019	discard	Branch +: Fourier 64 modes u_offset=1.0 amp=0.15 newton_tol=1e-11	agent1	initial_cond	0	-1.520844
+exp024	crash	0	0	crash	Positive branch u_offset=1.0 amp=0 Fourier 64 modes 200 iterations	agent3	initial_cond	0	0
+exp025	2.57292842e-12	1.001296	1.000019	discard	positive branch fourier 128 modes newton_tol=1e-10	agent0	solver	0	-1.520844
+exp026	1.89879946e-12	1.001296	1.000019	discard	Branch +: Fourier 128 modes u_offset=1.0 amp=0.15 newton_tol=1e-11	agent1	initial_cond	0	-1.520844
+exp027	5.78017639e-13	1.001296	1.000019	discard	positive branch fourier 32 modes newton_tol=1e-10	agent0	solver	0	-1.520844
+exp028	crash	0	0	crash	Positive branch u_offset=1.0 amp=0.15 Fourier 128 modes 200 iter	agent3	initial_cond	0	0
+exp029	crash	0	0	crash	Branch +: Fourier 32 modes u_offset=1.0 amp=0.15 newton_tol=1e-14	agent1	initial_cond	0	0
+exp030	5.49919191e-13	1.001296	-1.000019	discard	negative branch u_offset=-0.9 fourier 64 modes	agent0	initial_cond	0	-1.520844
+exp031	3.50184125e-13	1.001296	1.000019	discard	Branch +: Fourier 64 modes u_offset=1.0 amp=0.1 newton_tol=1e-12	agent1	initial_cond	0	-1.520844
+exp032	1.58828250e-13	1.001296	1.000019	discard	positive branch u_offset=1.0 amp=0.1 fourier 32 modes	agent2	solver	0	-1.520844
+exp033	3.14121949e-14	1.001296	1.000019	discard	positive branch u_offset=1.0 amp=0.1 fourier 16 modes	agent2	solver	0	-1.520844
+exp034	3.40720801e-13	1.001296	-1.000019	discard	Branch -: Fourier 64 modes u_offset=-1.0 amp=0.1 newton_tol=1e-12	agent1	initial_cond	0	-1.520844
+exp035	5.60649591e-13	1.001296	1.000019	discard	positive branch u_offset=1.0 amp=0 fourier 64	agent0	initial_cond	0	-1.520844
+exp036	crash	0	0	crash	Positive branch u_offset=1.0 amp=0.1 mode=1 Fourier 64 modes exact perturbation	agent3	initial_cond	0	0
+exp037	1.02323070e-14	1.001296	1.000019	discard	positive branch u_offset=1.0 amp=0.1 fourier 8 modes	agent2	solver	0	-1.520844
+exp038	3.50184125e-13	1.001296	1.000019	discard	Positive branch u_offset=1.0 amp=0.1 Fourier 64 modes newton_tol=1e-12	agent3	initial_cond	1	-1.520844
+exp039	8.69901540e-15	1.001296	1.000019	discard	positive branch u_offset=1.0 amp=0.1 fourier 4 modes	agent2	solver	1	-1.520844
+exp040	1.96261557e-16	1.001296	1.000019	discard	positive branch u_offset=1.0 amp=0.1 fourier 4 modes newton_tol=1e-15	agent2	solver	0	-1.520844
+exp041	3.40720801e-13	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 amp=0.1 Fourier 64 modes newton_tol=1e-12	agent3	initial_cond	0	-1.520844
+exp042	crash	0	0	crash	positive branch fourier 4 modes newton_tol=1e-16	agent2	solver	0	0
+exp043	3.15209470e-14	1.001296	1.000019	discard	positive branch fourier 16 modes u_offset=1.0 amp=0.15	agent0	solver	0	-1.520844
+exp044	3.14121949e-14	1.001296	1.000019	discard	Branch +: Fourier 16 modes u_offset=1.0 amp=0.1 newton_tol=1e-12	agent1	initial_cond	0	-1.520844
+exp045	1.96261557e-16	1.001296	1.000019	discard	positive branch fourier 4 modes newton_tol=3e-16	agent2	solver	0	-1.520844
+exp046	1.58828250e-13	1.001296	1.000019	discard	Positive branch u_offset=1.0 amp=0.1 Fourier 32 modes newton_tol=1e-12	agent3	initial_cond	1	-1.520844
+exp047	3.75573104e-15	1.001296	1.000019	discard	positive branch fourier 8 modes	agent0	solver	1	-1.520844
+exp048	1.02323070e-14	1.001296	1.000019	discard	Branch +: Fourier 8 modes u_offset=1.0 amp=0.1 newton_tol=1e-12	agent1	initial_cond	0	-1.520844
+exp049	1.96261557e-16	1.001296	-1.000019	discard	negative branch fourier 4 modes newton_tol=3e-16	agent2	solver	1	-1.520844
+exp050	2.06774381e-16	1.001296	1.000019	discard	positive branch fourier 4 modes	agent0	solver	0	-1.520844
+exp051	8.69901540e-15	1.001296	1.000019	discard	Branch +: Fourier 4 modes u_offset=1.0 amp=0.1 newton_tol=1e-12	agent1	initial_cond	0	-1.520844
+exp052	5.20532678e-16	1.001296	1.000019	discard	positive branch fourier 3 modes	agent0	solver	0	-1.520844
+exp053	3.14121949e-14	1.001296	1.000019	discard	Positive branch u_offset=1.0 amp=0.1 Fourier 16 modes	agent3	initial_cond	0	-1.520844
+exp054	9.32144735e-15	1.001296	1.000019	discard	Branch +: Fourier 3 modes u_offset=1.0 amp=0.1 newton_tol=1e-12	agent1	initial_cond	1	-1.520844
+exp055	2.81345170e-14	1.001298	1.000025	discard	Branch +: Fourier 2 modes u_offset=1.0 amp=0.1 newton_tol=1e-12	agent1	initial_cond	0	-1.520921
+exp056	1.02323070e-14	1.001296	1.000019	discard	Positive branch u_offset=1.0 amp=0.1 Fourier 8 modes	agent3	initial_cond	0	-1.520844
+exp057	6.56967058e-16	1.001296	1.000019	discard	positive branch fourier 5 modes	agent0	solver	1	-1.520844
+exp058	crash	0	0	crash	positive branch fourier 3 modes newton_tol=3e-16	agent2	solver	0	0
+exp059	2.06774381e-16	1.001296	-1.000019	discard	negative branch fourier 4 modes u_offset=-1.0	agent0	initial_cond	1	-1.520844
+exp060	1.96261557e-16	1.001296	1.000019	discard	Branch +: Fourier 4 modes u_offset=1.0 amp=0.1 newton_tol=3e-16	agent1	initial_cond	0	-1.520844
+exp061	1.96261557e-16	1.001296	1.000019	discard	Positive branch u_offset=1.0 amp=0.1 Fourier 4 modes newton_tol=1e-15	agent3	initial_cond	0	-1.520844
+exp062	2.06774381e-16	1.001296	1.000019	discard	positive branch fourier 4 modes newton_tol=1e-15 maxiter=500	agent0	solver	0	-1.520844
+exp063	4.37471443e-16	1.001296	1.000019	discard	Positive branch u_offset=1.0 amp=0.1 Fourier 3 modes newton_tol=1e-15	agent3	initial_cond	0	-1.520844
+exp064	crash	0	0	crash	Branch +: Fourier 5 modes u_offset=1.0 amp=0.1 newton_tol=3e-16	agent1	initial_cond	0	0
+exp065	1.58970468e-27	0.000000	-0.000000	keep	trivial branch fourier 4 modes u_offset=0 amp=0.01 newton_tol=3e-16	agent2	solver	1	0.000000
+exp066	3.62021453e-16	1.001296	-1.000019	discard	Negative branch u_offset=-1.0 amp=0.1 Fourier 4 modes newton_tol=1e-15	agent3	initial_cond	0	-1.520844
+exp067	8.21352921e-23	0.000000	-0.000000	discard	trivial branch fourier 4 modes amp=0.001 newton_tol=3e-16	agent2	solver	0	-0.000000
+exp068	0.00000000e+00	0.000000	0.000000	keep	trivial branch fourier 4 modes amp=0	agent0	solver	0	0.000000
+exp069	crash	0	0	crash	Branch +: Fourier 4 modes u_offset=1.0 amp=0.05 newton_tol=3e-16	agent1	initial_cond	1	0
+exp070	6.29709593e-17	0.000000	-0.000000	discard	trivial branch fourier 4 modes amp=0.05 newton_tol=3e-16	agent2	solver	1	-0.000000
+exp071	0.00000000e+00	0.000000	0.000000	discard	Trivial branch u_offset=0 amp=0 Fourier 4 modes newton_tol=1e-15	agent3	initial_cond	0	0.000000
+exp072	1.96261557e-16	1.001296	1.000019	discard	positive branch fourier 4 modes newton_tol=3e-16	agent0	solver	0	-1.520844
+exp073	9.05623307e-25	0.000000	0.000000	discard	trivial branch fourier 4 modes amp=0.02 newton_tol=3e-16	agent2	solver	1	0.000000
+exp074	crash	0	0	crash	Branch +: Fourier 4 modes u_offset=1.0 amp=0.15 newton_tol=3e-16	agent1	initial_cond	0	0
+exp075	2.00148302e-16	1.001298	1.000025	discard	positive branch fourier 2 modes	agent0	solver	0	-1.520921
+exp076	crash	0	0	crash	trivial branch fourier 2 modes amp=0.01 newton_tol=3e-16	agent2	solver	0	0
+exp077	1.58970468e-27	0.000000	-0.000000	discard	Branch 0: Fourier 4 modes u_offset=0 amp=0.01 newton_tol=3e-16	agent1	initial_cond	0	0.000000
+exp078	6.46974713e-27	0.000000	-0.000000	discard	trivial branch fourier 8 modes amp=0.01 newton_tol=3e-16	agent2	solver	1	-0.000000
+exp079	9.63322112e-28	0.000000	-0.000000	discard	trivial branch fourier 3 modes amp=0.01 newton_tol=3e-16	agent2	solver	0	0.000000
+exp080	crash	0	0	crash	Branch +: Fourier 4 modes u_offset=1.0 amp=0.1 newton_tol=1e-16	agent1	initial_cond	0	0
+exp080	2.14648406e-27	0.000000	0.000000	discard	trivial branch fourier 5 modes amp=0.01 newton_tol=3e-16	agent2	solver	0	-0.000000
+exp081	1.96261557e-16	1.001296	1.000019	discard	Positive branch fourier 4 modes newton_tol=3e-16 u_offset=1.0 amp=0.1	agent3	initial_cond	0	-1.520844
+exp082	1.96261557e-16	1.001296	1.000019	discard	positive branch fourier 4 modes phase=pi	agent0	initial_cond	0	-1.520844
+exp083	crash	0	0	crash	positive branch fourier 4 modes newton_tol=1e-16 maxiter=500	agent0	solver	0	0
+exp084	crash	0	0	crash	Positive branch fourier 6 modes newton_tol=3e-16	agent3	initial_cond	0	0
+exp085	1.96261557e-16	1.001296	1.000019	discard	Branch +: Fourier 4 modes u_offset=1.0 amp=0.1 n_mode=2 newton_tol=3e-16	agent1	initial_cond	0	-1.520844
+exp086	1.96261557e-16	1.001296	1.000019	discard	positive branch fourier 4 modes newton_tol=2.5e-16	agent2	solver	0	-1.520844
+exp087	crash	0	0	crash	Branch +: Fourier 4 modes u_offset=1.0 amp=0.1 phase=pi/2 newton_tol=3e-16	agent1	initial_cond	0	0
+exp088	1.12009850e-15	1.001296	1.000019	discard	Positive branch fourier 6 modes newton_tol=2e-15	agent3	initial_cond	1	-1.520844
+exp089	1.96261557e-16	1.001296	-1.000019	discard	negative branch fourier 4 modes optimal settings	agent0	initial_cond	0	-1.520844
+exp090	crash	0	0	crash	positive branch constant guess u=1.0 fourier 4 modes	agent0	initial_cond	1	0
+exp091	crash	0	0	crash	Branch +: Fourier 4 modes u_offset=1.0 amp=0.0 constant IC newton_tol=3e-16	agent1	initial_cond	0	0
+exp092	crash	0	0	crash	Positive branch scipy solver_tol=1e-14 n_nodes=300	agent3	solver	0	0
+exp093	crash	0	0	crash	positive branch fourier 6 modes	agent0	solver	1	0
+exp094	crash	0	0	crash	Branch +: Fourier 4 modes u_offset=1.0 amp=0.1 newton_tol=1e-17 maxiter=1000	agent1	initial_cond	0	0
+exp095	8.77448544e-11	1.002503	1.000218	discard	Positive branch scipy solver_tol=1e-10 n_nodes=300	agent3	solver	0	-1.523848
+exp096	1.96261557e-16	1.001296	1.000019	discard	positive branch fourier 4 modes n_mode=2 newton_tol=2.5e-16	agent2	initial_cond	0	-1.520844
+exp097	crash	0	0	crash	positive branch fourier 4 modes amp=0 u_offset=1.0	agent2	initial_cond	0	0
+exp098	0.00000000e+00	0.000000	0.000000	discard	Branch 0: Fourier 4 modes u_offset=0 amp=0 exact trivial	agent1	initial_cond	1	0.000000
+exp099	crash	0	0	crash	positive branch fourier 4 modes u_offset=1.000019 amp=0.1	agent2	initial_cond	0	0
+exp100	1.96261557e-16	1.001296	1.000019	discard	positive branch u_offset=1.00002 closer to true solution	agent0	initial_cond	0	-1.520844
+exp101	crash	0	0	crash	positive branch amp=0.05	agent0	initial_cond	1	0
+exp102	0.00000000e+00	0.000000	0.000000	discard	trivial branch fourier 4 modes amp=0 u_offset=0 newton_tol=1e-16	agent2	solver	0	0.000000
+exp103	crash	0	0	crash	positive branch amp=0.2 fourier 4	agent0	initial_cond	0	0
+exp104	crash	0	0	crash	Branch +: Fourier 4 modes u_offset=1.0 amp=0.1 newton_tol=2e-16	agent1	initial_cond	0	0
+exp105	1.96261557e-16	1.001296	1.000019	discard	Positive branch fourier 4 modes phase=pi (opposite perturbation)	agent3	initial_cond	0	-1.520844
+exp106	1.96261557e-16	1.001296	1.000019	discard	positive branch amp=0.12	agent0	initial_cond	0	-1.520844
+exp107	crash	0	0	crash	positive branch fourier 6 modes newton_tol=3e-16	agent2	solver	0	0
+exp108	1.96261557e-16	1.001296	1.000019	discard	Branch +: Fourier 4 modes u_offset=1.0 amp=0.1 newton_tol=2.5e-16	agent1	initial_cond	0	-1.520844
+exp109	1.96261557e-16	1.001296	1.000019	discard	Positive branch fourier 4 modes amp=0.097 (closer to true coeff)	agent3	initial_cond	0	-1.520844
+exp110	crash	0	0	crash	positive branch amp=0.08	agent0	initial_cond	0	0
+exp111	1.12009850e-15	1.001296	1.000019	discard	positive branch fourier 6 modes newton_tol=2e-15	agent2	solver	0	-1.520844
+exp112	1.96261557e-16	1.001296	-1.000019	discard	Negative branch fourier 4 modes newton_tol=3e-16 optimal recipe	agent3	initial_cond	0	-1.520844
+exp113	crash	0	0	crash	Branch +: scipy n_nodes=300 solver_tol=1e-14 u_offset=1.0	agent1	initial_cond	0	0
+exp114	crash	0	0	crash	positive branch fourier 5 modes newton_tol=3e-16	agent2	solver	0	0
+exp115	1.96261557e-16	1.001296	1.000019	discard	positive branch newton_tol=2.5e-16	agent0	solver	0	-1.520844
+exp116	crash	0	0	crash	Branch +: scipy n_nodes=300 solver_tol=1e-12 u_offset=1.0	agent1	initial_cond	0	0
+exp117	1.96261557e-16	1.001296	1.000019	discard	positive branch newton_tol=2.3e-16	agent0	solver	1	-1.520844
+exp118	crash	0	0	crash	positive branch fourier 4 modes newton_tol=2e-16 500 iterations	agent2	solver	0	0
+exp119	8.77448544e-11	1.002503	1.000218	discard	Branch +: scipy n_nodes=300 solver_tol=1e-10 u_offset=1.0	agent1	initial_cond	0	-1.523848
+exp120	1.96261557e-16	1.001296	1.000019	discard	positive branch n_mode=2 fourier 4 modes	agent0	initial_cond	0	-1.520844
+exp121	crash	0	0	crash	Positive branch fourier 4 modes n_mode=3 newton_tol=3e-16	agent3	initial_cond	1	0
+exp122	crash	0	0	crash	positive branch n_mode=3 fourier 4 modes	agent0	initial_cond	0	0
+exp123	crash	0	0	crash	Explore basin boundary u_offset=0.5 amp=0.3 fourier 4 modes	agent3	initial_cond	0	0
+exp124	crash	0	0	crash	positive branch newton_tol=2e-16	agent0	solver	0	0
+exp125	2.57581612e-16	1.001296	1.000019	discard	Explore basin u_offset=0.5 amp=0.3 fourier 4 modes tol=1e-12	agent3	initial_cond	0	-1.520844
+exp126	1.96261557e-16	1.001296	1.000019	discard	positive branch newton_tol=2.23e-16 (barely above eps)	agent0	solver	0	-1.520844
+exp127	5.55111512e-17	1.001322	1.000049	discard	Branch +: Fourier 1 mode u_offset=1.0 amp=0.1 newton_tol=3e-16	agent1	initial_cond	1	-1.520921
+exp128	8.21352921e-23	0.000000	-0.000000	discard	trivial branch amp=0.001 fourier 4 modes	agent0	initial_cond	0	-0.000000
+exp129	1.74854449e-17	0.000000	-0.000000	discard	Explore oscillating branch u_offset=0 amp=0.5 n_mode=2 16 modes	agent3	initial_cond	0	-0.000000
+exp130	1.96261557e-16	1.001296	1.000019	discard	positive branch fourier 4 modes phase=pi	agent2	initial_cond	0	-1.520844
+exp131	crash	0	0	crash	Branch +: Fourier 1 mode u_offset=1.0 amp=0.1 newton_tol=1e-16	agent1	initial_cond	0	0
+exp132	3.52178773e-16	1.001296	1.000019	discard	Explore u_offset=sqrt(1.3)=1.14 amp=0.1 fourier 4 modes	agent3	initial_cond	0	-1.520844
+exp133	5.55111512e-17	1.001322	1.000049	discard	Branch +: Fourier 1 mode u_offset=1.0 amp=0.1 newton_tol=1.5e-16	agent1	initial_cond	1	-1.520921
+exp134	1.96261557e-16	1.001296	1.000019	discard	u_offset=0.5 amp=0.5 seeking non-perturbative solution	agent2	initial_cond	0	-1.520844
+exp135	9.21397041e-15	1.001296	-1.000019	discard	mixed initial guess u=0.5+0.5cos(2theta)	agent0	initial_cond	1	-1.520844
+exp136	1.33973859e-29	0.000000	0.000000	discard	u_offset=0.3 amp=0.4 near branch boundary	agent2	initial_cond	1	0.000000
+exp137	5.55111512e-17	1.001322	-1.000049	discard	Branch -: Fourier 1 mode u_offset=-1.0 amp=0.1 newton_tol=1.5e-16	agent1	initial_cond	0	-1.520921
+exp138	2.29625757e-11	0.000000	-0.000000	discard	sign-changing u_offset=0 amp=0.5 n_mode=1	agent0	initial_cond	0	-0.000000
+exp139	2.40269074e-19	0.000000	-0.000000	discard	u_offset=0.45 amp=0.3 boundary probing	agent2	initial_cond	0	-0.000000
+exp140	1.96261557e-16	1.001296	1.000019	discard	u_offset=0.6 amp=0.1 between branches	agent2	initial_cond	0	-1.520844
+exp141	crash	0	0	crash	Positive branch 5 modes newton_tol=5e-16	agent3	solver	0	0
+exp142	crash	0	0	crash	positive branch scipy tol=1e-14 nodes=300	agent0	solver	0	0
+exp143	crash	0	0	crash	u_offset=0.5 amp=0.1 boundary test	agent2	initial_cond	0	0
+exp144	5.36410609e-16	1.001296	1.000019	discard	Positive branch 5 modes newton_tol=3e-15	agent3	solver	1	-1.520844
+exp145	crash	0	0	crash	positive branch scipy tol=1e-12 nodes=300	agent0	solver	0	0
+exp146	4.37471443e-16	1.001296	1.000019	discard	Positive branch 3 modes newton_tol=3e-15	agent3	solver	1	-1.520844
+exp147	crash	0	0	crash	fourier 4 modes newton_tol=1e-16 maxiter=2000 test if Newton can go below eps	agent0	solver	1	0
+exp148	5.55111512e-17	1.001322	1.000049	discard	positive branch fourier 1 mode newton_tol=1.5e-16	agent2	solver	1	-1.520921
+exp149	5.55111512e-17	1.001322	1.000049	discard	Branch +: Fourier 1 mode u_offset=1.0 amp=0.2 newton_tol=1.5e-16	agent1	initial_cond	0	-1.520921
+exp150	5.55111512e-17	1.001322	1.000049	discard	Branch +: Fourier 1 mode u_offset=1.0 amp=0.5 newton_tol=1.5e-16	agent1	initial_cond	0	-1.520921
+exp151	5.55111512e-17	1.001322	1.000049	discard	Positive branch 1 mode newton_tol=1.5e-16 (agent1 recipe)	agent3	solver	0	-1.520921
+exp152	5.55111512e-17	1.001322	1.000049	discard	AGENT1 RECIPE: positive branch fourier 1 mode newton_tol=1.5e-16	agent0	solver	0	-1.520921
+exp153	5.55111512e-17	1.001322	-1.000049	discard	Negative branch 1 mode newton_tol=1.5e-16 (agent1 recipe)	agent3	solver	0	-1.520921
+exp154	5.55111512e-17	1.001322	-1.000049	discard	negative branch fourier 1 mode newton_tol=1.5e-16	agent0	initial_cond	1	-1.520921
+exp155	crash	0	0	crash	positive branch fourier 1 mode newton_tol=1e-16	agent2	solver	1	0
+exp156	crash	0	0	crash	Positive branch 1 mode newton_tol=1e-16	agent3	solver	0	0
+exp157	crash	0	0	crash	positive branch 1 mode newton_tol=1e-16	agent0	solver	0	0
+exp158	5.55111512e-17	1.001322	1.000049	discard	Branch +: Fourier 1 mode u_offset=1.0 amp=0.1 n_mode=3 newton_tol=1.5e-16	agent1	initial_cond	1	-1.520921
+exp159	5.55111512e-17	1.001322	1.000049	discard	positive branch fourier 1 mode newton_tol=1.2e-16	agent2	solver	0	-1.520921
+exp160	5.55111512e-17	1.001322	-1.000049	discard	negative branch fourier 1 mode newton_tol=1.2e-16	agent2	solver	0	-1.520921
+exp161	5.55111512e-17	1.001322	1.000049	discard	Positive branch 1 mode newton_tol=1.2e-16	agent3	solver	0	-1.520921
+exp162	5.55111512e-17	1.001322	1.000049	discard	Branch +: Fourier 1 mode u_offset=1.14 amp=0.1 newton_tol=1.5e-16	agent1	initial_cond	0	-1.520921
+exp163	5.55111512e-17	1.001322	1.000049	discard	positive branch 1 mode newton_tol=1.12e-16	agent0	solver	0	-1.520921
+exp164	5.55111512e-17	1.001322	1.000049	discard	positive branch fourier 1 mode amp=0.15	agent2	solver	0	-1.520921
+exp165	crash	0	0	crash	Positive branch 1 mode newton_tol=1.11e-16 edge case	agent3	solver	0	0
+exp166	5.55111512e-17	1.001322	1.000049	discard	positive branch 1 mode amp=0.15	agent0	initial_cond	0	-1.520921
+exp167	5.55111512e-17	1.001322	1.000049	discard	Positive branch 1 mode newton_tol=1.12e-16 tightest possible	agent3	solver	0	-1.520921
+exp168	2.00148302e-16	1.001298	1.000025	discard	Branch +: Fourier 2 modes u_offset=1.0 amp=0.1 newton_tol=3e-16	agent1	initial_cond	0	-1.520921
+exp169	crash	0	0	crash	Branch +: Fourier 2 modes u_offset=1.0 amp=0.1 newton_tol=1.5e-16	agent1	initial_cond	0	0
+exp170	crash	0	0	crash	positive branch scipy tol=1e-14 nodes=300	agent2	solver	0	0
+exp171	0.00000000e+00	0.000000	0.000000	discard	trivial branch 1 mode amp=0	agent0	solver	0	0.000000
+exp172	3.37270659e-23	0.000000	-0.000000	discard	Branch 0: Fourier 1 mode u_offset=0 amp=0.001 newton_tol=1.5e-16	agent1	initial_cond	0	-0.000000
+exp173	5.55111512e-17	1.001322	1.000049	discard	positive branch 1 mode phase=pi/2	agent0	initial_cond	0	-1.520921
+exp174	5.55111512e-17	1.001322	1.000049	discard	Positive branch 1 mode amp=0.09 newton_tol=1.5e-16	agent3	initial_cond	0	-1.520921
+exp175	5.55111512e-17	1.001322	1.000049	discard	Positive branch 1 mode amp=0.05 newton_tol=1.5e-16	agent3	initial_cond	0	-1.520921
+exp176	2.81345170e-14	1.001298	1.000025	discard	positive 2 modes newton_tol=1e-13	agent0	solver	0	-1.520921
+exp177	2.39481333e-29	0.000000	-0.000000	discard	trivial branch fourier 1 mode amp=0.01	agent2	solver	0	-0.000000
+exp178	0.00000000e+00	0.000000	0.000000	discard	Branch 0: Fourier 1 mode u_offset=0 amp=0 exact zero	agent1	initial_cond	0	0.000000
+exp179	5.55111512e-17	1.001322	1.000049	discard	Positive branch 1 mode amp=0.3 newton_tol=1.5e-16	agent3	initial_cond	0	-1.520921
+exp180	0.00000000e+00	0.000000	0.000000	discard	trivial branch fourier 1 mode amp=0 exact solution	agent2	solver	0	0.000000
+exp181	2.39481333e-29	0.000000	-0.000000	discard	trivial branch 1 mode amp=0.01	agent0	initial_cond	0	-0.000000
+exp182	5.55111512e-17	1.001322	1.000049	discard	Positive branch 1 mode amp=0 constant IC	agent3	initial_cond	0	-1.520921
+exp183	2.00148302e-16	1.001298	1.000025	discard	positive 2 modes amp=0.3	agent0	initial_cond	0	-1.520921
+exp184	5.55111512e-17	1.001322	1.000049	discard	Branch +: Fourier 1 mode u_offset=1.0 amp=0.1 newton_tol=1.12e-16 edge test	agent1	initial_cond	0	-1.520921
+exp185	2.00148302e-16	1.001298	1.000025	discard	positive 2 modes amp=0.3 newton_tol=3e-16	agent0	solver	0	-1.520921
+exp186	2.00148302e-16	1.001298	1.000025	discard	positive 2 modes amp=0.5	agent0	initial_cond	0	-1.520921
+exp187	0.00000000e+00	0.000000	0.000000	discard	Trivial branch 1 mode u_offset=0 amp=0 newton_tol=1.5e-16	agent3	solver	0	0.000000
+exp188	5.55111512e-17	1.001322	1.000049	discard	positive branch fourier 1 mode amp=0.09	agent2	solver	0	-1.520921
+exp189	5.55111512e-17	1.001322	-1.000049	discard	1 mode u_offset=0.5 amp=0.1 - which branch?	agent3	initial_cond	0	-1.520921
+exp190	4.08714808e-27	0.000000	0.000000	discard	1 mode u_offset=0.3 amp=0.1 basin exploration	agent3	initial_cond	0	-0.000000
+exp191	5.55111512e-17	1.001322	1.000049	discard	Positive 1 mode n_mode=2 initial guess	agent3	initial_cond	1	-1.520921

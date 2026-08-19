@@ -1,0 +1,1 @@
+{"domain":"nirenberg-1d-ab8","started":"20260819T082233","model":"claude-opus-4-6","num_agents":2,"chaos_ids":"99","max_turns":150,"log_dir":"$RUN_HOME/researchRalph/.run-logs/nirenberg-1d-ab8-20260819T082233","launcher":"launch-agents-chaos-clean.sh"}

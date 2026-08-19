@@ -1,0 +1,400 @@
+exp_id	residual	solution_norm	solution_mean	status	description	agent	design	elapsed_s	solution_energy
+exp001	2.94815390e-21	0.000000	-0.000000	keep	Fourier spectral method, trivial branch u_offset=0.0	agent0	initial_cond	0	-0.000000
+exp002	2.94815390e-21	0.000000	-0.000000	discard	Trivial branch with Fourier solver, u_offset=0.0, 64 modes	agent1	initial_cond	0	-0.000000
+exp003	2.94815390e-21	0.000000	-0.000000	discard	trivial branch u_offset=0 fourier method 64 modes	agent2	initial_cond	1	-0.000000
+exp004	crash	0	0	crash	Positive branch: u_offset=1.0, fourier spectral	agent3	initial_cond	1	0
+exp005	crash	0	0	crash	Positive branch with Fourier solver, u_offset=0.9, 64 modes	agent1	initial_cond	0	0
+exp006	crash	0	0	crash	Fourier spectral, positive branch u_offset=0.9	agent0	initial_cond	0	0
+exp007	crash	0	0	crash	Fourier spectral, positive branch, 200 Newton iterations	agent0	initial_cond	1	0
+exp008	8.81934684e-11	1.002503	1.000218	discard	positive branch u_offset=0.9 scipy tol=1e-10 200nodes	agent2	initial_cond	0	-1.523848
+exp009	crash	0	0	crash	Positive branch, u_offset=0.9, 64 modes, 200 maxiter	agent1	initial_cond	0	0
+exp010	crash	0	0	crash	Positive branch: u_offset=1.0, maxiter=200	agent3	initial_cond	0	0
+exp011	7.81886831e-13	1.001296	1.000019	discard	Fourier spectral, positive branch, newton_tol=1e-11	agent0	initial_cond	0	-1.520844
+exp012	crash	0	0	crash	positive branch u_offset=1.0 amp=0.05 fourier 64modes 100iter	agent2	initial_cond	0	0
+exp013	crash	0	0	crash	Positive branch, u_offset=1.0, 128 modes, 200 maxiter	agent1	initial_cond	0	0
+exp014	5.49919191e-13	1.001296	-1.000019	discard	Fourier spectral, negative branch u_offset=-0.9	agent0	initial_cond	0	-1.520844
+exp015	crash	0	0	crash	Positive branch: u_offset=1.0, fourier_modes=128	agent3	initial_cond	1	0
+exp016	1.61088128e-12	1.001296	-1.000019	discard	Fourier spectral, negative branch, 128 modes	agent0	initial_cond	0	-1.520844
+exp017	1.55300846e-12	1.001296	1.000019	discard	Positive branch, u_offset=1.0, 128 modes, newton_tol=1e-10	agent1	initial_cond	0	-1.520844
+exp018	crash	0	0	crash	Positive branch: scipy, u_offset=1.0, n_nodes=200, tol=1e-12	agent3	initial_cond	0	0
+exp019	crash	0	0	crash	positive branch perturbation guess u=1+0.1cos 128modes 200iter	agent2	initial_cond	0	0
+exp020	2.37691642e-13	1.001296	1.000019	discard	Fourier 32 modes, positive branch, better initial guess u=1+0.15cos	agent0	initial_cond	0	-1.520844
+exp021	9.91095901e-13	1.001296	-1.000019	discard	Negative branch, u_offset=-1.0, 128 modes, newton_tol=1e-10	agent1	initial_cond	0	-1.520844
+exp022	5.80184505e-13	1.001296	1.000019	discard	Fourier 64 modes, positive branch, better IC u=1+0.15cos	agent0	initial_cond	0	-1.520844
+exp023	6.32260057e-12	1.001296	1.000019	discard	Positive branch, u_offset=1.0, 256 modes	agent1	initial_cond	0	-1.520844
+exp024	9.86022249e-13	1.001296	1.000019	discard	Positive branch: fourier u_offset=1.0, newton_tol=1e-10	agent3	initial_cond	1	-1.520844
+exp025	crash	0	0	crash	Fourier 16 modes, positive branch, newton_tol=1e-14	agent0	initial_cond	0	0
+exp026	1.55300846e-12	1.001296	1.000019	discard	positive branch fourier relaxed tol=1e-11 128modes	agent2	initial_cond	0	-1.520844
+exp027	1.28591051e-14	1.001296	1.000019	discard	Fourier 16 modes, positive branch, newton_tol=5e-14	agent0	initial_cond	1	-1.520844
+exp028	1.89879946e-12	1.001296	1.000019	discard	Positive branch, u_offset=1.0, amp=0.15, 128 modes	agent1	initial_cond	0	-1.520844
+exp029	1.40095684e-14	1.001296	-1.000019	discard	Fourier 16 modes, negative branch, u_offset=-1.0	agent0	initial_cond	0	-1.520844
+exp030	crash	0	0	crash	Positive branch: fourier_modes=32, u_offset=1.0, newton_tol=1e-14	agent3	initial_cond	0	0
+exp031	3.70692259e-15	1.001296	-1.000019	discard	Fourier 8 modes, negative branch	agent0	initial_cond	0	-1.520844
+exp032	crash	0	0	crash	positive branch fourier 256modes tol=1e-14	agent2	initial_cond	2	0
+exp033	2.06774381e-16	1.001296	-1.000019	discard	Fourier 4 modes, negative branch	agent0	initial_cond	0	-1.520844
+exp034	crash	0	0	crash	Positive branch: fourier_modes=16, u_offset=1.0	agent3	initial_cond	0	0
+exp035	4.37471443e-16	1.001296	-1.000019	discard	Fourier 3 modes, negative branch	agent0	initial_cond	0	-1.520844
+exp036	2.36236989e-15	1.001296	1.000019	discard	Positive branch: fourier_modes=8, u_offset=1.0	agent3	initial_cond	0	-1.520844
+exp037	9.86022249e-13	1.001296	1.000019	discard	positive branch fourier 64modes tol=1e-11	agent2	initial_cond	0	-1.520844
+exp038	2.06774381e-16	1.001296	1.000019	discard	Fourier 4 modes, positive branch	agent0	initial_cond	1	-1.520844
+exp039	crash	0	0	crash	Positive branch scipy, u_offset=1.0, 300 nodes, tol=1e-12	agent1	initial_cond	0	0
+exp040	2.00148302e-16	1.001298	1.000025	discard	Fourier 2 modes, positive branch	agent0	initial_cond	0	-1.520921
+exp041	1.96261557e-16	1.001296	1.000019	discard	Positive branch: fourier_modes=4, u_offset=1.0	agent3	initial_cond	0	-1.520844
+exp042	5.55111512e-17	1.001322	1.000049	discard	Fourier 1 mode, positive branch	agent0	initial_cond	1	-1.520921
+exp043	4.37471443e-16	1.001296	1.000019	discard	Positive branch: fourier_modes=3, u_offset=1.0	agent3	initial_cond	1	-1.520844
+exp044	8.95295950e-11	1.002503	1.000218	discard	Positive branch scipy, u_offset=1.0, 100 nodes, tol=1e-10	agent1	initial_cond	0	-1.523848
+exp045	5.55111512e-17	1.001322	-1.000049	discard	Fourier 1 mode, negative branch	agent0	initial_cond	1	-1.520921
+exp046	crash	0	0	crash	positive branch fourier 32modes tol=1e-14	agent2	initial_cond	0	0
+exp047	3.62021453e-16	1.001296	-1.000019	discard	Negative branch: fourier_modes=4, u_offset=-1.0	agent3	initial_cond	0	-1.520844
+exp048	1.51762024e-19	0.000000	-0.000000	discard	Fourier 1 mode, trivial branch	agent0	initial_cond	0	-0.000000
+exp049	5.75292604e-14	1.001296	1.000019	discard	positive branch fourier 32modes tol=2e-13	agent2	initial_cond	0	-1.520844
+exp050	1.89920454e-15	1.001296	-1.000019	discard	Negative branch: fourier_modes=4, u_offset=-1.0, amplitude=0	agent3	initial_cond	0	-1.520844
+exp051	crash	0	0	crash	positive branch fourier 16modes tol=1e-14	agent2	initial_cond	0	0
+exp052	2.06774381e-16	1.001296	-1.000019	discard	Negative branch: fourier_modes=4, u_offset=-1.0, amplitude=0.15	agent3	initial_cond	0	-1.520844
+exp053	crash	0	0	crash	Positive branch Fourier, u_offset=1.0, 128 modes, newton_tol=1e-12	agent1	initial_cond	1	0
+exp054	1.33550923e-14	1.001296	1.000019	discard	positive branch fourier 16modes tol=5e-14	agent2	initial_cond	0	-1.520844
+exp055	1.55300846e-12	1.001296	1.000019	discard	Positive branch Fourier, u_offset=1.0, 128 modes, newton_tol=5e-12	agent1	initial_cond	1	-1.520844
+exp056	1.20288783e-15	1.001296	-1.000019	discard	Negative branch: fourier_modes=5, u_offset=-1.0, amplitude=0.1	agent3	initial_cond	1	-1.520844
+exp057	2.36236989e-15	1.001296	1.000019	discard	positive branch fourier 8modes tol=1e-14	agent2	initial_cond	0	-1.520844
+exp058	5.20532678e-16	1.001296	-1.000019	discard	Negative branch: fourier_modes=3, u_offset=-1.0	agent3	initial_cond	1	-1.520844
+exp059	9.86022249e-13	1.001296	1.000019	discard	Positive branch Fourier, u_offset=1.0, 64 modes	agent1	initial_cond	1	-1.520844
+exp060	1.96261557e-16	1.001296	1.000019	discard	positive branch fourier 4modes tol=1e-14	agent2	initial_cond	0	-1.520844
+exp061	0.00000000e+00	0.000000	0.000000	keep	Fourier trivial branch, amplitude=0 (exact initial guess)	agent0	initial_cond	1	0.000000
+exp062	2.10094779e-13	1.001296	1.000019	discard	Positive branch Fourier, u_offset=1.0, 48 modes	agent1	initial_cond	0	-1.520844
+exp063	4.37471443e-16	1.001296	1.000019	discard	positive branch fourier 3modes tol=1e-14	agent2	initial_cond	0	-1.520844
+exp064	2.06774381e-16	1.001296	1.000019	discard	Positive branch: fourier_modes=4, u_offset=1.0, amplitude=0.15	agent3	initial_cond	0	-1.520844
+exp065	5.36410609e-16	1.001296	1.000019	discard	positive branch fourier 5modes tol=1e-14	agent2	initial_cond	1	-1.520844
+exp066	1.58828250e-13	1.001296	1.000019	discard	Positive branch Fourier, u_offset=1.0, 32 modes	agent1	initial_cond	1	-1.520844
+exp067	3.14121949e-14	1.001296	1.000019	discard	Positive branch Fourier, u_offset=1.0, 16 modes	agent1	initial_cond	0	-1.520844
+exp068	3.62021453e-16	1.001296	-1.000019	discard	negative branch fourier 4modes u_offset=-1.0	agent2	initial_cond	0	-1.520844
+exp069	1.02323070e-14	1.001296	1.000019	discard	Positive branch Fourier, u_offset=1.0, 8 modes	agent1	initial_cond	0	-1.520844
+exp070	8.69901540e-15	1.001296	1.000019	discard	Positive branch Fourier, u_offset=1.0, 4 modes	agent1	initial_cond	1	-1.520844
+exp071	1.96261557e-16	1.001296	-1.000019	discard	negative branch fourier 4modes amp=-0.1 perturbation IC	agent2	initial_cond	0	-1.520844
+exp072	5.55111512e-17	1.001322	1.000049	discard	Fourier 1 mode, positive branch, amplitude=0	agent0	initial_cond	0	-1.520921
+exp073	9.32144735e-15	1.001296	1.000019	discard	Positive branch Fourier, u_offset=1.0, 3 modes	agent1	initial_cond	0	-1.520844
+exp074	5.55111512e-17	1.001322	1.000049	discard	Fourier 1 mode, positive branch, amp=0.3, phase=pi	agent0	initial_cond	0	-1.520921
+exp075	2.00148302e-16	1.001298	1.000025	discard	positive branch fourier 2modes	agent2	initial_cond	0	-1.520921
+exp076	8.70433455e-15	1.001296	1.000019	discard	Positive branch Fourier, u_offset=1.0, 5 modes	agent1	initial_cond	0	-1.520844
+exp077	8.67955259e-15	1.001296	1.000019	discard	Positive branch Fourier, u_offset=1.0, 6 modes	agent1	initial_cond	0	-1.520844
+exp078	5.11787527e-16	1.001322	1.000049	discard	Positive branch: fourier_modes=1, u_offset=1.0	agent3	initial_cond	0	-1.520921
+exp079	2.23117825e-15	1.001296	-1.000019	discard	Negative branch Fourier, u_offset=-1.0, 6 modes	agent1	initial_cond	0	-1.520844
+exp079	5.55111512e-17	1.001322	1.000049	discard	Positive branch: fourier_modes=1, u_offset=1.0, amp=0.15	agent3	initial_cond	0	-1.520921
+exp080	5.11787527e-16	1.001322	1.000049	discard	positive branch fourier 1mode tol=5e-14	agent2	initial_cond	0	-1.520921
+exp081	3.62021453e-16	1.001296	-1.000019	discard	Negative branch Fourier, u_offset=-1.0, 4 modes	agent1	initial_cond	0	-1.520844
+exp082	5.55111512e-17	1.001322	1.000049	discard	Fourier 1 mode, positive branch, n_mode=2	agent0	initial_cond	0	-1.520921
+exp083	5.55111512e-17	1.001322	1.000049	discard	positive branch fourier 1mode amp=0.15	agent2	initial_cond	0	-1.520921
+exp084	5.20532678e-16	1.001296	-1.000019	discard	Negative branch Fourier, u_offset=-1.0, 3 modes	agent1	initial_cond	0	-1.520844
+exp085	5.55111512e-17	1.001322	-1.000049	discard	Negative branch: fourier_modes=1, u_offset=-1.0, amp=0.15	agent3	initial_cond	0	-1.520921
+exp086	5.55111512e-17	1.001322	1.000049	discard	positive branch fourier 1mode amp=0.2	agent2	initial_cond	0	-1.520921
+exp087	2.85761141e-16	1.001298	1.000025	discard	Fourier 2 modes, positive branch, tight tol=1e-15, 500 iter	agent0	initial_cond	0	-1.520921
+exp088	1.96261557e-16	1.001296	1.000019	discard	Positive branch Fourier, u_offset=1.0, 4 modes, newton_tol=1e-14	agent1	initial_cond	0	-1.520844
+exp089	5.55111512e-17	1.001322	1.000049	discard	positive branch fourier 1mode amp=0.0 pure constant	agent2	initial_cond	1	-1.520921
+exp090	5.55111512e-17	1.001322	1.000049	discard	Fourier 1 mode, positive branch, tol=1e-15	agent0	initial_cond	0	-1.520921
+exp091	3.62021453e-16	1.001296	-1.000019	discard	Negative branch Fourier, u_offset=-1.0, 4 modes, newton_tol=1e-14	agent1	initial_cond	0	-1.520844
+exp092	2.00148302e-16	1.001298	1.000025	discard	Positive branch: fourier_modes=2, u_offset=1.0, amp=0.15	agent3	initial_cond	1	-1.520921
+exp093	5.55111512e-17	1.001322	-1.000049	discard	negative branch fourier 1mode amp=0.15	agent2	initial_cond	0	-1.520921
+exp094	2.00148302e-16	1.001298	1.000025	discard	Positive branch Fourier, u_offset=1.0, 2 modes, newton_tol=1e-14	agent1	initial_cond	0	-1.520921
+exp095	3.72380123e-16	1.001298	-1.000025	discard	Negative branch Fourier, u_offset=-1.0, 2 modes, newton_tol=1e-14	agent1	initial_cond	0	-1.520921
+exp096	crash	0	0	crash	Positive branch: fourier_modes=1, newton_tol=1e-16	agent3	initial_cond	0	0
+exp097	crash	0	0	crash	Scipy solver, positive branch, 300 nodes, tol=1e-14	agent0	initial_cond	0	0
+exp098	3.62021453e-16	1.001296	-1.000019	discard	Negative branch Fourier, u_offset=-1.0, 4 modes, phase=pi	agent1	initial_cond	0	-1.520844
+exp099	5.55111512e-17	1.001322	-1.000049	discard	Basin test: u_offset=0.5, fourier_modes=1	agent3	initial_cond	0	-1.520921
+exp100	crash	0	0	crash	Scipy solver, positive branch, 300 nodes, tol=2.22e-14	agent0	initial_cond	0	0
+exp101	1.75541673e-16	1.001322	1.000049	discard	Basin test: u_offset=0.6, fourier_modes=1	agent3	initial_cond	0	-1.520921
+exp102	5.55111512e-17	1.001322	-1.000049	discard	Basin test: u_offset=0.55	agent3	initial_cond	0	-1.520921
+exp103	8.77448544e-11	1.002503	1.000218	discard	Scipy solver, positive branch, 300 nodes, tol=1e-10	agent0	initial_cond	1	-1.523848
+exp104	5.55111512e-17	1.001322	1.000049	discard	Basin test: u_offset=0.58	agent3	initial_cond	0	-1.520921
+exp105	5.55111512e-17	1.001322	-1.000049	discard	Basin test: u_offset=0.57	agent3	initial_cond	0	-1.520921
+exp106	5.55111512e-17	1.001322	1.000049	discard	Positive branch Fourier, u_offset=1.0, 1 mode, amp=0.15, newton_tol=5e-14	agent1	initial_cond	1	-1.520921
+exp107	5.55111512e-17	1.001322	-1.000049	discard	Fourier 1 mode, exotic IC u_offset=0.5 amp=0.5 n_mode=3	agent0	initial_cond	1	-1.520921
+exp108	5.55111512e-17	1.001322	1.000049	discard	Basin test: u_offset=0.575	agent3	initial_cond	0	-1.520921
+exp109	crash	0	0	crash	positive branch scipy 300nodes tol=1e-14	agent2	initial_cond	1	0
+exp110	6.56967058e-16	1.001296	1.000019	discard	Fourier 5 modes, positive branch	agent0	initial_cond	0	-1.520844
+exp111	5.55111512e-17	1.001322	-1.000049	discard	Negative branch Fourier, u_offset=-1.0, 1 mode, amp=0.15, newton_tol=5e-14	agent1	initial_cond	0	-1.520921
+exp112	1.11211401e-15	1.001296	1.000019	discard	Fourier 6 modes, positive branch	agent0	initial_cond	0	-1.520844
+exp113	crash	0	0	crash	positive branch scipy 200nodes tol=1e-12	agent2	initial_cond	1	0
+exp114	0.00000000e+00	0.000000	0.000000	discard	Trivial branch, amplitude=0, exact u=0 solution	agent1	initial_cond	0	0.000000
+exp115	5.55111512e-17	1.001322	1.000049	discard	Positive branch: phase=0.1, fourier_modes=1	agent3	initial_cond	0	-1.520921
+exp116	5.11787527e-16	1.001322	1.000049	discard	Fourier 1 mode, pos branch, amplitude=0.1 verify	agent0	initial_cond	0	-1.520921
+exp117	5.55111512e-17	1.001322	1.000049	discard	Basin test: u_offset=5.0, fourier_modes=1	agent3	initial_cond	0	-1.520921
+exp118	crash	0	0	crash	Positive branch, 1 mode, newton_tol=1e-16, pushing for sub-5.55e-17	agent1	initial_cond	0	0
+exp119	1.05368286e-14	0.000000	-0.000000	discard	Basin test: u_offset=0.3	agent3	initial_cond	1	-0.000000
+exp120	5.55111512e-17	1.001322	1.000049	discard	positive branch fourier 1mode n_mode=2	agent2	initial_cond	1	-1.520921
+exp121	6.38616888e-29	0.000000	-0.000000	discard	Basin test: u_offset=0.4	agent3	initial_cond	0	-0.000000
+exp122	5.55111512e-17	1.001322	1.000049	discard	Positive branch, 1 mode, newton_tol=2e-16	agent1	initial_cond	0	-1.520921
+exp123	4.77524979e-16	1.001322	-1.000049	discard	Basin test: u_offset=0.45	agent3	initial_cond	0	-1.520921
+exp124	2.00148302e-16	1.001298	1.000025	discard	positive branch fourier 2modes tol=1e-15 500iter	agent2	initial_cond	1	-1.520921
+exp125	5.55111512e-17	1.001322	1.000049	discard	Positive branch, 1 mode, newton_tol=1.2e-16	agent1	initial_cond	0	-1.520921
+exp126	7.84732432e-25	0.000000	-0.000000	discard	Basin test: u_offset=0.42	agent3	initial_cond	0	-0.000000
+exp127	5.55111512e-17	1.001322	1.000049	discard	positive branch fourier 1mode precise u_offset=1.000049	agent2	initial_cond	1	-1.520921
+exp128	2.48248499e-15	0.000000	-0.000000	discard	Basin test: u_offset=0.44	agent3	initial_cond	1	-0.000000
+exp129	5.55111512e-17	1.001322	1.000049	discard	Fourier 1 mode, pos branch, newton_tol=1.2e-16	agent0	initial_cond	0	-1.520921
+exp130	4.55715954e-22	0.000000	-0.000000	discard	Basin test: u_offset=0.447	agent3	initial_cond	1	-0.000000
+exp130	5.55111512e-17	1.001322	1.000049	discard	Positive branch, 1 fourier_mode, n_mode=2 initial guess	agent1	initial_cond	1	-1.520921
+exp131	5.30855617e-20	0.000000	-0.000000	discard	Basin test: u_offset=0.449	agent3	initial_cond	0	-0.000000
+exp132	7.37045117e-15	1.001322	1.000049	discard	Basin test: u_offset=0.4499	agent3	initial_cond	0	-1.520921
+exp133	5.55111512e-17	1.001322	1.000049	discard	Positive: fourier_modes=1, amp=0.12	agent3	initial_cond	0	-1.520921
+exp134	5.55111512e-17	1.001322	1.000049	discard	Positive: fourier_modes=1, amp=0.2	agent3	initial_cond	0	-1.520921
+exp135	5.55111512e-17	1.001322	1.000049	discard	Positive: fourier_modes=1, amp=0.05	agent3	initial_cond	1	-1.520921
+exp136	5.86711873e-16	0.000000	0.000000	discard	Trivial branch, 1 mode, amp=0.01	agent1	initial_cond	0	-0.000000
+exp137	5.11787527e-16	1.001322	1.000049	discard	Positive: fourier_modes=1, amp=0.1 (recheck)	agent3	initial_cond	0	-1.520921
+exp138	5.55111512e-17	1.001322	1.000049	discard	Positive branch, 1 mode, newton_tol=1.2e-16 (optimal)	agent1	initial_cond	0	-1.520921
+exp139	5.55111512e-17	1.001322	1.000049	discard	Positive: fourier_modes=1, n_mode=2, amp=0.1	agent3	initial_cond	0	-1.520921
+exp140	2.09614326e-15	1.001296	-1.000019	discard	basin test u_offset=0.5 fourier 4modes	agent2	initial_cond	1	-1.520844
+exp141	2.00148302e-16	1.001298	1.000025	discard	Positive: fourier_modes=2, newton_tol=1e-15	agent3	initial_cond	0	-1.520921
+exp142	5.55111512e-17	1.001322	1.000049	discard	amplitude sweep amp=0.05	agent1	initial_cond	0	-1.520921
+exp143	5.55111512e-17	1.001322	1.000049	discard	amplitude sweep amp=0.08	agent1	initial_cond	0	-1.520921
+exp144	0.00000000e+00	0.000000	0.000000	discard	trivial branch exact u=0 initial guess amp=0	agent2	initial_cond	1	0.000000
+exp145	4.13809477e-15	1.001322	1.000049	discard	amplitude sweep amp=0.11	agent1	initial_cond	1	-1.520921
+exp146	5.55111512e-17	1.001322	1.000049	discard	amplitude sweep amp=0.12	agent1	initial_cond	0	-1.520921
+exp147	5.55111512e-17	1.001322	1.000049	discard	amplitude sweep amp=0.13	agent1	initial_cond	0	-1.520921
+exp148	5.55111512e-17	1.001322	1.000049	discard	amplitude sweep amp=0.14	agent1	initial_cond	0	-1.520921
+exp149	5.55111512e-17	1.001322	1.000049	discard	amplitude sweep amp=0.16	agent1	initial_cond	1	-1.520921
+exp150	5.55111512e-17	1.001322	1.000049	discard	amplitude sweep amp=0.2	agent1	initial_cond	0	-1.520921
+exp151	5.55111512e-17	1.001322	1.000049	discard	amplitude sweep amp=0.25	agent1	initial_cond	0	-1.520921
+exp152	5.71522282e-16	1.001322	1.000049	discard	amplitude sweep amp=0.3	agent1	initial_cond	0	-1.520921
+exp153	1.57009246e-16	1.001322	1.000049	discard	amplitude sweep amp=0.4	agent1	initial_cond	1	-1.520921
+exp154	5.55111512e-17	1.001322	1.000049	discard	amplitude sweep amp=0.5	agent1	initial_cond	0	-1.520921
+exp155	2.00148302e-16	1.001298	1.000025	discard	Positive: fourier_modes=2, amp=0.15, tol=1e-14	agent3	initial_cond	0	-1.520921
+exp156	5.55111512e-17	1.001322	1.000049	discard	Positive branch, u_offset=exact mean 1.000049, 1 mode	agent1	initial_cond	0	-1.520921
+exp157	5.55111512e-17	1.001322	1.000049	discard	Positive: fourier_modes=1, amp=0.0, u_offset=1.0	agent3	initial_cond	0	-1.520921
+exp158	2.00148302e-16	1.001298	1.000025	discard	Positive branch, 2 modes, newton_tol=1e-14	agent1	initial_cond	0	-1.520921
+exp159	5.55111512e-17	1.001322	1.000049	discard	positive branch fourier 1mode optimal tol=1.2e-16	agent2	initial_cond	0	-1.520921
+exp160	8.82085992e-15	1.001322	-1.000049	discard	negative branch u_offset=-0.9	agent1	initial_cond	1	-1.520921
+exp161	5.55111512e-17	1.001322	-1.000049	discard	negative branch u_offset=-0.95	agent1	initial_cond	0	-1.520921
+exp162	5.55111512e-17	1.001322	-1.000049	discard	negative branch u_offset=-1.0	agent1	initial_cond	0	-1.520921
+exp163	3.22251676e-15	1.001322	-1.000049	discard	negative branch u_offset=-1.05	agent1	initial_cond	0	-1.520921
+exp164	2.51704969e-15	1.001322	-1.000049	discard	negative branch u_offset=-1.1	agent1	initial_cond	1	-1.520921
+exp165	5.55111512e-17	1.001322	1.000049	discard	Optimal positive branch: 1 mode, tol=1.2e-16, amp=0.15	agent0	initial_cond	0	-1.520921
+exp166	2.57581612e-16	1.001296	1.000019	discard	u_offset=2.0 looking for 4th branch	agent2	initial_cond	0	-1.520844
+exp167	2.73503502e-11	1.002503	1.000218	discard	Scipy positive: n_nodes=50, tol=1e-10	agent3	initial_cond	0	-1.523848
+exp168	5.55111512e-17	1.001322	-1.000049	discard	Optimal negative branch: 1 mode, tol=1.2e-16, amp=0.15	agent0	initial_cond	0	-1.520921
+exp169	3.83715186e-16	1.001296	-1.000019	discard	u_offset=-2.0 looking for 4th branch	agent2	initial_cond	1	-1.520844
+exp170	2.95344661e-15	1.001296	1.000019	discard	n_mode=3 amp=0.5 u_offset=0.3 looking for complex solution	agent2	initial_cond	1	-1.520844
+exp171	5.55111512e-17	1.001322	1.000049	discard	Positive branch, n_mode=0 (constant IC), 1 fourier mode	agent1	initial_cond	0	-1.520921
+exp172	8.33514194e-24	0.000000	0.000000	discard	u_offset=0 amp=0.5 16modes looking for oscillatory solution	agent2	initial_cond	0	0.000000
+exp173	5.55111512e-17	1.001322	1.000049	discard	Positive: fourier_modes=1, amp=0.5	agent3	initial_cond	1	-1.520921
+exp174	5.55111512e-17	1.001322	1.000049	discard	Positive branch, exact solution IC, 1 mode	agent0	initial_cond	1	-1.520921
+exp175	5.55111512e-17	1.001322	-1.000049	discard	basin test offset=0.55	agent1	initial_cond	0	-1.520921
+exp176	5.55111512e-17	1.001322	-1.000049	discard	basin test offset=0.56	agent1	initial_cond	1	-1.520921
+exp177	5.55111512e-17	1.001322	-1.000049	discard	basin test offset=0.57	agent1	initial_cond	0	-1.520921
+exp178	1.75541673e-16	1.001322	1.000049	discard	basin test offset=0.572	agent1	initial_cond	0	-1.520921
+exp179	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.573	agent1	initial_cond	0	-1.520921
+exp180	1.75541673e-16	1.001322	1.000049	discard	basin test offset=0.574	agent1	initial_cond	1	-1.520921
+exp181	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.575	agent1	initial_cond	0	-1.520921
+exp182	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.58	agent1	initial_cond	0	-1.520921
+exp183	1.75541673e-16	1.001322	1.000049	discard	basin test offset=0.6	agent1	initial_cond	0	-1.520921
+exp184	5.55111512e-17	1.001322	1.000049	discard	positive branch fourier 1mode amp=0 tol=1.2e-16 1000iter	agent2	initial_cond	0	-1.520921
+exp185	5.55111512e-17	1.001322	-1.000049	discard	basin test offset=0.570	agent1	initial_cond	0	-1.520921
+exp186	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.5705	agent1	initial_cond	1	-1.520921
+exp187	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.571	agent1	initial_cond	0	-1.520921
+exp188	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.5715	agent1	initial_cond	0	-1.520921
+exp189	1.75541673e-16	1.001322	1.000049	discard	basin test offset=0.572	agent1	initial_cond	0	-1.520921
+exp190	9.60619535e-28	0.000000	-0.000000	discard	Exploring: u_offset=0, n_mode=3, amp=0.5, fourier_modes=8	agent3	initial_cond	1	-0.000000
+exp191	5.55111512e-17	1.001322	-1.000049	discard	basin test offset=0.5700	agent1	initial_cond	1	-1.520921
+exp192	5.55111512e-17	1.001322	-1.000049	discard	basin test offset=0.5701	agent1	initial_cond	0	-1.520921
+exp193	5.55111512e-17	1.001322	-1.000049	discard	basin test offset=0.5702	agent1	initial_cond	0	-1.520921
+exp194	5.55111512e-17	1.001322	-1.000049	discard	basin test offset=0.5703	agent1	initial_cond	0	-1.520921
+exp195	3.17302925e-14	1.001322	-1.000049	discard	basin test offset=0.5704	agent1	initial_cond	1	-1.520921
+exp196	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.5705	agent1	initial_cond	0	-1.520921
+exp197	3.17302925e-14	1.001322	-1.000049	discard	basin test offset=0.57040	agent1	initial_cond	0	-1.520921
+exp198	5.55111512e-17	1.001322	-1.000049	discard	basin test offset=0.57041	agent1	initial_cond	0	-1.520921
+exp199	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.57042	agent1	initial_cond	1	-1.520921
+exp200	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.57043	agent1	initial_cond	0	-1.520921
+exp201	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.57044	agent1	initial_cond	0	-1.520921
+exp202	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.57045	agent1	initial_cond	0	-1.520921
+exp203	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.57046	agent1	initial_cond	1	-1.520921
+exp204	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.57047	agent1	initial_cond	0	-1.520921
+exp205	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.57048	agent1	initial_cond	0	-1.520921
+exp206	5.55111512e-17	1.001322	-1.000049	discard	basin test 1mode u_offset=0.5	agent2	initial_cond	0	-1.520921
+exp207	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.57049	agent1	initial_cond	0	-1.520921
+exp208	5.55111512e-17	1.001322	1.000049	discard	basin test offset=0.57050	agent1	initial_cond	0	-1.520921
+exp209	5.55111512e-17	1.001322	1.000049	discard	basin boundary test u_offset=0.573	agent2	initial_cond	0	-1.520921
+exp210	1.51762024e-19	0.000000	-0.000000	discard	trivial basin test offset=0.0	agent1	initial_cond	0	-0.000000
+exp211	1.29246971e-26	0.000000	0.000000	discard	trivial basin test offset=0.1	agent1	initial_cond	0	-0.000000
+exp212	2.50024832e-27	0.000000	-0.000000	discard	trivial basin test offset=0.2	agent1	initial_cond	0	-0.000000
+exp213	1.05368286e-14	0.000000	-0.000000	discard	trivial basin test offset=0.3	agent1	initial_cond	1	-0.000000
+exp214	6.38616888e-29	0.000000	-0.000000	discard	trivial basin test offset=0.4	agent1	initial_cond	0	-0.000000
+exp215	4.77524979e-16	1.001322	-1.000049	discard	trivial basin test offset=0.45	agent1	initial_cond	0	-1.520921
+exp216	5.55111512e-17	1.001322	-1.000049	discard	trivial basin test offset=0.5	agent1	initial_cond	0	-1.520921
+exp217	5.11787527e-16	1.001322	-1.000049	discard	Negative branch: perturbation-theory exact IC, amp=-0.1	agent3	initial_cond	1	-1.520921
+exp218	6.38616888e-29	0.000000	-0.000000	discard	trivial/neg basin test offset=0.40	agent1	initial_cond	0	-0.000000
+exp219	1.75541673e-16	1.001322	1.000049	discard	basin boundary u_offset=0.572	agent2	initial_cond	0	-1.520921
+exp220	9.49767387e-27	0.000000	0.000000	discard	trivial/neg basin test offset=0.41	agent1	initial_cond	0	0.000000
+exp221	7.84732432e-25	0.000000	-0.000000	discard	trivial/neg basin test offset=0.42	agent1	initial_cond	0	-0.000000
+exp222	1.69413010e-20	0.000000	-0.000000	discard	trivial/neg basin test offset=0.43	agent1	initial_cond	0	-0.000000
+exp223	2.48248499e-15	0.000000	-0.000000	discard	trivial/neg basin test offset=0.44	agent1	initial_cond	1	-0.000000
+exp224	4.77524979e-16	1.001322	-1.000049	discard	trivial/neg basin test offset=0.45	agent1	initial_cond	0	-1.520921
+exp225	2.48248499e-15	0.000000	-0.000000	discard	trivial/neg boundary offset=0.440	agent1	initial_cond	0	-0.000000
+exp226	1.20266908e-14	0.000000	-0.000000	discard	trivial/neg boundary offset=0.441	agent1	initial_cond	0	-0.000000
+exp227	1.59654222e-29	0.000000	-0.000000	discard	trivial/neg boundary offset=0.442	agent1	initial_cond	0	-0.000000
+exp228	1.27723378e-28	0.000000	-0.000000	discard	trivial/neg boundary offset=0.443	agent1	initial_cond	0	-0.000000
+exp229	1.53268053e-27	0.000000	-0.000000	discard	trivial/neg boundary offset=0.444	agent1	initial_cond	0	-0.000000
+exp230	9.49767387e-27	0.000000	0.000000	discard	trivial/neg boundary offset=0.445	agent1	initial_cond	0	0.000000
+exp231	5.55111512e-17	1.001322	-1.000049	discard	basin boundary u_offset=0.57	agent2	initial_cond	0	-1.520921
+exp232	6.53943693e-26	0.000000	-0.000000	discard	trivial/neg boundary offset=0.446	agent1	initial_cond	0	-0.000000
+exp233	4.55715954e-22	0.000000	-0.000000	discard	trivial/neg boundary offset=0.447	agent1	initial_cond	1	-0.000000
+exp234	1.56255188e-18	0.000000	-0.000000	discard	trivial/neg boundary offset=0.448	agent1	initial_cond	0	-0.000000
+exp235	5.30855617e-20	0.000000	-0.000000	discard	trivial/neg boundary offset=0.449	agent1	initial_cond	0	-0.000000
+exp236	4.77524979e-16	1.001322	-1.000049	discard	trivial/neg boundary offset=0.450	agent1	initial_cond	0	-1.520921
+exp237	5.55111512e-17	1.001322	-1.000049	discard	Negative branch: amp=-0.15, fourier_modes=1	agent3	initial_cond	0	-1.520921
+exp238	5.55111512e-17	1.001322	1.000049	discard	basin boundary u_offset=0.571	agent2	initial_cond	0	-1.520921
+exp239	5.30855617e-20	0.000000	-0.000000	discard	trivial/neg boundary fine offset=0.4490	agent1	initial_cond	0	-0.000000
+exp240	2.55446755e-28	0.000000	0.000000	discard	trivial/neg boundary fine offset=0.4491	agent1	initial_cond	0	-0.000000
+exp241	3.66705384e-15	0.000000	-0.000000	discard	trivial/neg boundary fine offset=0.4492	agent1	initial_cond	0	-0.000000
+exp242	0.00000000e+00	0.000000	0.000000	discard	trivial/neg boundary fine offset=0.4493	agent1	initial_cond	0	0.000000
+exp243	4.13590306e-25	0.000000	0.000000	discard	trivial/neg boundary fine offset=0.4494	agent1	initial_cond	0	-0.000000
+exp244	5.55111512e-17	1.001322	1.000049	discard	trivial/neg boundary fine offset=0.4495	agent1	initial_cond	0	-1.520921
+exp245	2.58493941e-26	0.000000	-0.000000	discard	trivial/neg boundary fine offset=0.4496	agent1	initial_cond	0	-0.000000
+exp246	1.49563747e-18	0.000000	-0.000000	discard	trivial/neg boundary fine offset=0.4497	agent1	initial_cond	0	-0.000000
+exp247	5.55111512e-17	1.001322	1.000049	discard	trivial/neg boundary fine offset=0.4498	agent1	initial_cond	0	-1.520921
+exp248	7.37045117e-15	1.001322	1.000049	discard	trivial/neg boundary fine offset=0.4499	agent1	initial_cond	0	-1.520921
+exp249	4.77524979e-16	1.001322	-1.000049	discard	trivial/neg boundary fine offset=0.4500	agent1	initial_cond	1	-1.520921
+exp250	5.55111512e-17	1.001322	1.000049	discard	basin boundary u_offset=0.5705	agent2	initial_cond	0	-1.520921
+exp251	1.56255188e-18	0.000000	-0.000000	discard	fractal basin offset=0.4480	agent1	initial_cond	0	-0.000000
+exp252	1.07766658e-17	0.000000	-0.000000	discard	fractal basin offset=0.4482	agent1	initial_cond	0	-0.000000
+exp253	1.16581619e-16	0.000000	-0.000000	discard	fractal basin offset=0.4484	agent1	initial_cond	1	-0.000000
+exp254	3.61360637e-15	0.000000	-0.000000	discard	fractal basin offset=0.4486	agent1	initial_cond	0	-0.000000
+exp255	5.93604617e-28	0.000000	0.000000	discard	fractal basin offset=0.4488	agent1	initial_cond	0	0.000000
+exp256	5.30855617e-20	0.000000	-0.000000	discard	fractal basin offset=0.4490	agent1	initial_cond	0	-0.000000
+exp257	3.66705384e-15	0.000000	-0.000000	discard	fractal basin offset=0.4492	agent1	initial_cond	1	-0.000000
+exp258	4.13590306e-25	0.000000	0.000000	discard	fractal basin offset=0.4494	agent1	initial_cond	0	-0.000000
+exp259	2.58493941e-26	0.000000	-0.000000	discard	fractal basin offset=0.4496	agent1	initial_cond	0	-0.000000
+exp260	5.55111512e-17	1.001322	1.000049	discard	fractal basin offset=0.4498	agent1	initial_cond	1	-1.520921
+exp261	4.77524979e-16	1.001322	-1.000049	discard	fractal basin offset=0.4500	agent1	initial_cond	0	-1.520921
+exp262	4.77524979e-16	1.001322	-1.000049	discard	fractal basin offset=0.4502	agent1	initial_cond	0	-1.520921
+exp263	5.55111512e-17	1.001322	-1.000049	discard	fractal basin offset=0.4504	agent1	initial_cond	0	-1.520921
+exp264	5.55111512e-17	1.001322	-1.000049	discard	fractal basin offset=0.4506	agent1	initial_cond	1	-1.520921
+exp265	5.55111512e-17	1.001322	-1.000049	discard	fractal basin offset=0.4508	agent1	initial_cond	0	-1.520921
+exp266	5.55111512e-17	1.001322	-1.000049	discard	fractal basin offset=0.4510	agent1	initial_cond	0	-1.520921
+exp267	5.55111512e-17	1.001322	-1.000049	discard	fractal basin offset=0.4512	agent1	initial_cond	0	-1.520921
+exp268	5.55111512e-17	1.001322	-1.000049	discard	fractal basin offset=0.4514	agent1	initial_cond	1	-1.520921
+exp269	5.11787527e-16	1.001322	-1.000049	discard	fractal basin offset=0.4516	agent1	initial_cond	0	-1.520921
+exp270	5.55111512e-17	1.001322	-1.000049	discard	fractal basin offset=0.4518	agent1	initial_cond	0	-1.520921
+exp271	5.55111512e-17	1.001322	-1.000049	discard	fractal basin offset=0.4520	agent1	initial_cond	0	-1.520921
+exp272	5.55111512e-17	1.001322	-1.000049	discard	basin boundary u_offset=0.5702	agent2	initial_cond	0	-1.520921
+exp273	5.55111512e-17	1.001322	-1.000049	discard	basin boundary u_offset=0.5703	agent2	initial_cond	0	-1.520921
+exp274	3.17302925e-14	1.001322	-1.000049	discard	basin boundary u_offset=0.5704	agent2	initial_cond	0	-1.520921
+exp275	5.55111512e-17	1.001322	1.000049	discard	basin boundary u_offset=0.57045	agent2	initial_cond	0	-1.520921
+exp276	3.19308444e-29	0.000000	-0.000000	discard	negative-side basin offset=-0.44	agent1	initial_cond	0	-0.000000
+exp277	9.42041086e-28	0.000000	-0.000000	discard	negative-side basin offset=-0.449	agent1	initial_cond	0	-0.000000
+exp278	5.10893510e-28	0.000000	-0.000000	discard	negative-side basin offset=-0.4495	agent1	initial_cond	1	-0.000000
+exp279	0.00000000e+00	0.000000	0.000000	discard	negative-side basin offset=-0.4498	agent1	initial_cond	0	0.000000
+exp280	1.02178702e-27	0.000000	-0.000000	discard	negative-side basin offset=-0.4499	agent1	initial_cond	0	-0.000000
+exp281	1.89702541e-27	0.000000	0.000000	discard	negative-side basin offset=-0.450	agent1	initial_cond	0	-0.000000
+exp282	1.02178702e-27	0.000000	0.000000	discard	negative-side basin offset=-0.451	agent1	initial_cond	1	-0.000000
+exp283	1.71061459e-20	0.000000	-0.000000	discard	negative-side basin offset=-0.5	agent1	initial_cond	0	-0.000000
+exp284	5.94287641e-15	0.000000	-0.000000	discard	negative-side basin offset=-0.55	agent1	initial_cond	0	-0.000000
+exp285	5.55111512e-17	1.001322	1.000049	discard	negative-side basin offset=-0.57	agent1	initial_cond	0	-1.520921
+exp286	5.55111512e-17	1.001322	1.000049	discard	negative-side basin offset=-0.5704	agent1	initial_cond	1	-1.520921
+exp287	5.55111512e-17	1.001322	1.000049	discard	negative-side basin offset=-0.5705	agent1	initial_cond	0	-1.520921
+exp288	1.60015893e-25	0.000000	-0.000000	discard	negative-side basin offset=-0.6	agent1	initial_cond	0	-0.000000
+exp289	5.94287641e-15	0.000000	-0.000000	discard	negative-side basin offset=-0.55	agent1	initial_cond	0	-0.000000
+exp290	5.40940401e-22	0.000000	-0.000000	discard	negative-side basin offset=-0.56	agent1	initial_cond	1	-0.000000
+exp291	1.75541673e-16	1.001322	-1.000049	discard	negative-side basin offset=-0.565	agent1	initial_cond	0	-1.520921
+exp292	5.55111512e-17	1.001322	1.000049	discard	negative-side basin offset=-0.57	agent1	initial_cond	0	-1.520921
+exp293	5.55111512e-17	1.001322	1.000049	discard	negative-side basin offset=-0.575	agent1	initial_cond	0	-1.520921
+exp294	2.16821327e-14	1.001322	1.000049	discard	negative-side basin offset=-0.58	agent1	initial_cond	0	-1.520921
+exp295	1.03703389e-15	1.001322	-1.000049	discard	negative-side basin offset=-0.59	agent1	initial_cond	0	-1.520921
+exp296	1.60015893e-25	0.000000	-0.000000	discard	negative-side basin offset=-0.60	agent1	initial_cond	0	-0.000000
+exp297	5.55111512e-17	1.001322	1.000049	discard	negative-side basin offset=-0.65	agent1	initial_cond	1	-1.520921
+exp298	1.31386815e-14	1.001322	1.000049	discard	negative-side basin offset=-0.7	agent1	initial_cond	0	-1.520921
+exp299	5.55111512e-17	1.001322	-1.000049	discard	negative-side basin offset=-0.8	agent1	initial_cond	0	-1.520921
+exp300	8.82085992e-15	1.001322	-1.000049	discard	negative-side basin offset=-0.9	agent1	initial_cond	0	-1.520921
+exp301	5.55111512e-17	1.001322	-1.000049	discard	negative-side basin offset=-1.0	agent1	initial_cond	1	-1.520921
+exp302	2.51704969e-15	1.001322	-1.000049	discard	negative-side basin offset=-1.1	agent1	initial_cond	0	-1.520921
+exp303	5.55111512e-17	1.001322	-1.000049	discard	negative-side basin offset=-1.5	agent1	initial_cond	0	-1.520921
+exp304	1.05368286e-14	0.000000	-0.000000	discard	trivial basin test u_offset=0.3	agent2	initial_cond	0	-0.000000
+exp305	5.94287641e-15	0.000000	-0.000000	discard	neg side map offset=-0.55	agent1	initial_cond	0	-0.000000
+exp306	5.40940401e-22	0.000000	-0.000000	discard	neg side map offset=-0.56	agent1	initial_cond	1	-0.000000
+exp307	6.38616888e-29	0.000000	-0.000000	discard	trivial basin test u_offset=0.4	agent2	initial_cond	0	-0.000000
+exp308	5.55111512e-17	1.001322	1.000049	discard	neg side map offset=-0.57	agent1	initial_cond	0	-1.520921
+exp309	2.16821327e-14	1.001322	1.000049	discard	neg side map offset=-0.58	agent1	initial_cond	0	-1.520921
+exp310	1.03703389e-15	1.001322	-1.000049	discard	neg side map offset=-0.59	agent1	initial_cond	0	-1.520921
+exp311	1.60015893e-25	0.000000	-0.000000	discard	neg side map offset=-0.60	agent1	initial_cond	0	-0.000000
+exp312	5.55111512e-17	1.001322	1.000049	discard	neg side map offset=-0.61	agent1	initial_cond	0	-1.520921
+exp313	5.55111512e-17	1.001322	-1.000049	discard	neg side map offset=-0.62	agent1	initial_cond	0	-1.520921
+exp314	5.55111512e-17	1.001322	-1.000049	discard	neg side map offset=-0.63	agent1	initial_cond	0	-1.520921
+exp315	5.55111512e-17	1.001322	-1.000049	discard	neg side map offset=-0.64	agent1	initial_cond	0	-1.520921
+exp316	5.55111512e-17	1.001322	1.000049	discard	neg side map offset=-0.65	agent1	initial_cond	0	-1.520921
+exp317	5.55111512e-17	1.001322	1.000049	discard	neg side map offset=-0.66	agent1	initial_cond	0	-1.520921
+exp318	5.55111512e-17	1.001322	1.000049	discard	neg side map offset=-0.67	agent1	initial_cond	1	-1.520921
+exp319	2.39757411e-14	1.001322	1.000049	discard	neg side map offset=-0.68	agent1	initial_cond	0	-1.520921
+exp320	5.55111512e-17	1.001322	1.000049	discard	neg side map offset=-0.69	agent1	initial_cond	0	-1.520921
+exp321	1.31386815e-14	1.001322	1.000049	discard	neg side map offset=-0.70	agent1	initial_cond	0	-1.520921
+exp322	5.55111512e-17	1.001322	-1.000049	discard	neg side map offset=-0.71	agent1	initial_cond	1	-1.520921
+exp323	5.55111512e-17	1.001322	-1.000049	discard	neg side map offset=-0.72	agent1	initial_cond	0	-1.520921
+exp324	5.55111512e-17	1.001322	-1.000049	discard	neg side map offset=-0.73	agent1	initial_cond	0	-1.520921
+exp325	5.55111512e-17	1.001322	-1.000049	discard	neg side map offset=-0.74	agent1	initial_cond	0	-1.520921
+exp326	5.55111512e-17	1.001322	-1.000049	discard	neg side map offset=-0.75	agent1	initial_cond	1	-1.520921
+exp327	1.57009246e-16	1.001322	-1.000049	discard	neg side map offset=-0.76	agent1	initial_cond	0	-1.520921
+exp328	5.55111512e-17	1.001322	-1.000049	discard	neg side map offset=-0.77	agent1	initial_cond	0	-1.520921
+exp329	3.22729440e-15	1.001322	-1.000049	discard	neg side map offset=-0.78	agent1	initial_cond	0	-1.520921
+exp330	1.57009246e-16	1.001322	-1.000049	discard	neg side map offset=-0.79	agent1	initial_cond	1	-1.520921
+exp331	5.55111512e-17	1.001322	-1.000049	discard	neg side map offset=-0.80	agent1	initial_cond	0	-1.520921
+exp332	4.77524979e-16	1.001322	-1.000049	discard	trivial basin test u_offset=0.45	agent2	initial_cond	0	-1.520921
+exp333	7.84732432e-25	0.000000	-0.000000	discard	trivial basin test u_offset=0.42	agent2	initial_cond	1	-0.000000
+exp334	5.55111512e-17	1.001322	1.000049	discard	symmetric IC basin offset=-0.55	agent1	initial_cond	0	-1.520921
+exp335	2.48248499e-15	0.000000	-0.000000	discard	trivial basin test u_offset=0.44	agent2	initial_cond	0	-0.000000
+exp336	5.55111512e-17	1.001322	1.000049	discard	symmetric IC basin offset=-0.57	agent1	initial_cond	0	-1.520921
+exp337	5.55111512e-17	1.001322	-1.000049	discard	symmetric IC basin offset=-0.58	agent1	initial_cond	1	-1.520921
+exp338	5.55111512e-17	1.001322	-1.000049	discard	symmetric IC basin offset=-0.59	agent1	initial_cond	0	-1.520921
+exp339	1.75541673e-16	1.001322	-1.000049	discard	symmetric IC basin offset=-0.60	agent1	initial_cond	0	-1.520921
+exp340	5.55111512e-17	1.001322	-1.000049	discard	symmetric IC basin offset=-0.62	agent1	initial_cond	0	-1.520921
+exp341	5.55111512e-17	1.001322	-1.000049	discard	symmetric IC basin offset=-0.65	agent1	initial_cond	1	-1.520921
+exp342	5.55111512e-17	1.001322	-1.000049	discard	symmetric IC basin offset=-0.70	agent1	initial_cond	0	-1.520921
+exp343	5.55111512e-17	1.001322	-1.000049	discard	symmetric IC basin offset=-0.80	agent1	initial_cond	0	-1.520921
+exp344	9.49767387e-27	0.000000	0.000000	discard	trivial basin test u_offset=0.445	agent2	initial_cond	0	0.000000
+exp345	1.56255188e-18	0.000000	-0.000000	discard	trivial basin test u_offset=0.448	agent2	initial_cond	1	-0.000000
+exp346	5.30855617e-20	0.000000	-0.000000	discard	trivial basin test u_offset=0.449	agent2	initial_cond	1	-0.000000
+exp347	5.33718499e-15	1.001296	1.000019	discard	modes=10 tol=1e-14	agent1	initial_cond	1	-1.520844
+exp348	6.36341232e-15	1.001296	1.000019	discard	modes=10 tol=5e-14	agent1	initial_cond	0	-1.520844
+exp349	6.36341232e-15	1.001296	1.000019	discard	modes=10 tol=1e-13	agent1	initial_cond	0	-1.520844
+exp350	3.64840521e-15	1.001296	1.000019	discard	modes=12 tol=1e-14	agent1	initial_cond	0	-1.520844
+exp351	1.14056389e-14	1.001296	1.000019	discard	modes=12 tol=5e-14	agent1	initial_cond	1	-1.520844
+exp352	1.14056389e-14	1.001296	1.000019	discard	modes=12 tol=1e-13	agent1	initial_cond	0	-1.520844
+exp353	1.49563747e-18	0.000000	-0.000000	discard	triple junction u_offset=0.4497	agent2	initial_cond	0	-0.000000
+exp354	5.55111512e-17	1.001322	-1.000049	discard	negative branch amp=0.05 phase=pi	agent1	initial_cond	1	-1.520921
+exp355	5.55111512e-17	1.001322	-1.000049	discard	negative branch amp=0.08 phase=pi	agent1	initial_cond	0	-1.520921
+exp356	5.11787527e-16	1.001322	-1.000049	discard	negative branch amp=0.10 phase=pi	agent1	initial_cond	0	-1.520921
+exp357	5.55111512e-17	1.001322	-1.000049	discard	negative branch amp=0.12 phase=pi	agent1	initial_cond	0	-1.520921
+exp358	5.55111512e-17	1.001322	-1.000049	discard	negative branch amp=0.13 phase=pi	agent1	initial_cond	1	-1.520921
+exp359	5.55111512e-17	1.001322	-1.000049	discard	negative branch amp=0.14 phase=pi	agent1	initial_cond	0	-1.520921
+exp360	5.55111512e-17	1.001322	-1.000049	discard	negative branch amp=0.15 phase=pi	agent1	initial_cond	0	-1.520921
+exp361	5.55111512e-17	1.001322	-1.000049	discard	negative branch amp=0.16 phase=pi	agent1	initial_cond	0	-1.520921
+exp362	3.52659683e-15	1.001322	-1.000049	discard	negative branch amp=0.18 phase=pi	agent1	initial_cond	1	-1.520921
+exp363	5.55111512e-17	1.001322	-1.000049	discard	negative branch amp=0.20 phase=pi	agent1	initial_cond	0	-1.520921
+exp364	5.55111512e-17	1.001322	-1.000049	discard	negative branch amp=0.25 phase=pi	agent1	initial_cond	0	-1.520921
+exp365	5.71522282e-16	1.001322	-1.000049	discard	negative branch amp=0.30 phase=pi	agent1	initial_cond	0	-1.520921
+exp366	5.55111512e-17	1.001322	1.000049	discard	triple junction u_offset=0.4495	agent2	initial_cond	1	-1.520921
+exp367	5.55111512e-17	1.001322	-1.000049	discard	negative branch amp=0.35 phase=pi	agent1	initial_cond	1	-1.520921
+exp368	1.57009246e-16	1.001322	-1.000049	discard	negative branch amp=0.40 phase=pi	agent1	initial_cond	0	-1.520921
+exp369	5.55111512e-17	1.001322	-1.000049	discard	negative branch amp=0.45 phase=pi	agent1	initial_cond	0	-1.520921
+exp370	5.55111512e-17	1.001322	-1.000049	discard	negative branch amp=0.50 phase=pi	agent1	initial_cond	0	-1.520921
+exp371	4.77524979e-16	1.001322	-1.000049	discard	triple junction u_offset=0.450	agent2	initial_cond	0	-1.520921
+exp372	5.55111512e-17	1.001322	1.000049	discard	constant IC u=1.0 amp=0	agent1	initial_cond	0	-1.520921
+exp373	5.55111512e-17	1.001322	-1.000049	discard	constant IC u=-1.0 amp=0	agent1	initial_cond	0	-1.520921
+exp374	2.58493941e-26	0.000000	-0.000000	discard	triple junction u_offset=0.4496	agent2	initial_cond	0	-0.000000
+exp375	3.58737531e-15	0.000000	-0.000000	discard	4-mode basin offset=0.0	agent1	initial_cond	0	-0.000000
+exp376	4.06182911e-18	0.000000	-0.000000	discard	4-mode basin offset=0.1	agent1	initial_cond	0	-0.000000
+exp377	1.60399903e-20	0.000000	-0.000000	discard	4-mode basin offset=0.2	agent1	initial_cond	0	-0.000000
+exp378	1.66462880e-24	0.000000	0.000000	discard	4-mode basin offset=0.3	agent1	initial_cond	1	0.000000
+exp379	5.45453979e-19	0.000000	-0.000000	discard	4-mode basin offset=0.4	agent1	initial_cond	0	-0.000000
+exp380	1.23633098e-15	1.001296	-1.000019	discard	4-mode basin offset=0.5	agent1	initial_cond	0	-1.520844
+exp381	7.25637132e-16	1.001296	1.000019	discard	4-mode basin offset=0.6	agent1	initial_cond	0	-1.520844
+exp382	2.06774381e-16	1.001296	1.000019	discard	4-mode basin offset=0.7	agent1	initial_cond	0	-1.520844
+exp383	3.06884301e-16	1.001296	1.000019	discard	4-mode basin offset=0.8	agent1	initial_cond	0	-1.520844
+exp384	1.86448479e-16	1.001296	1.000019	discard	4-mode basin offset=0.9	agent1	initial_cond	0	-1.520844
+exp385	2.06774381e-16	1.001296	1.000019	discard	4-mode basin offset=1.0	agent1	initial_cond	1	-1.520844
+exp386	5.55111512e-17	1.001322	1.000049	discard	triple junction u_offset=0.4498	agent2	initial_cond	0	-1.520921
+exp387	5.45453979e-19	0.000000	-0.000000	discard	4-mode basin refine offset=0.40	agent1	initial_cond	1	-0.000000
+exp388	8.06938013e-27	0.000000	0.000000	discard	4-mode basin refine offset=0.42	agent1	initial_cond	0	0.000000
+exp389	2.47250685e-28	0.000000	0.000000	discard	4-mode basin refine offset=0.44	agent1	initial_cond	0	0.000000
+exp390	2.73184526e-16	1.001296	1.000019	discard	4-mode basin refine offset=0.46	agent1	initial_cond	0	-1.520844
+exp391	1.88564362e-15	1.001296	1.000019	discard	4-mode basin refine offset=0.48	agent1	initial_cond	1	-1.520844
+exp392	1.23633098e-15	1.001296	-1.000019	discard	4-mode basin refine offset=0.50	agent1	initial_cond	0	-1.520844
+exp393	1.96261557e-16	1.001296	-1.000019	discard	4-mode basin refine offset=0.52	agent1	initial_cond	0	-1.520844
+exp394	3.85733855e-15	1.001296	-1.000019	discard	4-mode basin refine offset=0.54	agent1	initial_cond	0	-1.520844
+exp395	3.62021453e-16	1.001296	-1.000019	discard	4-mode basin refine offset=0.56	agent1	initial_cond	1	-1.520844
+exp396	3.62021453e-16	1.001296	1.000019	discard	4-mode basin refine offset=0.58	agent1	initial_cond	0	-1.520844
+exp397	7.25637132e-16	1.001296	1.000019	discard	4-mode basin refine offset=0.60	agent1	initial_cond	0	-1.520844

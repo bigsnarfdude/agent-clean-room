@@ -1,0 +1,2 @@
+exp_id	residual	solution_norm	solution_mean	status	description	agent	design	elapsed_s	solution_energy
+exp001	5.63592552e-11	0.000000	-0.000000	keep	default scipy config, trivial branch	agent0	initial_cond	0	-0.000000

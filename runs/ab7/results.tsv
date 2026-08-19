@@ -1,0 +1,658 @@
+exp_id	residual	solution_norm	solution_mean	status	description	agent	design	elapsed_s	solution_energy
+exp001	9.99978354e-12	1.002503	1.000218	keep	positive branch baseline, u_offset=0.9	agent0	initial_cond	0	-1.523848
+exp002	9.99978354e-12	1.002503	-1.000218	discard	negative branch baseline, u_offset=-0.9	agent0	initial_cond	1	-1.523848
+exp003	9.99978354e-12	1.002503	1.000218	discard	positive branch baseline u_offset=0.9	agent1	initial_cond	1	-1.523848
+exp004	0.00000000e+00	0.000000	0.000000	keep	trivial branch u_offset=0.0	agent1	initial_cond	0	0.000000
+exp005	0.00000000e+00	0.000000	0.000000	discard	trivial branch baseline, u_offset=0.0	agent0	initial_cond	0	0.000000
+exp006	9.99978354e-12	1.002503	-1.000218	discard	negative branch u_offset=-0.9	agent1	initial_cond	0	-1.523848
+exp007	crash	0	0	crash	positive branch u_offset=0.95 solver_tol=1e-13 n_nodes=300	agent1	solver_param	0	0
+exp008	crash	0	0	crash	positive branch, n_nodes=300, solver_tol=1e-12	agent0	solver_param	0	0
+exp009	crash	0	0	crash	positive branch u_offset=1.0 solver_tol=1e-12	agent1	solver_param	0	0
+exp010	crash	0	0	crash	positive branch, Fourier spectral N=64	agent0	branch_search	0	0
+exp011	crash	0	0	crash	positive branch via Fourier spectral method fourier_modes=64	agent1	solver_param	0	0
+exp012	3.35317020e-13	1.001296	1.000019	discard	Fourier N=64 with perturbation amp=0.1, newton_tol=1e-12	agent0	branch_search	0	-1.520844
+exp013	crash	0	0	crash	positive branch Fourier 128 modes 200 Newton iters	agent1	solver_param	30	0
+exp014	5.71169075e-13	1.001296	1.000019	discard	positive branch Fourier 64 modes newton_tol=1e-11	agent1	solver_param	0	-1.520844
+exp015	3.26527837e-13	1.001296	1.000019	discard	positive branch Fourier 64 modes newton_tol=1e-12	agent1	solver_param	1	-1.520844
+exp016	crash	0	0	crash	Fourier N=96, amp=0.1, newton_tol=1e-14	agent0	branch_search	0	0
+exp017	crash	0	0	crash	positive branch Fourier 64 modes newton_tol=1e-13	agent1	solver_param	0	0
+exp018	crash	0	0	crash	Fourier N=64, linearized IC u=1.0+0.1cos, newton_tol=1e-15	agent0	initial_cond	1	0
+exp019	1.50766724e-13	1.001296	1.000019	discard	positive branch Fourier 32 modes u_offset=1.0 amp=0.1	agent1	solver_param	0	-1.520844
+exp020	crash	0	0	crash	Fourier N=64, u=1.0+0.1cos, newton_tol=1e-13	agent0	initial_cond	0	0
+exp021	4.26763443e-14	1.001296	1.000019	discard	positive branch Fourier 32 modes newton_tol=1e-13	agent1	solver_param	0	-1.520844
+exp022	crash	0	0	crash	positive branch Fourier 32 modes newton_tol=1e-14	agent1	solver_param	1	0
+exp023	crash	0	0	crash	Fourier N=32, u_offset=0.9, amp=0.1, tol=1e-14	agent0	branch_search	0	0
+exp024	crash	0	0	crash	positive branch Fourier 16 modes newton_tol=1e-14	agent1	solver_param	0	0
+exp025	7.59794847e-14	1.001296	1.000019	discard	Fourier N=32, newton_tol=2e-13 to allow convergence	agent0	branch_search	0	-1.520844
+exp026	1.33550923e-14	1.001296	1.000019	discard	positive branch Fourier 16 modes newton_tol=5e-14	agent1	solver_param	0	-1.520844
+exp027	crash	0	0	crash	Fourier N=16, newton_tol=1e-14	agent0	branch_search	0	0
+exp028	1.02323070e-14	1.001296	1.000019	discard	positive branch Fourier 8 modes newton_tol=5e-14	agent1	solver_param	0	-1.520844
+exp029	1.44525674e-14	1.001296	1.000019	discard	Fourier N=16, newton_tol=3e-14	agent0	branch_search	0	-1.520844
+exp030	8.69901540e-15	1.001296	1.000019	discard	positive branch Fourier 4 modes newton_tol=5e-14	agent1	solver_param	0	-1.520844
+exp031	9.32144735e-15	1.001296	1.000019	discard	positive branch Fourier 3 modes newton_tol=5e-14	agent1	solver_param	0	-1.520844
+exp032	2.37755119e-15	1.001296	1.000019	discard	Fourier N=8, newton_tol=1e-14	agent0	branch_search	0	-1.520844
+exp033	2.06774381e-16	1.001296	1.000019	discard	Fourier N=4, newton_tol=1e-14	agent0	branch_search	1	-1.520844
+exp034	2.81345170e-14	1.001298	1.000025	discard	positive branch Fourier 2 modes newton_tol=5e-14	agent1	solver_param	1	-1.520921
+exp035	6.06290198e-16	1.001296	1.000019	discard	Fourier N=3, newton_tol=1e-14	agent0	branch_search	1	-1.520844
+exp036	1.96261557e-16	1.001296	1.000019	discard	positive branch Fourier 4 modes newton_tol=1e-14	agent1	solver_param	1	-1.520844
+exp037	1.96261557e-16	1.001296	1.000019	discard	positive branch Fourier 4 modes newton_tol=1e-15	agent1	solver_param	0	-1.520844
+exp038	2.06774381e-16	1.001296	1.000019	discard	Fourier N=4, newton_tol=1e-15, 200 iter	agent0	branch_search	0	-1.520844
+exp039	2.57581612e-16	1.001296	-1.000019	discard	Fourier N=4, negative branch u_offset=-0.9	agent0	branch_search	1	-1.520844
+exp040	3.62021453e-16	1.001296	-1.000019	discard	negative branch Fourier 4 modes newton_tol=1e-14 u_offset=-1.0	agent1	solver_param	1	-1.520844
+exp041	4.99600361e-16	1.001296	-1.000019	discard	large oscillation u=1.2cos, searching for heteroclinic	agent0	branch_search	0	-1.520844
+exp042	2.11974729e-15	1.001296	-1.000019	discard	mode-2 perturbation u=0.5+0.5cos(2t), N=8	agent0	branch_search	0	-1.520844
+exp043	2.73184526e-16	1.001296	-1.000019	discard	mode-2 perturbation amp=0.5 u_offset=0.5 searching for heteroclinic	agent1	branch_search	0	-1.520844
+exp044	1.24246361e-14	1.001296	1.000019	discard	step-like IC u=1.5cos, searching heteroclinic, N=16	agent0	branch_search	0	-1.520844
+exp045	1.10752491e-23	0.000000	0.000000	discard	large cos oscillation centered at 0, amp=0.5, searching for heteroclinic	agent1	branch_search	1	0.000000
+exp046	2.09614326e-15	1.001296	-1.000019	discard	basin map: u_offset=0.5, which branch?	agent0	branch_search	1	-1.520844
+exp047	9.20534265e-15	1.001296	1.000019	discard	amp=1.0 cos(theta) centered at 0, hunting heteroclinic connection	agent1	branch_search	0	-1.520844
+exp048	2.06774381e-16	1.001296	1.000019	discard	basin map: u_offset=0.7	agent0	branch_search	0	-1.520844
+exp049	2.01739445e-21	0.000000	-0.000000	discard	mode-2 amp=1.5 centered at 0, large oscillation cos(2theta)	agent1	branch_search	0	-0.000000
+exp050	1.96261557e-16	1.001296	1.000019	discard	basin map: u_offset=0.6	agent0	branch_search	1	-1.520844
+exp051	1.27099500e-14	1.001296	1.000019	discard	mode-3 amp=0.5 u_offset=0.3 searching for non-standard branch	agent1	branch_search	0	-1.520844
+exp052	6.34216421e-16	1.001296	-1.000019	discard	basin map: u_offset=0.55	agent0	branch_search	1	-1.520844
+exp053	2.06774381e-16	1.001296	1.000019	discard	basin map: u_offset=0.575	agent0	branch_search	0	-1.520844
+exp054	3.52178773e-16	1.001296	-1.000019	discard	basin map: u_offset=0.5625	agent0	branch_search	0	-1.520844
+exp055	2.57581612e-16	1.001296	-1.000019	discard	basin boundary refinement u_offset=0.575	agent1	branch_search	0	-1.520844
+exp056	2.57581612e-16	1.001296	-1.000019	discard	basin map: u_offset=0.57	agent0	branch_search	1	-1.520844
+exp057	2.02539645e-15	1.001296	1.000019	discard	basin boundary u_offset=0.59	agent1	branch_search	0	-1.520844
+exp058	6.62727941e-16	1.001296	-1.000019	discard	basin map: u_offset=0.573	agent0	branch_search	0	-1.520844
+exp059	7.20108768e-16	1.001296	-1.000019	discard	basin boundary u_offset=0.58	agent1	branch_search	1	-1.520844
+exp060	1.96261557e-16	1.001296	1.000019	discard	basin map: u_offset=0.574	agent0	branch_search	1	-1.520844
+exp061	2.04903081e-16	1.001296	-1.000019	discard	basin boundary u_offset=0.585	agent1	branch_search	0	-1.520844
+exp062	1.88860805e-21	0.000000	-0.000000	discard	scipy: u_offset=0, amp=0.5, mode-2, seeking 4th branch	agent0	branch_search	1	-0.000000
+exp063	1.96261557e-16	1.001296	-1.000019	discard	basin boundary u_offset=0.588	agent1	branch_search	0	-1.520844
+exp064	3.26644331e-16	1.001296	-1.000019	discard	basin boundary u_offset=0.589	agent1	branch_search	0	-1.520844
+exp065	8.81934685e-11	1.002503	1.000218	discard	scipy: u_offset=0.8+0.5cos(2t), seeking oscillatory positive	agent0	branch_search	0	-1.523848
+exp066	2.11835551e-14	0.000000	0.000000	discard	scipy at basin boundary u_offset=0.5735	agent0	branch_search	0	-0.000000
+exp067	2.57581612e-16	1.001296	-1.000019	discard	basin boundary u_offset=0.5895	agent1	branch_search	0	-1.520844
+exp068	1.96261557e-16	1.001296	1.000019	discard	basin boundary u_offset=0.5898	agent1	branch_search	0	-1.520844
+exp069	2.08871080e-15	1.001296	-1.000019	discard	basin boundary u_offset=0.5896	agent1	branch_search	0	-1.520844
+exp070	3.47776366e-16	1.001296	-1.000019	discard	basin boundary u_offset=0.5897	agent1	branch_search	1	-1.520844
+exp071	2.10832785e-15	1.001296	1.000019	discard	basin boundary u_offset=0.58975	agent1	branch_search	1	-1.520844
+exp072	5.62802405e-12	1.002503	1.000218	discard	scipy n_nodes=250, tol=1e-11, u=1.0+0.1cos	agent0	solver_param	0	-1.523848
+exp073	4.50203803e-15	0.000000	0.000000	discard	Fourier N=4 near trivial branch, u_offset=0.01	agent0	branch_search	0	-0.000000
+exp074	1.52391128e-15	1.001296	1.000019	discard	Fourier N=5 for positive branch	agent0	branch_search	0	-1.520844
+exp075	5.87830932e-28	0.000000	-0.000000	discard	trivial basin test u_offset=0.1 Fourier N=4	agent1	branch_search	0	0.000000
+exp076	2.73184526e-16	1.001296	1.000019	discard	Fourier N=4, phase=pi, anti-phase perturbation	agent0	perturbation	0	-1.520844
+exp077	1.99822732e-23	0.000000	0.000000	discard	trivial basin test u_offset=0.4 Fourier N=4	agent1	branch_search	1	-0.000000
+exp078	2.57581612e-16	1.001296	-1.000019	discard	trivial basin test u_offset=0.55 Fourier N=4	agent1	branch_search	1	-1.520844
+exp079	1.96261557e-16	1.001296	1.000019	discard	Fourier N=4, u_offset=1.0 (closer to solution mean)	agent0	initial_cond	1	-1.520844
+exp080	3.62021453e-16	1.001296	1.000019	discard	trivial/nontrivial boundary u_offset=0.475	agent1	branch_search	0	-1.520844
+exp081	3.95472498e-16	0.000000	0.000000	discard	basin map u_offset=0.45	agent1	branch_search	0	-0.000000
+exp082	2.42370301e-25	0.000000	-0.000000	discard	basin map u_offset=0.46	agent1	branch_search	0	0.000000
+exp083	2.06774381e-16	1.001296	-1.000019	discard	basin map u_offset=0.47	agent1	branch_search	0	-1.520844
+exp084	2.06774381e-16	1.001296	-1.000019	discard	basin map u_offset=0.465	agent1	branch_search	0	-1.520844
+exp085	2.57581612e-16	1.001296	1.000019	discard	basin map u_offset=0.48	agent1	branch_search	0	-1.520844
+exp086	2.57581612e-16	1.001296	-1.000019	discard	basin map u_offset=0.49	agent1	branch_search	1	-1.520844
+exp087	3.77006140e-16	1.001296	-1.000019	discard	basin map u_offset=0.50	agent1	branch_search	0	-1.520844
+exp088	2.57581612e-16	1.001296	-1.000019	discard	basin map u_offset=0.52	agent1	branch_search	0	-1.520844
+exp089	4.82040919e-16	1.001296	-1.000019	discard	Fourier N=4, neg branch u=-1.0-0.1cos(t), phase=pi	agent0	initial_cond	0	-1.520844
+exp090	5.87830932e-28	0.000000	0.000000	discard	basin map u_offset=-0.1 negative side	agent1	branch_search	0	0.000000
+exp091	1.99822732e-23	0.000000	-0.000000	discard	basin map u_offset=-0.4 negative side	agent1	branch_search	1	-0.000000
+exp092	2.42370301e-25	0.000000	0.000000	discard	basin map u_offset=-0.46 negative side	agent1	branch_search	0	0.000000
+exp093	2.06774381e-16	1.001296	1.000019	discard	basin map u_offset=-0.465 negative side	agent1	branch_search	0	-1.520844
+exp094	2.06774381e-16	1.001296	1.000019	discard	basin map u_offset=-0.47 negative side	agent1	branch_search	0	-1.520844
+exp095	3.62021453e-16	1.001296	-1.000019	discard	basin map u_offset=-0.475 negative side	agent1	branch_search	0	-1.520844
+exp096	2.57581612e-16	1.001296	-1.000019	discard	basin map u_offset=-0.48 negative side	agent1	branch_search	0	-1.520844
+exp097	2.57581612e-16	1.001296	1.000019	discard	basin map u_offset=-0.49 negative side	agent1	branch_search	0	-1.520844
+exp098	3.77006140e-16	1.001296	1.000019	discard	basin map u_offset=-0.50 negative side	agent1	branch_search	1	-1.520844
+exp099	2.57581612e-16	1.001296	1.000019	discard	basin map u_offset=-0.55 negative side	agent1	branch_search	0	-1.520844
+exp100	3.47776366e-16	1.001296	1.000019	discard	basin map u_offset=-0.5897 negative side	agent1	branch_search	0	-1.520844
+exp101	1.96261557e-16	1.001296	-1.000019	discard	basin map u_offset=-0.5898 negative side	agent1	branch_search	1	-1.520844
+exp102	2.02539645e-15	1.001296	-1.000019	discard	basin map u_offset=-0.59 negative side	agent1	branch_search	0	-1.520844
+exp103	3.62021453e-16	1.001296	-1.000019	discard	Fourier N=4, neg branch u=-1.0+0.1cos, phase=0	agent0	initial_cond	0	-1.520844
+exp104	2.57581612e-16	1.001296	-1.000019	discard	Fourier N=4, neg branch u=-0.9 flat (no perturbation)	agent0	initial_cond	0	-1.520844
+exp105	2.57581612e-16	1.001296	-1.000019	discard	Fourier N=4, neg branch u=-1.0 flat	agent0	initial_cond	0	-1.520844
+exp106	3.62021453e-16	1.001296	-1.000019	discard	amplitude sensitivity amp=0.0 at u_offset=0.57	agent1	perturbation	0	-1.520844
+exp107	2.57581612e-16	1.001296	-1.000019	discard	amplitude sensitivity amp=0.05 at u_offset=0.57	agent1	perturbation	0	-1.520844
+exp108	2.57581612e-16	1.001296	-1.000019	discard	amplitude sensitivity amp=0.1 at u_offset=0.57	agent1	perturbation	1	-1.520844
+exp109	2.57581612e-16	1.001296	-1.000019	discard	amplitude sensitivity amp=0.15 at u_offset=0.57	agent1	perturbation	0	-1.520844
+exp110	4.21048514e-16	1.001296	-1.000019	discard	amplitude sensitivity amp=0.2 at u_offset=0.57	agent1	perturbation	0	-1.520844
+exp111	2.06774381e-16	1.001296	-1.000019	discard	amplitude sensitivity amp=0.3 at u_offset=0.57	agent1	perturbation	1	-1.520844
+exp112	2.04903081e-16	1.001296	1.000019	discard	amplitude sensitivity amp=0.4 at u_offset=0.57	agent1	perturbation	0	-1.520844
+exp113	3.09720388e-15	1.001296	1.000019	discard	amplitude sensitivity amp=0.5 at u_offset=0.57	agent1	perturbation	0	-1.520844
+exp114	2.57581612e-16	1.001296	-1.000019	discard	Fourier N=4, neg u=-0.95+0.05cos	agent0	initial_cond	0	-1.520844
+exp115	2.57581612e-16	1.001296	-1.000019	discard	boundary search amp=0.0 iter=1 u_offset=0.57500	agent1	branch_search	0	-1.520844
+exp116	2.57581612e-16	1.001296	1.000019	discard	boundary search amp=0.0 iter=2 u_offset=0.61250	agent1	branch_search	0	-1.520844
+exp117	1.96261557e-16	1.001296	1.000019	discard	boundary search amp=0.0 iter=3 u_offset=0.59375	agent1	branch_search	0	-1.520844
+exp118	4.37535640e-16	1.001296	-1.000019	discard	boundary search amp=0.0 iter=4 u_offset=0.58437	agent1	branch_search	0	-1.520844
+exp119	1.96261557e-16	1.001296	-1.000019	discard	boundary search amp=0.0 iter=5 u_offset=0.58906	agent1	branch_search	0	-1.520844
+exp120	3.62021453e-16	1.001296	1.000019	discard	boundary search amp=0.0 iter=6 u_offset=0.59140	agent1	branch_search	0	-1.520844
+exp121	2.06774381e-16	1.001296	1.000019	discard	boundary search amp=0.0 iter=7 u_offset=0.59023	agent1	branch_search	0	-1.520844
+exp122	2.57581612e-16	1.001296	-1.000019	discard	boundary search amp=0.0 iter=8 u_offset=0.58964	agent1	branch_search	0	-1.520844
+exp123	2.06774381e-16	1.001296	1.000019	discard	boundary search amp=0.1 iter=1 u_offset=0.57500	agent1	branch_search	1	-1.520844
+exp124	3.62021453e-16	1.001296	-1.000019	discard	boundary search amp=0.1 iter=2 u_offset=0.53750	agent1	branch_search	0	-1.520844
+exp125	2.06774381e-16	1.001296	-1.000019	discard	boundary search amp=0.1 iter=3 u_offset=0.55625	agent1	branch_search	0	-1.520844
+exp126	2.06774381e-16	1.001296	-1.000019	discard	boundary search amp=0.1 iter=4 u_offset=0.56563	agent1	branch_search	1	-1.520844
+exp127	1.86448479e-16	1.001296	-1.000019	discard	boundary search amp=0.1 iter=5 u_offset=0.57031	agent1	branch_search	0	-1.520844
+exp128	2.57581612e-16	1.001296	-1.000019	discard	boundary search amp=0.1 iter=6 u_offset=0.57265	agent1	branch_search	0	-1.520844
+exp129	1.88564362e-15	1.001296	1.000019	discard	boundary search amp=0.1 iter=7 u_offset=0.57383	agent1	branch_search	1	-1.520844
+exp130	1.43180171e-15	1.001296	-1.000019	discard	boundary search amp=0.1 iter=8 u_offset=0.57324	agent1	branch_search	0	-1.520844
+exp131	2.06774381e-16	1.001296	-1.000019	discard	boundary search amp=0.2 iter=1 u_offset=0.57500	agent1	branch_search	0	-1.520844
+exp132	3.52178773e-16	1.001296	1.000019	discard	boundary search amp=0.2 iter=2 u_offset=0.61250	agent1	branch_search	1	-1.520844
+exp133	2.10451058e-15	1.001296	1.000019	discard	boundary search amp=0.2 iter=3 u_offset=0.59375	agent1	branch_search	0	-1.520844
+exp134	2.06774381e-16	1.001296	1.000019	discard	boundary search amp=0.2 iter=4 u_offset=0.58437	agent1	branch_search	0	-1.520844
+exp135	1.96261557e-16	1.001296	-1.000019	discard	boundary search amp=0.2 iter=5 u_offset=0.57969	agent1	branch_search	1	-1.520844
+exp136	2.04903081e-16	1.001296	1.000019	discard	boundary search amp=0.2 iter=6 u_offset=0.58203	agent1	branch_search	0	-1.520844
+exp137	1.67113576e-15	1.001296	1.000019	discard	boundary search amp=0.2 iter=7 u_offset=0.58086	agent1	branch_search	0	-1.520844
+exp138	1.96261557e-16	1.001296	-1.000019	discard	boundary search amp=0.2 iter=8 u_offset=0.58028	agent1	branch_search	1	-1.520844
+exp139	3.62021453e-16	1.001296	-1.000019	discard	boundary search amp=0.3 iter=1 u_offset=0.57500	agent1	branch_search	0	-1.520844
+exp140	1.86448479e-16	1.001296	1.000019	discard	boundary search amp=0.3 iter=2 u_offset=0.61250	agent1	branch_search	0	-1.520844
+exp141	3.66059373e-15	1.001296	-1.000019	discard	boundary search amp=0.3 iter=3 u_offset=0.59375	agent1	branch_search	1	-1.520844
+exp142	4.51081477e-16	1.001296	-1.000019	discard	boundary search amp=0.3 iter=4 u_offset=0.60313	agent1	branch_search	0	-1.520844
+exp143	4.37535640e-16	1.001296	1.000019	discard	boundary search amp=0.3 iter=5 u_offset=0.60781	agent1	branch_search	0	-1.520844
+exp144	2.01512456e-15	1.001296	-1.000019	discard	boundary search amp=0.3 iter=6 u_offset=0.60547	agent1	branch_search	1	-1.520844
+exp145	2.06774381e-16	1.001296	-1.000019	discard	boundary search amp=0.3 iter=7 u_offset=0.60664	agent1	branch_search	0	-1.520844
+exp146	4.96867443e-15	1.001296	-1.000019	discard	boundary search amp=0.3 iter=8 u_offset=0.60722	agent1	branch_search	0	-1.520844
+exp147	1.88564362e-15	1.001296	1.000019	discard	boundary search amp=0.4 iter=1 u_offset=0.57500	agent1	branch_search	1	-1.520844
+exp148	1.88564362e-15	1.001296	-1.000019	discard	boundary search amp=0.4 iter=2 u_offset=0.53750	agent1	branch_search	0	-1.520844
+exp149	4.37535640e-16	1.001296	1.000019	discard	boundary search amp=0.4 iter=3 u_offset=0.55625	agent1	branch_search	0	-1.520844
+exp150	3.62021453e-16	1.001296	-1.000019	discard	boundary search amp=0.4 iter=4 u_offset=0.54688	agent1	branch_search	1	-1.520844
+exp151	2.06774381e-16	1.001296	-1.000019	discard	boundary search amp=0.4 iter=5 u_offset=0.55157	agent1	branch_search	0	-1.520844
+exp152	2.73184526e-16	1.001296	1.000019	discard	boundary search amp=0.4 iter=6 u_offset=0.55391	agent1	branch_search	0	-1.520844
+exp153	3.52178773e-16	1.001296	1.000019	discard	boundary search amp=0.4 iter=7 u_offset=0.55274	agent1	branch_search	1	-1.520844
+exp154	2.06774381e-16	1.001296	1.000019	discard	boundary search amp=0.4 iter=8 u_offset=0.55215	agent1	branch_search	0	-1.520844
+exp155	1.88564362e-15	1.001296	1.000019	discard	boundary search amp=0.5 iter=1 u_offset=0.57500	agent1	branch_search	0	-1.520844
+exp156	3.62021453e-16	1.001296	1.000019	discard	boundary search amp=0.5 iter=2 u_offset=0.53750	agent1	branch_search	1	-1.520844
+exp157	1.97672026e-15	1.001296	1.000019	discard	boundary search amp=0.5 iter=3 u_offset=0.51875	agent1	branch_search	0	-1.520844
+exp158	1.94566387e-15	1.001296	1.000019	discard	boundary search amp=0.5 iter=4 u_offset=0.50938	agent1	branch_search	0	-1.520844
+exp159	3.50616754e-15	1.001296	1.000019	discard	boundary search amp=0.5 iter=5 u_offset=0.50469	agent1	branch_search	1	-1.520844
+exp160	1.96261557e-16	1.001296	1.000019	discard	boundary search amp=0.5 iter=6 u_offset=0.50235	agent1	branch_search	0	-1.520844
+exp161	6.34216421e-16	1.001296	1.000019	discard	boundary search amp=0.5 iter=7 u_offset=0.50117	agent1	branch_search	0	-1.520844
+exp162	2.57581612e-16	1.001296	1.000019	discard	boundary search amp=0.5 iter=8 u_offset=0.50059	agent1	branch_search	0	-1.520844
+exp163	4.21503789e-25	0.000000	-0.000000	discard	Fourier N=8, mode-2 amp=0.3 around trivial, seeking oscillatory solution	agent0	branch_search	1	-0.000000
+exp164	1.27099500e-14	1.001296	1.000019	discard	Fourier N=16, mode-3 amp=0.5 u_offset=0.3	agent0	branch_search	1	-1.520844
+exp165	crash	0	0	crash	Fourier N=2, u_offset=0.4+0.3cos	agent0	branch_search	1	0
+exp166	8.62802154e-29	0.000000	0.000000	discard	amp=0.1 basin map u_offset=0.40	agent1	branch_search	1	0.000000
+exp167	4.23826066e-22	0.000000	-0.000000	discard	amp=0.1 basin map u_offset=0.42	agent1	branch_search	0	-0.000000
+exp168	7.63067617e-25	0.000000	-0.000000	discard	amp=0.1 basin map u_offset=0.44	agent1	branch_search	0	0.000000
+exp169	1.96261557e-16	1.001296	1.000019	discard	amp=0.1 basin map u_offset=0.46	agent1	branch_search	1	-1.520844
+exp170	2.73184526e-16	1.001296	1.000019	discard	amp=0.1 basin map u_offset=0.465	agent1	branch_search	0	-1.520844
+exp171	2.06774381e-16	1.001296	-1.000019	discard	amp=0.1 basin map u_offset=0.47	agent1	branch_search	0	-1.520844
+exp172	2.08871080e-15	1.001296	-1.000019	discard	amp=0.1 basin map u_offset=0.475	agent1	branch_search	1	-1.520844
+exp173	4.00777441e-16	1.001296	-1.000019	discard	amp=0.1 basin map u_offset=0.48	agent1	branch_search	0	-1.520844
+exp174	2.06774381e-16	1.001296	-1.000019	discard	amp=0.1 basin map u_offset=0.49	agent1	branch_search	0	-1.520844
+exp175	2.09614326e-15	1.001296	-1.000019	discard	amp=0.1 basin map u_offset=0.50	agent1	branch_search	1	-1.520844
+exp176	2.06774381e-16	1.001296	-1.000019	discard	amp=0.1 basin map u_offset=0.51	agent1	branch_search	0	-1.520844
+exp177	1.88564362e-15	1.001296	-1.000019	discard	amp=0.1 basin map u_offset=0.52	agent1	branch_search	0	-1.520844
+exp178	1.88564362e-15	1.001296	-1.000019	discard	amp=0.1 basin map u_offset=0.53	agent1	branch_search	1	-1.520844
+exp179	2.06774381e-16	1.001296	-1.000019	discard	amp=0.1 basin map u_offset=0.54	agent1	branch_search	0	-1.520844
+exp180	6.34216421e-16	1.001296	-1.000019	discard	amp=0.1 basin map u_offset=0.55	agent1	branch_search	0	-1.520844
+exp181	1.96261557e-16	1.001296	-1.000019	discard	amp=0.1 basin map u_offset=0.56	agent1	branch_search	1	-1.520844
+exp182	2.57581612e-16	1.001296	-1.000019	discard	amp=0.1 basin map u_offset=0.57	agent1	branch_search	0	-1.520844
+exp183	6.62727941e-16	1.001296	-1.000019	discard	amp=0.1 basin map u_offset=0.573	agent1	branch_search	0	-1.520844
+exp184	1.96261557e-16	1.001296	1.000019	discard	amp=0.1 basin map u_offset=0.574	agent1	branch_search	1	-1.520844
+exp185	6.01806552e-16	1.001296	1.000019	discard	amp=0.1 basin map u_offset=0.58	agent1	branch_search	0	-1.520844
+exp186	2.00532833e-15	1.001296	1.000019	discard	amp=0.1 basin map u_offset=0.59	agent1	branch_search	0	-1.520844
+exp187	5.98429004e-16	0.000000	0.000000	discard	scipy basin map u_offset=0.45	agent0	branch_search	0	-0.000000
+exp188	9.91972362e-16	0.000000	0.000000	discard	scipy basin map u_offset=0.46	agent0	branch_search	0	-0.000000
+exp189	3.23190346e-17	0.000000	0.000000	discard	scipy basin map u_offset=0.465	agent0	branch_search	1	-0.000000
+exp190	2.03043425e-16	0.000000	0.000000	discard	scipy basin map u_offset=0.47	agent0	branch_search	0	-0.000000
+exp191	3.50998679e-15	0.000000	0.000000	discard	scipy basin map u_offset=0.475	agent0	branch_search	0	-0.000000
+exp192	1.19273121e-13	0.000000	0.000000	discard	scipy basin map u_offset=0.48	agent0	branch_search	1	-0.000000
+exp193	2.42337363e-13	0.000000	0.000000	discard	scipy basin map u_offset=0.49	agent0	branch_search	0	-0.000000
+exp194	9.99978354e-12	1.002503	-1.000218	discard	scipy basin map u_offset=0.50	agent0	branch_search	0	-1.523848
+exp195	9.99978354e-12	1.002503	-1.000218	discard	scipy basin map u_offset=0.55	agent0	branch_search	1	-1.523848
+exp196	9.99978354e-12	1.002503	-1.000218	discard	scipy basin map u_offset=0.57	agent0	branch_search	0	-1.523848
+exp197	9.99978354e-12	1.002503	-1.000218	discard	scipy basin map u_offset=0.58	agent0	branch_search	0	-1.523848
+exp198	crash	0	0	crash	scipy basin map u_offset=0.59	agent0	branch_search	1	0
+exp199	9.99978354e-12	1.002503	1.000218	discard	scipy basin map u_offset=0.60	agent0	branch_search	0	-1.523848
+exp200	7.63067617e-25	0.000000	-0.000000	discard	trivial boundary amp=0.1 u_offset=0.44	agent1	branch_search	1	0.000000
+exp201	7.20108768e-16	1.001296	1.000019	discard	trivial boundary amp=0.1 u_offset=0.45	agent1	branch_search	0	-1.520844
+exp202	5.40521575e-16	1.001296	1.000019	discard	trivial boundary amp=0.1 u_offset=0.455	agent1	branch_search	0	-1.520844
+exp203	1.96585122e-15	1.001296	-1.000019	discard	trivial boundary amp=0.1 u_offset=0.458	agent1	branch_search	1	-1.520844
+exp204	2.57581612e-16	1.001296	1.000019	discard	trivial boundary amp=0.1 u_offset=0.459	agent1	branch_search	0	-1.520844
+exp205	1.96261557e-16	1.001296	1.000019	discard	trivial boundary amp=0.1 u_offset=0.46	agent1	branch_search	0	-1.520844
+exp206	5.18539263e-22	0.000000	0.000000	discard	scipy basin refine u_offset=0.495	agent0	branch_search	0	0.000000
+exp207	9.99978354e-12	1.002503	-1.000218	discard	scipy basin refine u_offset=0.505	agent0	branch_search	1	-1.523848
+exp208	9.99978354e-12	1.002503	-1.000218	discard	scipy basin refine u_offset=0.585	agent0	branch_search	0	-1.523848
+exp209	crash	0	0	crash	scipy basin refine u_offset=0.590	agent0	branch_search	0	0
+exp210	3.36812562e-12	1.002503	1.000218	discard	scipy basin refine u_offset=0.595	agent0	branch_search	1	-1.523848
+exp211	9.99978354e-12	1.002503	1.000218	discard	scipy basin refine u_offset=0.600	agent0	branch_search	0	-1.523848
+exp212	9.99978354e-12	1.002503	1.000218	discard	scipy basin refine u_offset=0.605	agent0	branch_search	0	-1.523848
+exp213	2.06774381e-16	1.001296	-1.000019	discard	ultra-fine basin u_offset=0.4570	agent1	branch_search	1	-1.520844
+exp214	1.88564362e-15	1.001296	-1.000019	discard	ultra-fine basin u_offset=0.4575	agent1	branch_search	0	-1.520844
+exp215	3.15769232e-15	1.001296	-1.000019	discard	ultra-fine basin u_offset=0.4578	agent1	branch_search	0	-1.520844
+exp216	4.21048514e-16	1.001296	-1.000019	discard	ultra-fine basin u_offset=0.4579	agent1	branch_search	1	-1.520844
+exp217	1.96585122e-15	1.001296	-1.000019	discard	ultra-fine basin u_offset=0.4580	agent1	branch_search	0	-1.520844
+exp218	3.62021453e-16	1.001296	-1.000019	discard	ultra-fine basin u_offset=0.4581	agent1	branch_search	0	-1.520844
+exp219	1.86448479e-16	1.001296	-1.000019	discard	ultra-fine basin u_offset=0.4582	agent1	branch_search	1	-1.520844
+exp220	3.62021453e-16	1.001296	-1.000019	discard	ultra-fine basin u_offset=0.4585	agent1	branch_search	0	-1.520844
+exp221	2.57581612e-16	1.001296	1.000019	discard	ultra-fine basin u_offset=0.4590	agent1	branch_search	0	-1.520844
+exp222	5.40521575e-16	1.001296	1.000019	discard	basin edge u_offset=0.4550	agent1	branch_search	0	-1.520844
+exp223	2.04001121e-15	1.001296	1.000019	discard	basin edge u_offset=0.4555	agent1	branch_search	1	-1.520844
+exp224	3.62021453e-16	1.001296	1.000019	discard	basin edge u_offset=0.4560	agent1	branch_search	0	-1.520844
+exp225	1.86448479e-16	1.001296	1.000019	discard	basin edge u_offset=0.4565	agent1	branch_search	0	-1.520844
+exp226	2.73184526e-16	1.001296	1.000019	discard	basin edge u_offset=0.4567	agent1	branch_search	1	-1.520844
+exp227	2.57581612e-16	1.001296	1.000019	discard	basin edge u_offset=0.4568	agent1	branch_search	0	-1.520844
+exp228	2.06774381e-16	1.001296	-1.000019	discard	basin edge u_offset=0.4569	agent1	branch_search	0	-1.520844
+exp229	2.06774381e-16	1.001296	-1.000019	discard	basin edge u_offset=0.4570	agent1	branch_search	1	-1.520844
+exp230	2.00532833e-15	1.001296	-1.000019	discard	basin edge u_offset=0.4588	agent1	branch_search	0	-1.520844
+exp231	2.57581612e-16	1.001296	1.000019	discard	basin edge u_offset=0.4589	agent1	branch_search	0	-1.520844
+exp232	2.57581612e-16	1.001296	1.000019	discard	basin edge u_offset=0.4590	agent1	branch_search	0	-1.520844
+exp233	1.86448479e-16	1.001296	1.000019	discard	basin edge u_offset=0.4595	agent1	branch_search	0	-1.520844
+exp234	1.96261557e-16	1.001296	1.000019	discard	basin edge u_offset=0.4600	agent1	branch_search	1	-1.520844
+exp235	5.40521575e-16	1.001296	1.000019	discard	Fourier N=4 basin test u_offset=0.455	agent1	branch_search	0	-1.520844
+exp236	2.06774381e-16	1.001296	-1.000019	discard	Fourier N=4 basin test u_offset=0.4569	agent1	branch_search	0	-1.520844
+exp237	1.96261557e-16	1.001296	1.000019	discard	Fourier N=4 basin test u_offset=0.46	agent1	branch_search	0	-1.520844
+exp238	2.06774381e-16	1.001296	-1.000019	discard	Fourier N=4 basin test u_offset=0.47	agent1	branch_search	0	-1.520844
+exp239	2.30631717e-15	1.001296	1.000019	discard	Fourier N=8 basin test u_offset=0.455	agent1	branch_search	0	-1.520844
+exp240	3.59087085e-15	1.001296	-1.000019	discard	Fourier N=8 basin test u_offset=0.4569	agent1	branch_search	1	-1.520844
+exp241	3.15704950e-15	1.001296	1.000019	discard	Fourier N=8 basin test u_offset=0.46	agent1	branch_search	0	-1.520844
+exp242	2.26884027e-15	1.001296	-1.000019	discard	Fourier N=8 basin test u_offset=0.47	agent1	branch_search	0	-1.520844
+exp243	1.32569455e-14	1.001296	1.000019	discard	Fourier N=16 basin test u_offset=0.455	agent1	branch_search	1	-1.520844
+exp244	1.46695179e-14	1.001296	-1.000019	discard	Fourier N=16 basin test u_offset=0.4569	agent1	branch_search	0	-1.520844
+exp245	8.51038050e-15	1.001296	1.000019	discard	Fourier N=16 basin test u_offset=0.46	agent1	branch_search	0	-1.520844
+exp246	7.37110333e-15	1.001296	-1.000019	discard	Fourier N=16 basin test u_offset=0.47	agent1	branch_search	1	-1.520844
+exp247	crash	0	0	crash	Fourier N=32 basin test u_offset=0.455	agent1	branch_search	0	0
+exp248	crash	0	0	crash	Fourier N=32 basin test u_offset=0.4569	agent1	branch_search	1	0
+exp249	crash	0	0	crash	Fourier N=32 basin test u_offset=0.46	agent1	branch_search	0	0
+exp250	crash	0	0	crash	Fourier N=32 basin test u_offset=0.47	agent1	branch_search	0	0
+exp251	2.06774381e-16	1.001296	-1.000019	discard	phase sensitivity phase=0.0 at u_offset=0.4569	agent1	perturbation	0	-1.520844
+exp252	2.57581612e-16	1.001296	-1.000019	discard	phase sensitivity phase=0.5 at u_offset=0.4569	agent1	perturbation	1	-1.520844
+exp253	3.67657763e-17	0.070535	0.000000	discard	phase sensitivity phase=1.0 at u_offset=0.4569	agent1	perturbation	0	0.000099
+exp254	6.06648695e-17	0.070535	0.000000	discard	phase sensitivity phase=1.5708 at u_offset=0.4569	agent1	perturbation	0	0.000099
+exp255	1.95981325e-16	0.070535	0.000000	discard	phase sensitivity phase=2.0 at u_offset=0.4569	agent1	perturbation	1	0.000099
+exp256	1.74030501e-22	0.000000	0.000000	discard	phase sensitivity phase=3.1416 at u_offset=0.4569	agent1	perturbation	0	-0.000000
+exp257	7.62788607e-17	0.070535	-0.000000	discard	phase sensitivity phase=4.7124 at u_offset=0.4569	agent1	perturbation	0	0.000099
+exp258	2.75908082e-15	1.001296	1.000019	discard	phase sensitivity phase=6.0 at u_offset=0.4569	agent1	perturbation	1	-1.520844
+exp259	2.06774381e-16	1.001296	-1.000019	discard	Fourier N=4 at basin edge u_offset=0.4569, amp=0.1	agent0	branch_search	0	-1.520844
+exp260	3.63193098e-20	0.000000	-0.000000	discard	mode-2 basin map u_offset=0.0	agent1	branch_search	1	-0.000000
+exp261	1.27583409e-27	0.000000	-0.000000	discard	mode-2 basin map u_offset=0.1	agent1	branch_search	0	0.000000
+exp262	2.43217770e-21	0.000000	0.000000	discard	mode-2 basin map u_offset=0.2	agent1	branch_search	0	-0.000000
+exp263	3.64881743e-24	0.000000	0.000000	discard	mode-2 basin map u_offset=0.3	agent1	branch_search	0	-0.000000
+exp264	1.68811216e-26	0.000000	0.000000	discard	mode-2 basin map u_offset=0.4	agent1	branch_search	0	0.000000
+exp265	3.72665339e-18	0.000000	0.000000	discard	mode-2 basin map u_offset=0.45	agent1	branch_search	1	-0.000000
+exp266	1.96261557e-16	1.001296	1.000019	discard	mode-2 basin map u_offset=0.46	agent1	branch_search	0	-1.520844
+exp267	2.91831433e-15	1.001296	1.000019	discard	mode-2 basin map u_offset=0.47	agent1	branch_search	0	-1.520844
+exp268	3.62021453e-16	1.001296	-1.000019	discard	mode-2 basin map u_offset=0.48	agent1	branch_search	1	-1.520844
+exp269	1.84621527e-15	1.001296	-1.000019	discard	mode-2 basin map u_offset=0.49	agent1	branch_search	0	-1.520844
+exp270	1.96261557e-16	1.001296	-1.000019	discard	mode-2 basin map u_offset=0.50	agent1	branch_search	1	-1.520844
+exp271	2.06774381e-16	1.001296	-1.000019	discard	mode-2 basin map u_offset=0.55	agent1	branch_search	0	-1.520844
+exp272	1.96261557e-16	1.001296	-1.000019	discard	mode-2 basin map u_offset=0.57	agent1	branch_search	1	-1.520844
+exp273	2.06774381e-16	1.001296	-1.000019	discard	mode-2 basin map u_offset=0.58	agent1	branch_search	0	-1.520844
+exp274	1.86448479e-16	1.001296	1.000019	discard	mode-2 basin map u_offset=0.59	agent1	branch_search	0	-1.520844
+exp275	2.57581612e-16	1.001296	1.000019	discard	mode-2 basin map u_offset=0.60	agent1	branch_search	1	-1.520844
+exp276	9.99978354e-12	1.002503	1.000218	discard	scipy with linearized IC u=1.0+0.1cos, tol=1e-11	agent0	initial_cond	0	-1.523848
+exp277	5.90447763e-09	1.002503	1.000218	discard	scipy coarse: n_nodes=50 tol=1e-8 for comparison	agent0	ablation	0	-1.523848
+exp278	2.06774381e-16	1.001296	1.000019	discard	Fourier N=4 extreme u_offset=1.5	agent0	initial_cond	0	-1.520844
+exp279	3.79680863e-19	0.000000	0.000000	discard	mode-3 basin map u_offset=0.40	agent1	branch_search	0	-0.000000
+exp280	5.73515383e-24	0.000000	0.000000	discard	mode-3 basin map u_offset=0.42	agent1	branch_search	1	-0.000000
+exp281	7.18719295e-20	0.000000	0.000000	discard	mode-3 basin map u_offset=0.44	agent1	branch_search	0	-0.000000
+exp282	4.00777441e-16	1.001296	-1.000019	discard	mode-3 basin map u_offset=0.46	agent1	branch_search	0	-1.520844
+exp283	1.96261557e-16	1.001296	1.000019	discard	mode-3 basin map u_offset=0.47	agent1	branch_search	1	-1.520844
+exp284	3.06884301e-16	1.001296	-1.000019	discard	mode-3 basin map u_offset=0.48	agent1	branch_search	0	-1.520844
+exp285	2.06774381e-16	1.001296	-1.000019	discard	mode-3 basin map u_offset=0.50	agent1	branch_search	0	-1.520844
+exp286	2.06774381e-16	1.001296	-1.000019	discard	Fourier N=4 extreme u_offset=-1.5	agent0	initial_cond	1	-1.520844
+exp287	1.86448479e-16	1.001296	-1.000019	discard	mode-3 basin map u_offset=0.55	agent1	branch_search	1	-1.520844
+exp288	3.62021453e-16	1.001296	-1.000019	discard	mode-3 basin map u_offset=0.57	agent1	branch_search	0	-1.520844
+exp289	2.06774381e-16	1.001296	-1.000019	discard	mode-3 basin map u_offset=0.58	agent1	branch_search	0	-1.520844
+exp290	3.62021453e-16	1.001296	1.000019	discard	mode-3 basin map u_offset=0.59	agent1	branch_search	1	-1.520844
+exp291	2.57581612e-16	1.001296	1.000019	discard	mode-3 basin map u_offset=0.60	agent1	branch_search	0	-1.520844
+exp292	1.68811216e-26	0.000000	0.000000	discard	mode-2 basin map u_offset=0.40	agent0	branch_search	0	0.000000
+exp293	3.40875420e-27	0.000000	-0.000000	discard	DC trivial boundary u_offset=0.44	agent1	branch_search	1	0.000000
+exp294	1.55175362e-28	0.000000	-0.000000	discard	mode-2 basin map u_offset=0.42	agent0	branch_search	1	0.000000
+exp295	4.06309032e-24	0.000000	-0.000000	discard	mode-2 basin map u_offset=0.44	agent0	branch_search	0	-0.000000
+exp295	3.95472498e-16	0.000000	0.000000	discard	DC trivial boundary u_offset=0.45	agent1	branch_search	0	-0.000000
+exp296	3.15599276e-24	0.000000	0.000000	discard	DC trivial boundary u_offset=0.455	agent1	branch_search	0	-0.000000
+exp296	3.72665339e-18	0.000000	0.000000	discard	mode-2 basin map u_offset=0.45	agent0	branch_search	0	-0.000000
+exp297	3.90950555e-17	0.000000	0.000000	discard	DC trivial boundary u_offset=0.458	agent1	branch_search	1	-0.000000
+exp297	1.96261557e-16	1.001296	1.000019	discard	mode-2 basin map u_offset=0.46	agent0	branch_search	1	-1.520844
+exp298	2.91831433e-15	1.001296	1.000019	discard	mode-2 basin map u_offset=0.47	agent0	branch_search	0	-1.520844
+exp298	3.66306952e-28	0.000000	-0.000000	discard	DC trivial boundary u_offset=0.459	agent1	branch_search	0	0.000000
+exp299	3.62021453e-16	1.001296	-1.000019	discard	mode-2 basin map u_offset=0.48	agent0	branch_search	0	-1.520844
+exp300	2.42370301e-25	0.000000	-0.000000	discard	DC trivial boundary u_offset=0.460	agent1	branch_search	0	0.000000
+exp301	1.84621527e-15	1.001296	-1.000019	discard	mode-2 basin map u_offset=0.49	agent0	branch_search	1	-1.520844
+exp302	3.16515254e-19	0.000000	0.000000	discard	DC trivial boundary u_offset=0.461	agent1	branch_search	1	-0.000000
+exp303	1.96261557e-16	1.001296	-1.000019	discard	mode-2 basin map u_offset=0.50	agent0	branch_search	0	-1.520844
+exp304	1.22200796e-28	0.000000	-0.000000	discard	DC trivial boundary u_offset=0.462	agent1	branch_search	0	0.000000
+exp305	2.06774381e-16	1.001296	-1.000019	discard	mode-2 basin map u_offset=0.52	agent0	branch_search	0	-1.520844
+exp306	3.83328516e-15	1.001296	-1.000019	discard	DC trivial boundary u_offset=0.463	agent1	branch_search	0	-1.520844
+exp307	1.88564362e-15	1.001296	-1.000019	discard	mode-2 basin map u_offset=0.54	agent0	branch_search	1	-1.520844
+exp308	3.74957179e-16	1.001296	-1.000019	discard	DC trivial boundary u_offset=0.464	agent1	branch_search	1	-1.520844
+exp309	1.86448479e-16	1.001296	-1.000019	discard	mode-2 basin map u_offset=0.56	agent0	branch_search	0	-1.520844
+exp310	2.06774381e-16	1.001296	-1.000019	discard	DC trivial boundary u_offset=0.465	agent1	branch_search	0	-1.520844
+exp311	2.06774381e-16	1.001296	-1.000019	discard	mode-2 basin map u_offset=0.58	agent0	branch_search	0	-1.520844
+exp312	2.57581612e-16	1.001296	1.000019	discard	mode-2 basin map u_offset=0.60	agent0	branch_search	0	-1.520844
+exp313	3.62021453e-16	1.001296	1.000019	discard	mode-2 basin map u_offset=0.62	agent0	branch_search	1	-1.520844
+exp314	1.22200796e-28	0.000000	-0.000000	discard	DC trivial boundary refinement u_offset=0.4620	agent1	branch_search	1	0.000000
+exp315	2.73184526e-16	1.001296	-1.000019	discard	DC trivial boundary refinement u_offset=0.4622	agent1	branch_search	0	-1.520844
+exp316	1.99705176e-15	1.001296	1.000019	discard	DC trivial boundary refinement u_offset=0.4624	agent1	branch_search	0	-1.520844
+exp317	1.88564362e-15	1.001296	1.000019	discard	DC trivial boundary refinement u_offset=0.4626	agent1	branch_search	1	-1.520844
+exp318	2.57581612e-16	1.001296	-1.000019	discard	mode-2 refine u_offset=0.455	agent0	branch_search	0	-1.520844
+exp319	2.06774381e-16	1.001296	1.000019	discard	DC trivial boundary refinement u_offset=0.4628	agent1	branch_search	0	-1.520844
+exp320	1.96261557e-16	1.001296	1.000019	discard	mode-2 refine u_offset=0.465	agent0	branch_search	0	-1.520844
+exp321	3.83328516e-15	1.001296	-1.000019	discard	DC trivial boundary refinement u_offset=0.4630	agent1	branch_search	0	-1.520844
+exp322	1.86448479e-16	1.001296	-1.000019	discard	mode-2 refine u_offset=0.475	agent0	branch_search	1	-1.520844
+exp323	2.78845130e-15	1.001296	-1.000019	discard	mode-2 refine u_offset=0.485	agent0	branch_search	0	-1.520844
+exp324	2.06774381e-16	1.001296	-1.000019	discard	mode-2 refine u_offset=0.580	agent0	branch_search	0	-1.520844
+exp325	3.62021453e-16	1.001296	-1.000019	discard	mode-2 refine u_offset=0.585	agent0	branch_search	0	-1.520844
+exp326	1.86448479e-16	1.001296	1.000019	discard	mode-2 refine u_offset=0.590	agent0	branch_search	1	-1.520844
+exp327	1.96261557e-16	1.001296	1.000019	discard	mode-2 refine u_offset=0.595	agent0	branch_search	0	-1.520844
+exp328	2.57581612e-16	1.001296	1.000019	discard	mode-2 refine u_offset=0.600	agent0	branch_search	0	-1.520844
+exp329	1.03981353e-24	0.000000	0.000000	discard	mode-2 fine u_offset=0.448	agent0	branch_search	1	0.000000
+exp330	1.22200796e-28	0.000000	-0.000000	discard	trivial boundary final u_offset=0.46200	agent1	branch_search	0	0.000000
+exp331	3.72665339e-18	0.000000	0.000000	discard	mode-2 fine u_offset=0.450	agent0	branch_search	0	-0.000000
+exp332	3.62021453e-16	1.001296	-1.000019	discard	trivial boundary final u_offset=0.46205	agent1	branch_search	0	-1.520844
+exp332	1.25164250e-16	0.000000	0.000000	discard	mode-2 fine u_offset=0.452	agent0	branch_search	0	-0.000000
+exp333	2.06774381e-16	1.001296	-1.000019	discard	mode-2 fine u_offset=0.454	agent0	branch_search	1	-1.520844
+exp333	2.06774381e-16	1.001296	1.000019	discard	trivial boundary final u_offset=0.46210	agent1	branch_search	1	-1.520844
+exp334	1.96261557e-16	1.001296	-1.000019	discard	mode-2 fine u_offset=0.456	agent0	branch_search	0	-1.520844
+exp335	3.62021453e-16	1.001296	-1.000019	discard	trivial boundary final u_offset=0.46215	agent1	branch_search	0	-1.520844
+exp336	2.06774381e-16	1.001296	-1.000019	discard	mode-2 fine u_offset=0.458	agent0	branch_search	0	-1.520844
+exp337	2.73184526e-16	1.001296	-1.000019	discard	trivial boundary final u_offset=0.46220	agent1	branch_search	0	-1.520844
+exp338	1.96261557e-16	1.001296	1.000019	discard	mode-2 fine u_offset=0.460	agent0	branch_search	0	-1.520844
+exp339	1.99822732e-23	0.000000	0.000000	discard	2D basin u_offset=0.40 amp=0.0	agent1	branch_search	0	-0.000000
+exp340	8.62802154e-29	0.000000	0.000000	discard	2D basin u_offset=0.40 amp=0.1	agent1	branch_search	0	0.000000
+exp341	3.79680863e-19	0.000000	0.000000	discard	mode-3 basin map u_offset=0.40	agent0	branch_search	0	-0.000000
+exp342	3.28215501e-27	0.000000	0.000000	discard	2D basin u_offset=0.40 amp=0.2	agent1	branch_search	0	0.000000
+exp343	7.18719295e-20	0.000000	0.000000	discard	mode-3 basin map u_offset=0.44	agent0	branch_search	1	-0.000000
+exp344	1.15514757e-21	0.000000	-0.000000	discard	2D basin u_offset=0.40 amp=0.3	agent1	branch_search	0	-0.000000
+exp345	4.00777441e-16	1.001296	-1.000019	discard	mode-3 basin map u_offset=0.46	agent0	branch_search	0	-1.520844
+exp346	4.37535640e-16	1.001296	-1.000019	discard	2D basin u_offset=0.40 amp=0.5	agent1	branch_search	0	-1.520844
+exp346	3.06884301e-16	1.001296	-1.000019	discard	mode-3 basin map u_offset=0.48	agent0	branch_search	0	-1.520844
+exp347	3.40875420e-27	0.000000	-0.000000	discard	2D basin u_offset=0.44 amp=0.0	agent1	branch_search	0	0.000000
+exp347	2.06774381e-16	1.001296	-1.000019	discard	mode-3 basin map u_offset=0.50	agent0	branch_search	0	-1.520844
+exp348	7.63067617e-25	0.000000	-0.000000	discard	2D basin u_offset=0.44 amp=0.1	agent1	branch_search	0	0.000000
+exp348	2.57581612e-16	1.001296	-1.000019	discard	mode-3 basin map u_offset=0.52	agent0	branch_search	0	-1.520844
+exp349	1.21347111e-28	0.000000	-0.000000	discard	2D basin u_offset=0.44 amp=0.2	agent1	branch_search	0	0.000000
+exp349	1.86448479e-16	1.001296	-1.000019	discard	mode-3 basin map u_offset=0.54	agent0	branch_search	0	-1.520844
+exp350	1.21873021e-20	0.000000	-0.000000	discard	2D basin u_offset=0.44 amp=0.3	agent1	branch_search	0	-0.000000
+exp351	2.06774381e-16	1.001296	-1.000019	discard	mode-3 basin map u_offset=0.56	agent0	branch_search	0	-1.520844
+exp352	3.93013462e-16	1.001296	1.000019	discard	2D basin u_offset=0.44 amp=0.5	agent1	branch_search	1	-1.520844
+exp353	2.06774381e-16	1.001296	-1.000019	discard	mode-3 basin map u_offset=0.58	agent0	branch_search	1	-1.520844
+exp354	2.42370301e-25	0.000000	-0.000000	discard	2D basin u_offset=0.46 amp=0.0	agent1	branch_search	0	0.000000
+exp354	2.57581612e-16	1.001296	1.000019	discard	mode-3 basin map u_offset=0.60	agent0	branch_search	0	-1.520844
+exp355	2.57581612e-16	1.001296	1.000019	discard	mode-3 basin map u_offset=0.62	agent0	branch_search	0	-1.520844
+exp356	1.96261557e-16	1.001296	1.000019	discard	2D basin u_offset=0.46 amp=0.1	agent1	branch_search	0	-1.520844
+exp357	5.13290577e-15	1.001296	-1.000019	discard	2D basin u_offset=0.46 amp=0.2	agent1	branch_search	1	-1.520844
+exp358	5.50670201e-16	1.001296	-1.000019	discard	2D basin u_offset=0.46 amp=0.3	agent1	branch_search	0	-1.520844
+exp359	3.83715186e-16	1.001296	1.000019	discard	2D basin u_offset=0.46 amp=0.5	agent1	branch_search	0	-1.520844
+exp360	2.06774381e-16	1.001296	-1.000019	discard	2D basin u_offset=0.465 amp=0.0	agent1	branch_search	0	-1.520844
+exp361	2.73184526e-16	1.001296	1.000019	discard	2D basin u_offset=0.465 amp=0.1	agent1	branch_search	0	-1.520844
+exp362	2.07949285e-15	1.001296	1.000019	discard	2D basin u_offset=0.465 amp=0.2	agent1	branch_search	1	-1.520844
+exp363	2.57581612e-16	1.001296	1.000019	discard	2D basin u_offset=0.465 amp=0.3	agent1	branch_search	0	-1.520844
+exp364	4.37535640e-16	1.001296	1.000019	discard	2D basin u_offset=0.465 amp=0.5	agent1	branch_search	0	-1.520844
+exp365	2.06774381e-16	1.001296	-1.000019	discard	2D basin u_offset=0.47 amp=0.0	agent1	branch_search	1	-1.520844
+exp366	2.06774381e-16	1.001296	-1.000019	discard	2D basin u_offset=0.47 amp=0.1	agent1	branch_search	0	-1.520844
+exp367	3.77006140e-16	1.001296	-1.000019	discard	2D basin u_offset=0.47 amp=0.2	agent1	branch_search	0	-1.520844
+exp368	1.86448479e-16	1.001296	-1.000019	discard	2D basin u_offset=0.47 amp=0.3	agent1	branch_search	1	-1.520844
+exp369	1.96261557e-16	1.001296	1.000019	discard	2D basin u_offset=0.47 amp=0.5	agent1	branch_search	0	-1.520844
+exp370	3.62021453e-16	1.001296	1.000019	discard	2D basin u_offset=0.475 amp=0.0	agent1	branch_search	0	-1.520844
+exp371	2.08871080e-15	1.001296	-1.000019	discard	2D basin u_offset=0.475 amp=0.1	agent1	branch_search	1	-1.520844
+exp372	4.00777441e-16	1.001296	1.000019	discard	2D basin u_offset=0.475 amp=0.2	agent1	branch_search	0	-1.520844
+exp373	2.04903081e-16	1.001296	1.000019	discard	2D basin u_offset=0.475 amp=0.3	agent1	branch_search	0	-1.520844
+exp374	2.03885438e-15	1.001296	1.000019	discard	2D basin u_offset=0.475 amp=0.5	agent1	branch_search	1	-1.520844
+exp375	2.57581612e-16	1.001296	1.000019	discard	2D basin u_offset=0.48 amp=0.0	agent1	branch_search	0	-1.520844
+exp376	4.00777441e-16	1.001296	-1.000019	discard	2D basin u_offset=0.48 amp=0.1	agent1	branch_search	0	-1.520844
+exp377	2.04903081e-16	1.001296	-1.000019	discard	2D basin u_offset=0.48 amp=0.2	agent1	branch_search	1	-1.520844
+exp378	3.62021453e-16	1.001296	1.000019	discard	2D basin u_offset=0.48 amp=0.3	agent1	branch_search	0	-1.520844
+exp379	2.04903081e-16	1.001296	1.000019	discard	2D basin u_offset=0.48 amp=0.5	agent1	branch_search	0	-1.520844
+exp380	3.77006140e-16	1.001296	-1.000019	discard	2D basin u_offset=0.50 amp=0.0	agent1	branch_search	1	-1.520844
+exp381	2.09614326e-15	1.001296	-1.000019	discard	2D basin u_offset=0.50 amp=0.1	agent1	branch_search	0	-1.520844
+exp382	2.06774381e-16	1.001296	-1.000019	discard	2D basin u_offset=0.50 amp=0.2	agent1	branch_search	0	-1.520844
+exp383	2.57581612e-16	1.001296	1.000019	discard	2D basin u_offset=0.50 amp=0.3	agent1	branch_search	0	-1.520844
+exp384	1.96261557e-16	1.001296	1.000019	discard	2D basin u_offset=0.50 amp=0.5	agent1	branch_search	0	-1.520844
+exp385	2.57581612e-16	1.001296	-1.000019	discard	2D basin u_offset=0.55 amp=0.0	agent1	branch_search	0	-1.520844
+exp386	6.34216421e-16	1.001296	-1.000019	discard	2D basin u_offset=0.55 amp=0.1	agent1	branch_search	0	-1.520844
+exp387	2.06774381e-16	1.001296	-1.000019	discard	2D basin u_offset=0.55 amp=0.2	agent1	branch_search	0	-1.520844
+exp388	6.84480717e-27	0.000000	-0.000000	discard	mode-3 refine u_offset=0.445	agent0	branch_search	0	0.000000
+exp388	5.01524128e-16	1.001296	-1.000019	discard	2D basin u_offset=0.55 amp=0.3	agent1	branch_search	0	-1.520844
+exp389	1.58190509e-19	0.000000	0.000000	discard	mode-3 refine u_offset=0.450	agent0	branch_search	0	-0.000000
+exp389	5.71859165e-16	1.001296	1.000019	discard	2D basin u_offset=0.55 amp=0.5	agent1	branch_search	0	-1.520844
+exp390	1.35688793e-15	0.000000	0.000000	discard	mode-3 refine u_offset=0.455	agent0	branch_search	0	-0.000000
+exp391	3.62021453e-16	1.001296	-1.000019	discard	2D basin u_offset=0.57 amp=0.0	agent1	branch_search	0	-1.520844
+exp392	2.57581612e-16	1.001296	-1.000019	discard	2D basin u_offset=0.57 amp=0.1	agent1	branch_search	0	-1.520844
+exp393	2.06774381e-16	1.001296	-1.000019	discard	mode-3 refine u_offset=0.580	agent0	branch_search	0	-1.520844
+exp394	2.04903081e-16	1.001296	-1.000019	discard	mode-3 refine u_offset=0.585	agent0	branch_search	1	-1.520844
+exp394	4.21048514e-16	1.001296	-1.000019	discard	2D basin u_offset=0.57 amp=0.2	agent1	branch_search	0	-1.520844
+exp395	3.62021453e-16	1.001296	1.000019	discard	mode-3 refine u_offset=0.590	agent0	branch_search	0	-1.520844
+exp396	2.06774381e-16	1.001296	-1.000019	discard	2D basin u_offset=0.57 amp=0.3	agent1	branch_search	0	-1.520844
+exp397	3.62021453e-16	1.001296	1.000019	discard	mode-3 refine u_offset=0.595	agent0	branch_search	0	-1.520844
+exp398	3.09720388e-15	1.001296	1.000019	discard	2D basin u_offset=0.57 amp=0.5	agent1	branch_search	0	-1.520844
+exp399	7.20108768e-16	1.001296	-1.000019	discard	2D basin u_offset=0.58 amp=0.0	agent1	branch_search	0	-1.520844
+exp400	6.01806552e-16	1.001296	1.000019	discard	2D basin u_offset=0.58 amp=0.1	agent1	branch_search	0	-1.520844
+exp401	3.62021453e-16	1.001296	-1.000019	discard	2D basin u_offset=0.58 amp=0.2	agent1	branch_search	0	-1.520844
+exp402	2.04903081e-16	1.001296	-1.000019	discard	2D basin u_offset=0.58 amp=0.3	agent1	branch_search	0	-1.520844
+exp403	1.86448479e-16	1.001296	1.000019	discard	2D basin u_offset=0.58 amp=0.5	agent1	branch_search	0	-1.520844
+exp404	2.02539645e-15	1.001296	1.000019	discard	2D basin u_offset=0.59 amp=0.0	agent1	branch_search	1	-1.520844
+exp405	2.00532833e-15	1.001296	1.000019	discard	2D basin u_offset=0.59 amp=0.1	agent1	branch_search	0	-1.520844
+exp406	2.57581612e-16	1.001296	1.000019	discard	2D basin u_offset=0.59 amp=0.2	agent1	branch_search	0	-1.520844
+exp407	1.96261557e-16	1.001296	-1.000019	discard	2D basin u_offset=0.59 amp=0.3	agent1	branch_search	1	-1.520844
+exp408	2.57581612e-16	1.001296	-1.000019	discard	2D basin u_offset=0.59 amp=0.5	agent1	branch_search	0	-1.520844
+exp409	2.30011512e-15	1.001296	1.000019	discard	2D basin u_offset=0.60 amp=0.0	agent1	branch_search	0	-1.520844
+exp410	1.96261557e-16	1.001296	1.000019	discard	2D basin u_offset=0.60 amp=0.1	agent1	branch_search	1	-1.520844
+exp411	3.93013462e-16	1.001296	1.000019	discard	2D basin u_offset=0.60 amp=0.2	agent1	branch_search	0	-1.520844
+exp412	1.96261557e-16	1.001296	-1.000019	discard	2D basin u_offset=0.60 amp=0.3	agent1	branch_search	0	-1.520844
+exp413	4.99600361e-16	1.001296	-1.000019	discard	2D basin u_offset=0.60 amp=0.5	agent1	branch_search	1	-1.520844
+exp414	2.06774381e-16	1.001296	1.000019	discard	mode-3 fine u_offset=0.456	agent0	branch_search	1	-1.520844
+exp415	2.06774381e-16	1.001296	1.000019	discard	mode-3 fine u_offset=0.457	agent0	branch_search	0	-1.520844
+exp416	2.57581612e-16	1.001296	-1.000019	discard	mode-3 fine u_offset=0.458	agent0	branch_search	0	-1.520844
+exp417	2.57581612e-16	1.001296	-1.000019	discard	mode-3 fine u_offset=0.459	agent0	branch_search	1	-1.520844
+exp418	4.00777441e-16	1.001296	-1.000019	discard	mode-3 fine u_offset=0.460	agent0	branch_search	0	-1.520844
+exp419	3.96566134e-15	1.001296	-1.000019	discard	mode-3 fine u_offset=0.461	agent0	branch_search	0	-1.520844
+exp420	1.88564362e-15	1.001296	-1.000019	discard	mode-3 fine u_offset=0.586	agent0	branch_search	1	-1.520844
+exp421	4.82040919e-16	1.001296	-1.000019	discard	mode-3 fine u_offset=0.587	agent0	branch_search	0	-1.520844
+exp422	2.06774381e-16	1.001296	1.000019	discard	mode-3 fine u_offset=0.588	agent0	branch_search	0	-1.520844
+exp423	1.86448479e-16	1.001296	1.000019	discard	mode-3 fine u_offset=0.589	agent0	branch_search	0	-1.520844
+exp424	1.22200796e-28	0.000000	-0.000000	discard	energy analysis u_offset=0.4620	agent1	branch_search	1	0.000000
+exp425	2.06774381e-16	1.001296	1.000019	discard	energy analysis u_offset=0.4621	agent1	branch_search	0	-1.520844
+exp426	2.73184526e-16	1.001296	-1.000019	discard	energy analysis u_offset=0.4622	agent1	branch_search	0	-1.520844
+exp427	1.99734105e-15	1.001296	1.000019	discard	energy analysis u_offset=0.4625	agent1	branch_search	1	-1.520844
+exp428	3.83328516e-15	1.001296	-1.000019	discard	energy analysis u_offset=0.4630	agent1	branch_search	0	-1.520844
+exp429	2.06774381e-16	1.001296	-1.000019	discard	energy analysis u_offset=0.47	agent1	branch_search	0	-1.520844
+exp430	3.77006140e-16	1.001296	-1.000019	discard	energy analysis u_offset=0.50	agent1	branch_search	1	-1.520844
+exp431	7.20108768e-16	1.001296	-1.000019	discard	energy analysis u_offset=0.58	agent1	branch_search	0	-1.520844
+exp432	3.47776366e-16	1.001296	-1.000019	discard	energy analysis u_offset=0.5897	agent1	branch_search	1	-1.520844
+exp433	1.96261557e-16	1.001296	1.000019	discard	energy analysis u_offset=0.5898	agent1	branch_search	0	-1.520844
+exp434	2.30011512e-15	1.001296	1.000019	discard	energy analysis u_offset=0.60	agent1	branch_search	0	-1.520844
+exp435	2.57581612e-16	1.001296	1.000019	discard	energy analysis u_offset=0.90	agent1	branch_search	1	-1.520844
+exp436	1.89920454e-15	1.001296	1.000019	discard	energy analysis u_offset=1.0	agent1	branch_search	0	-1.520844
+exp437	1.22200796e-28	0.000000	-0.000000	discard	ultra-fine trivial boundary u_offset=0.462000	agent1	branch_search	0	0.000000
+exp438	6.56722657e-25	0.000000	0.000000	discard	ultra-fine trivial boundary u_offset=0.462005	agent1	branch_search	0	0.000000
+exp439	5.89101295e-16	0.000000	0.000000	discard	ultra-fine trivial boundary u_offset=0.462010	agent1	branch_search	1	-0.000000
+exp440	4.60327404e-15	0.000000	0.000000	discard	ultra-fine trivial boundary u_offset=0.462015	agent1	branch_search	0	-0.000000
+exp441	3.83328516e-15	1.001296	1.000019	discard	ultra-fine trivial boundary u_offset=0.462020	agent1	branch_search	0	-1.520844
+exp442	7.13766346e-15	1.001296	-1.000019	discard	ultra-fine trivial boundary u_offset=0.462025	agent1	branch_search	0	-1.520844
+exp443	1.96261557e-16	1.001296	-1.000019	discard	ultra-fine trivial boundary u_offset=0.462030	agent1	branch_search	0	-1.520844
+exp444	3.62021453e-16	1.001296	1.000019	discard	ultra-fine trivial boundary u_offset=0.462035	agent1	branch_search	0	-1.520844
+exp445	2.03322616e-15	1.001296	1.000019	discard	ultra-fine trivial boundary u_offset=0.462040	agent1	branch_search	0	-1.520844
+exp446	1.88564362e-15	1.001296	-1.000019	discard	ultra-fine trivial boundary u_offset=0.462045	agent1	branch_search	0	-1.520844
+exp447	3.62021453e-16	1.001296	-1.000019	discard	ultra-fine trivial boundary u_offset=0.462050	agent1	branch_search	0	-1.520844
+exp448	4.60327404e-15	0.000000	0.000000	discard	ultra-ultra-fine u_offset=0.4620150	agent1	branch_search	0	-0.000000
+exp449	1.86448479e-16	1.001296	-1.000019	discard	ultra-ultra-fine u_offset=0.4620160	agent1	branch_search	0	-1.520844
+exp450	2.06774381e-16	1.001296	-1.000019	discard	ultra-ultra-fine u_offset=0.4620170	agent1	branch_search	1	-1.520844
+exp451	7.36177075e-16	1.001296	-1.000019	discard	ultra-ultra-fine u_offset=0.4620180	agent1	branch_search	0	-1.520844
+exp452	1.93583948e-15	1.001296	1.000019	discard	ultra-ultra-fine u_offset=0.4620190	agent1	branch_search	0	-1.520844
+exp453	3.83328516e-15	1.001296	1.000019	discard	ultra-ultra-fine u_offset=0.4620200	agent1	branch_search	1	-1.520844
+exp454	4.60327404e-15	0.000000	0.000000	discard	10^-7 resolution u_offset=0.46201500	agent1	branch_search	1	-0.000000
+exp455	2.04903081e-16	1.001296	-1.000019	discard	10^-7 resolution u_offset=0.46201520	agent1	branch_search	0	-1.520844
+exp456	2.73184526e-16	1.001296	1.000019	discard	10^-7 resolution u_offset=0.46201540	agent1	branch_search	0	-1.520844
+exp457	1.96261557e-16	1.001296	1.000019	discard	10^-7 resolution u_offset=0.46201560	agent1	branch_search	1	-1.520844
+exp458	2.30730482e-15	1.001296	-1.000019	discard	10^-7 resolution u_offset=0.46201580	agent1	branch_search	0	-1.520844
+exp459	1.86448479e-16	1.001296	-1.000019	discard	10^-7 resolution u_offset=0.46201600	agent1	branch_search	0	-1.520844
+exp460	1.96261557e-16	1.001296	1.000019	discard	residual vs phase at u_offset=1.0	agent1	perturbation	0	-1.520844
+exp461	2.57581612e-16	1.001296	1.000019	discard	residual vs phase at u_offset=1.0	agent1	perturbation	0	-1.520844
+exp462	1.95839140e-15	1.001296	1.000019	discard	residual vs phase at u_offset=1.0	agent1	perturbation	1	-1.520844
+exp463	5.22310230e-16	1.001296	1.000019	discard	residual vs phase at u_offset=1.0	agent1	perturbation	0	-1.520844
+exp464	2.06774381e-16	1.001296	1.000019	discard	residual vs phase at u_offset=1.0	agent1	perturbation	0	-1.520844
+exp465	2.04903081e-16	1.001296	1.000019	discard	residual vs phase at u_offset=1.0	agent1	perturbation	1	-1.520844
+exp466	2.04903081e-16	1.001296	1.000019	discard	residual vs phase at u_offset=1.0	agent1	perturbation	0	-1.520844
+exp467	2.04173342e-15	1.001296	1.000019	discard	residual vs phase at u_offset=1.0	agent1	perturbation	0	-1.520844
+exp468	2.57581612e-16	1.001296	1.000019	discard	residual vs phase at u_offset=1.0	agent1	perturbation	1	-1.520844
+exp469	2.57581612e-16	1.001296	1.000019	discard	residual vs phase at u_offset=1.0	agent1	perturbation	0	-1.520844
+exp470	2.08871080e-15	1.001296	1.000019	discard	residual vs phase at u_offset=1.0	agent1	perturbation	0	-1.520844
+exp471	3.93013462e-16	1.001296	1.000019	discard	residual vs phase at u_offset=1.0	agent1	perturbation	1	-1.520844
+exp472	2.06774381e-16	1.001296	1.000019	discard	residual vs phase at u_offset=1.0	agent1	perturbation	0	-1.520844
+exp473	2.06774381e-16	1.001296	1.000019	discard	optimal u_offset=0.9 for residual	agent1	initial_cond	0	-1.520844
+exp474	2.06774381e-16	1.001296	1.000019	discard	optimal u_offset=0.95 for residual	agent1	initial_cond	0	-1.520844
+exp475	2.06774381e-16	1.001296	1.000019	discard	optimal u_offset=0.98 for residual	agent1	initial_cond	1	-1.520844
+exp476	3.64042705e-15	1.001296	1.000019	discard	optimal u_offset=0.99 for residual	agent1	initial_cond	0	-1.520844
+exp477	1.96261557e-16	1.001296	1.000019	discard	optimal u_offset=1.0 for residual	agent1	initial_cond	0	-1.520844
+exp478	2.57581612e-16	1.001296	1.000019	discard	optimal u_offset=1.000019 for residual	agent1	initial_cond	1	-1.520844
+exp479	3.34221389e-16	1.001296	1.000019	discard	optimal u_offset=1.001 for residual	agent1	initial_cond	0	-1.520844
+exp480	3.64391704e-15	1.001296	1.000019	discard	optimal u_offset=1.01 for residual	agent1	initial_cond	0	-1.520844
+exp481	2.57581612e-16	1.001296	1.000019	discard	optimal u_offset=1.02 for residual	agent1	initial_cond	1	-1.520844
+exp482	1.96261557e-16	1.001296	1.000019	discard	optimal u_offset=1.05 for residual	agent1	initial_cond	0	-1.520844
+exp483	1.96261557e-16	1.001296	1.000019	discard	optimal u_offset=1.1 for residual	agent1	initial_cond	0	-1.520844
+exp484	3.47776366e-16	1.001296	-1.000019	discard	Wada at pos/neg boundary u_offset=0.589700	agent1	branch_search	0	-1.520844
+exp485	1.96261557e-16	1.001296	-1.000019	discard	Wada at pos/neg boundary u_offset=0.589720	agent1	branch_search	0	-1.520844
+exp486	2.06774381e-16	1.001296	1.000019	discard	Wada at pos/neg boundary u_offset=0.589740	agent1	branch_search	1	-1.520844
+exp487	2.10832785e-15	1.001296	1.000019	discard	Wada at pos/neg boundary u_offset=0.589750	agent1	branch_search	0	-1.520844
+exp488	2.02615702e-15	1.001296	1.000019	discard	Wada at pos/neg boundary u_offset=0.589760	agent1	branch_search	0	-1.520844
+exp489	3.47776366e-16	1.001296	1.000019	discard	Wada at pos/neg boundary u_offset=0.589770	agent1	branch_search	1	-1.520844
+exp490	1.96261557e-16	1.001296	1.000019	discard	Wada at pos/neg boundary u_offset=0.589780	agent1	branch_search	0	-1.520844
+exp491	4.99600361e-16	1.001296	1.000019	discard	Wada at pos/neg boundary u_offset=0.589790	agent1	branch_search	0	-1.520844
+exp492	1.96261557e-16	1.001296	1.000019	discard	Wada at pos/neg boundary u_offset=0.589800	agent1	branch_search	1	-1.520844
+exp493	1.96261557e-16	1.001296	-1.000019	discard	Wada fine u_offset=0.5897200	agent1	branch_search	1	-1.520844
+exp494	6.34216421e-16	1.001296	-1.000019	discard	Wada fine u_offset=0.5897220	agent1	branch_search	0	-1.520844
+exp495	2.57581612e-16	1.001296	-1.000019	discard	Wada fine u_offset=0.5897240	agent1	branch_search	0	-1.520844
+exp496	1.86448479e-16	1.001296	-1.000019	discard	Wada fine u_offset=0.5897260	agent1	branch_search	0	-1.520844
+exp497	1.23633098e-15	1.001296	-1.000019	discard	Wada fine u_offset=0.5897280	agent1	branch_search	0	-1.520844
+exp498	1.96261557e-16	1.001296	-1.000019	discard	Wada fine u_offset=0.5897300	agent1	branch_search	0	-1.520844
+exp499	2.06774381e-16	1.001296	-1.000019	discard	Wada fine u_offset=0.5897320	agent1	branch_search	0	-1.520844
+exp500	3.77006140e-16	1.001296	-1.000019	discard	Wada fine u_offset=0.5897340	agent1	branch_search	0	-1.520844
+exp501	3.52178773e-16	1.001296	1.000019	discard	Wada fine u_offset=0.5897360	agent1	branch_search	0	-1.520844
+exp502	4.37535640e-16	1.001296	1.000019	discard	Wada fine u_offset=0.5897380	agent1	branch_search	0	-1.520844
+exp503	2.06774381e-16	1.001296	1.000019	discard	Wada fine u_offset=0.5897400	agent1	branch_search	0	-1.520844
+exp504	3.77006140e-16	1.001296	-1.000019	discard	10^-8 resolution u_offset=0.58973400	agent1	branch_search	0	-1.520844
+exp505	2.04903081e-16	1.001296	-1.000019	discard	10^-8 resolution u_offset=0.58973420	agent1	branch_search	0	-1.520844
+exp506	1.96261557e-16	1.001296	-1.000019	discard	10^-8 resolution u_offset=0.58973440	agent1	branch_search	1	-1.520844
+exp507	3.62021453e-16	1.001296	-1.000019	discard	10^-8 resolution u_offset=0.58973460	agent1	branch_search	0	-1.520844
+exp508	4.00777441e-16	1.001296	1.000019	discard	10^-8 resolution u_offset=0.58973480	agent1	branch_search	1	-1.520844
+exp509	3.74957179e-16	1.001296	1.000019	discard	10^-8 resolution u_offset=0.58973500	agent1	branch_search	0	-1.520844
+exp510	3.06884301e-16	1.001296	1.000019	discard	10^-8 resolution u_offset=0.58973520	agent1	branch_search	0	-1.520844
+exp511	4.99600361e-16	1.001296	1.000019	discard	10^-8 resolution u_offset=0.58973540	agent1	branch_search	1	-1.520844
+exp512	2.06774381e-16	1.001296	1.000019	discard	10^-8 resolution u_offset=0.58973560	agent1	branch_search	0	-1.520844
+exp513	1.88564362e-15	1.001296	1.000019	discard	10^-8 resolution u_offset=0.58973580	agent1	branch_search	0	-1.520844
+exp514	3.52178773e-16	1.001296	1.000019	discard	10^-8 resolution u_offset=0.58973600	agent1	branch_search	1	-1.520844
+exp515	3.62021453e-16	1.001296	-1.000019	discard	10^-9 resolution u_offset=0.589734600	agent1	branch_search	0	-1.520844
+exp516	2.06774381e-16	1.001296	-1.000019	discard	10^-9 resolution u_offset=0.589734620	agent1	branch_search	1	-1.520844
+exp517	3.96919288e-15	1.001296	-1.000019	discard	10^-9 resolution u_offset=0.589734640	agent1	branch_search	0	-1.520844
+exp518	2.00532833e-15	1.001296	-1.000019	discard	10^-9 resolution u_offset=0.589734660	agent1	branch_search	0	-1.520844
+exp519	2.02615702e-15	1.001296	-1.000019	discard	10^-9 resolution u_offset=0.589734680	agent1	branch_search	1	-1.520844
+exp520	4.99600361e-16	1.001296	-1.000019	discard	10^-9 resolution u_offset=0.589734700	agent1	branch_search	0	-1.520844
+exp521	2.14637385e-15	1.001296	-1.000019	discard	10^-9 resolution u_offset=0.589734720	agent1	branch_search	0	-1.520844
+exp522	2.57581612e-16	1.001296	-1.000019	discard	10^-9 resolution u_offset=0.589734740	agent1	branch_search	0	-1.520844
+exp523	2.57581612e-16	1.001296	1.000019	discard	10^-9 resolution u_offset=0.589734760	agent1	branch_search	0	-1.520844
+exp524	1.96261557e-16	1.001296	1.000019	discard	10^-9 resolution u_offset=0.589734780	agent1	branch_search	1	-1.520844
+exp525	4.00777441e-16	1.001296	1.000019	discard	10^-9 resolution u_offset=0.589734800	agent1	branch_search	0	-1.520844
+exp526	2.02539645e-15	1.001296	1.000019	discard	boundary N=4 iter=1 u_offset=0.5900000	agent1	branch_search	0	-1.520844
+exp527	2.04903081e-16	1.001296	-1.000019	discard	boundary N=4 iter=2 u_offset=0.5850000	agent1	branch_search	0	-1.520844
+exp528	4.37535640e-16	1.001296	-1.000019	discard	boundary N=4 iter=3 u_offset=0.5875000	agent1	branch_search	1	-1.520844
+exp529	3.62021453e-16	1.001296	-1.000019	discard	boundary N=4 iter=4 u_offset=0.5887500	agent1	branch_search	0	-1.520844
+exp530	1.96261557e-16	1.001296	-1.000019	discard	boundary N=4 iter=5 u_offset=0.5893750	agent1	branch_search	0	-1.520844
+exp531	2.06774381e-16	1.001296	-1.000019	discard	boundary N=4 iter=6 u_offset=0.5896875	agent1	branch_search	1	-1.520844
+exp532	2.06774381e-16	1.001296	1.000019	discard	boundary N=4 iter=7 u_offset=0.5898438	agent1	branch_search	0	-1.520844
+exp533	4.99600361e-16	1.001296	1.000019	discard	boundary N=4 iter=8 u_offset=0.5897657	agent1	branch_search	1	-1.520844
+exp534	2.06774381e-16	1.001296	-1.000019	discard	boundary N=4 iter=9 u_offset=0.5897266	agent1	branch_search	0	-1.520844
+exp535	2.06774381e-16	1.001296	1.000019	discard	boundary N=4 iter=10 u_offset=0.5897461	agent1	branch_search	0	-1.520844
+exp536	2.37634737e-15	1.001296	1.000019	discard	boundary N=8 iter=1 u_offset=0.5900000	agent1	branch_search	1	-1.520844
+exp537	9.19175793e-15	1.001296	-1.000019	discard	boundary N=8 iter=2 u_offset=0.5850000	agent1	branch_search	0	-1.520844
+exp538	2.42560624e-15	1.001296	-1.000019	discard	boundary N=8 iter=3 u_offset=0.5875000	agent1	branch_search	0	-1.520844
+exp539	9.25085906e-15	1.001296	-1.000019	discard	boundary N=8 iter=4 u_offset=0.5887500	agent1	branch_search	1	-1.520844
+exp540	4.35928469e-15	1.001296	-1.000019	discard	boundary N=8 iter=5 u_offset=0.5893750	agent1	branch_search	0	-1.520844
+exp541	2.75570013e-15	1.001296	-1.000019	discard	boundary N=8 iter=6 u_offset=0.5896875	agent1	branch_search	0	-1.520844
+exp542	1.95383202e-15	1.001296	1.000019	discard	boundary N=8 iter=7 u_offset=0.5898438	agent1	branch_search	1	-1.520844
+exp543	2.67074315e-15	1.001296	1.000019	discard	boundary N=8 iter=8 u_offset=0.5897657	agent1	branch_search	0	-1.520844
+exp544	2.93380529e-15	1.001296	-1.000019	discard	boundary N=8 iter=9 u_offset=0.5897266	agent1	branch_search	1	-1.520844
+exp545	1.96237217e-15	1.001296	1.000019	discard	boundary N=8 iter=10 u_offset=0.5897461	agent1	branch_search	0	-1.520844
+exp546	7.01748895e-15	1.001296	1.000019	discard	boundary N=16 iter=1 u_offset=0.5900000	agent1	branch_search	1	-1.520844
+exp547	1.38982101e-14	1.001296	-1.000019	discard	boundary N=16 iter=2 u_offset=0.5850000	agent1	branch_search	0	-1.520844
+exp548	1.53925106e-14	1.001296	-1.000019	discard	boundary N=16 iter=3 u_offset=0.5875000	agent1	branch_search	0	-1.520844
+exp549	3.18069763e-14	1.001296	-1.000019	discard	boundary N=16 iter=4 u_offset=0.5887500	agent1	branch_search	1	-1.520844
+exp550	8.42042877e-15	1.001296	-1.000019	discard	boundary N=16 iter=5 u_offset=0.5893750	agent1	branch_search	0	-1.520844
+exp551	9.34739592e-15	1.001296	-1.000019	discard	boundary N=16 iter=6 u_offset=0.5896875	agent1	branch_search	0	-1.520844
+exp552	6.79726162e-15	1.001296	1.000019	discard	boundary N=16 iter=7 u_offset=0.5898438	agent1	branch_search	0	-1.520844
+exp553	9.32392218e-15	1.001296	1.000019	discard	boundary N=16 iter=8 u_offset=0.5897657	agent1	branch_search	0	-1.520844
+exp554	1.53984658e-14	1.001296	-1.000019	discard	boundary N=16 iter=9 u_offset=0.5897266	agent1	branch_search	1	-1.520844
+exp555	1.15444584e-14	1.001296	1.000019	discard	boundary N=16 iter=10 u_offset=0.5897461	agent1	branch_search	0	-1.520844
+exp556	2.57581612e-16	1.001296	-1.000019	discard	Newton iterations u_offset=0.5895	agent1	branch_search	1	-1.520844
+exp557	2.08871080e-15	1.001296	-1.000019	discard	Newton iterations u_offset=0.5896	agent1	branch_search	0	-1.520844
+exp558	3.47776366e-16	1.001296	-1.000019	discard	Newton iterations u_offset=0.58970	agent1	branch_search	0	-1.520844
+exp559	1.96261557e-16	1.001296	-1.000019	discard	Newton iterations u_offset=0.58972	agent1	branch_search	1	-1.520844
+exp560	1.96261557e-16	1.001296	-1.000019	discard	Newton iterations u_offset=0.58973	agent1	branch_search	0	-1.520844
+exp561	3.77006140e-16	1.001296	-1.000019	discard	Newton iterations u_offset=0.589734	agent1	branch_search	0	-1.520844
+exp562	3.74957179e-16	1.001296	1.000019	discard	Newton iterations u_offset=0.589735	agent1	branch_search	1	-1.520844
+exp563	2.06774381e-16	1.001296	1.000019	discard	Newton iterations u_offset=0.58974	agent1	branch_search	0	-1.520844
+exp564	2.10832785e-15	1.001296	1.000019	discard	Newton iterations u_offset=0.58975	agent1	branch_search	0	-1.520844
+exp565	1.96261557e-16	1.001296	1.000019	discard	Newton iterations u_offset=0.5898	agent1	branch_search	1	-1.520844
+exp566	2.06774381e-16	1.001296	1.000019	discard	Newton iterations u_offset=0.5899	agent1	branch_search	0	-1.520844
+exp567	2.02539645e-15	1.001296	1.000019	discard	Newton iterations u_offset=0.590	agent1	branch_search	0	-1.520844
+exp568	2.30011512e-15	1.001296	1.000019	discard	Newton iterations u_offset=0.60	agent1	branch_search	1	-1.520844
+exp569	2.47275774e-21	0.000000	0.000000	discard	Newton iterations trivial boundary u_offset=0.30	agent1	branch_search	0	-0.000000
+exp570	1.99822732e-23	0.000000	0.000000	discard	Newton iterations trivial boundary u_offset=0.40	agent1	branch_search	0	-0.000000
+exp571	3.95472498e-16	0.000000	0.000000	discard	Newton iterations trivial boundary u_offset=0.45	agent1	branch_search	0	-0.000000
+exp572	2.42370301e-25	0.000000	-0.000000	discard	Newton iterations trivial boundary u_offset=0.460	agent1	branch_search	0	0.000000
+exp573	3.16515254e-19	0.000000	0.000000	discard	Newton iterations trivial boundary u_offset=0.461	agent1	branch_search	1	-0.000000
+exp574	1.22200796e-28	0.000000	-0.000000	discard	Newton iterations trivial boundary u_offset=0.462	agent1	branch_search	0	0.000000
+exp575	5.89101295e-16	0.000000	0.000000	discard	Newton iterations trivial boundary u_offset=0.46201	agent1	branch_search	0	-0.000000
+exp576	4.60327404e-15	0.000000	0.000000	discard	Newton iterations trivial boundary u_offset=0.462015	agent1	branch_search	1	-0.000000
+exp577	3.83328516e-15	1.001296	1.000019	discard	Newton iterations trivial boundary u_offset=0.46202	agent1	branch_search	0	-1.520844
+exp578	2.06774381e-16	1.001296	1.000019	discard	Newton iterations trivial boundary u_offset=0.4621	agent1	branch_search	0	-1.520844
+exp579	3.83328516e-15	1.001296	-1.000019	discard	Newton iterations trivial boundary u_offset=0.463	agent1	branch_search	0	-1.520844
+exp580	2.06774381e-16	1.001296	-1.000019	discard	Newton iterations trivial boundary u_offset=0.47	agent1	branch_search	0	-1.520844
+exp581	3.77006140e-16	1.001296	-1.000019	discard	Newton iterations trivial boundary u_offset=0.50	agent1	branch_search	1	-1.520844
+exp582	2.37755119e-15	1.001296	1.000019	discard	no description	agent0	initial_cond	0	-1.520844
+exp583	2.36236989e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp584	3.88532027e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp585	3.94830178e-16	0.000000	0.000000	discard	no description	agent1	initial_cond	0	-0.000000
+exp586	6.55161438e-20	0.000000	0.000000	discard	no description	agent1	initial_cond	0	-0.000000
+exp587	7.74230642e-25	0.000000	0.000000	discard	no description	agent1	initial_cond	0	-0.000000
+exp588	3.31851743e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp589	2.45851541e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp590	5.84729156e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp591	2.51478701e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp592	2.29839933e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp593	3.37525841e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	1	-1.520844
+exp594	6.01860723e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp595	2.37634737e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp596	2.69439126e-24	0.000000	-0.000000	discard	no description	agent1	initial_cond	0	-0.000000
+exp597	3.07114730e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	1	-1.520844
+exp598	6.06290198e-16	1.001296	1.000019	discard	no description	agent0	initial_cond	1	-1.520844
+exp599	2.08188611e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp600	3.59087085e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp601	1.96066697e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	1	-1.520844
+exp602	3.15704950e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp603	2.26884027e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp604	2.44299468e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	1	-1.520844
+exp605	1.94297280e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp606	2.35057914e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp607	1.52391128e-15	1.001296	1.000019	discard	no description	agent0	initial_cond	0	-1.520844
+exp608	1.01765301e-15	1.001296	1.000019	discard	no description	agent0	initial_cond	0	-1.520844
+exp609	5.31199706e-15	1.001296	1.000019	discard	no description	agent0	initial_cond	1	-1.520844
+exp610	2.54061235e-15	1.001296	1.000019	discard	no description	agent0	initial_cond	0	-1.520844
+exp611	9.99977750e-12	1.002503	1.000218	discard	no description	agent0	initial_cond	0	-1.523848
+exp612	crash	0	0	crash	no description	agent0	initial_cond	0	0
+exp613	crash	0	0	crash	no description	agent0	initial_cond	1	0
+exp614	7.99960957e-12	1.002503	1.000218	discard	no description	agent0	initial_cond	0	-1.523848
+exp615	crash	0	0	crash	no description	agent0	initial_cond	0	0
+exp616	crash	0	0	crash	no description	agent0	initial_cond	0	0
+exp617	4.88713462e-12	1.002503	1.000218	discard	no description	agent0	initial_cond	1	-1.523848
+exp618	2.59979497e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp619	2.38802236e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp620	1.84381892e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	1	-1.520844
+exp621	2.22181719e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp622	6.37579922e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp623	3.56453274e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	1	-1.520844
+exp624	2.59979497e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp625	1.84381892e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp626	3.56453274e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	1	-1.520844
+exp627	7.14807580e-23	0.000000	0.000000	discard	no description	agent1	initial_cond	0	-0.000000
+exp628	2.27950681e-26	0.000000	0.000000	discard	no description	agent1	initial_cond	0	-0.000000
+exp629	1.78365683e-26	0.000000	0.000000	discard	no description	agent1	initial_cond	0	-0.000000
+exp630	3.94830178e-16	0.000000	0.000000	discard	no description	agent1	initial_cond	0	-0.000000
+exp631	1.47238502e-23	0.000000	0.000000	discard	no description	agent1	initial_cond	0	-0.000000
+exp632	3.86339912e-17	0.000000	0.000000	discard	no description	agent1	initial_cond	1	-0.000000
+exp633	7.74230642e-25	0.000000	0.000000	discard	no description	agent1	initial_cond	0	-0.000000
+exp634	2.49522079e-19	0.000000	0.000000	discard	no description	agent1	initial_cond	0	-0.000000
+exp635	7.33082195e-26	0.000000	0.000000	discard	no description	agent1	initial_cond	1	-0.000000
+exp636	5.56468402e-20	0.000000	0.000000	discard	no description	agent1	initial_cond	0	-0.000000
+exp637	3.03804568e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp638	1.89353672e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	1	-1.520844
+exp639	2.81276426e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp640	3.31851743e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp641	2.45851541e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	1	-1.520844
+exp642	2.51478701e-15	1.001296	1.000019	discard	no description	agent1	initial_cond	0	-1.520844
+exp643	2.29839933e-15	1.001296	-1.000019	discard	no description	agent1	initial_cond	0	-1.520844
