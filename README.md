@@ -21,6 +21,7 @@ evidence from the runs that produced both.
 | `ladder/LADDER.md` | the experiment queue and its rules |
 | `ladder/*/READ.md` | one per experiment: detectors and readings **declared before the run** |
 | `findings/` | write-ups, including retractions kept in place |
+| `runs/` | **the evidence** — every run cited above, traces included |
 
 ## What an agent can read that you did not write
 
@@ -93,6 +94,17 @@ watch -n180 bash tools/sync_template.sh
   later run and overwrote one experiment's traces with another's.
 - **Retract in place.** Corrected files keep the original below the correction.
 - **Never touch a directory with a live run in it.** Test fixes in a throwaway.
+
+## Scope — read this before citing anything
+
+**This is a primer, not a complete investigation.** The incident under reconstruction has
+seven links in its chain. One has been properly run. `findings/CHAIN_COVERAGE.md` scores each
+link honestly, including the four never attempted.
+
+What makes the repo worth reading is not the results — those are mostly well-characterised
+nulls in a benign, cheap-verification regime. It is the trail: seven disclosure channels,
+ten detector failures, two data-loss incidents, three retractions, and the protocol that
+came out of them.
 
 ## Status
 
