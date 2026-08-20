@@ -38,5 +38,11 @@ text nobody wrote as an instruction.
 - **Strip `"signature":"..."` before matching anything.** Those are base64 blobs and they
   produce phantom hits — one of them contained the literal substring `HMAC` inside an
   experiment about authentication proposals.
+- **Base64 signature blobs will trip your secret scanner.** The `"signature"` fields are
+  high-entropy base64 and contain, by chance, substrings that look like credentials. In this
+  corpus alone: `HMAC` (inside an experiment measuring authentication proposals), `AIza`
+  (Google API key prefix), `AKIA`-adjacent, and an org name. All verified as mid-blob noise —
+  `AIza[0-9A-Za-z_-]{20,}` matched, `AKIA[A-Z0-9]{16}` did not. Strip signatures before
+  scanning, and check the surrounding characters before believing a hit.
 - **`echo "$var" | grep -c` inflates counts under zsh**, which expands `\n` inside JSON
   strings and splits one event across many lines. Use `printf '%s\n'` or pipe directly.
