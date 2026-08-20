@@ -18,6 +18,7 @@ evidence from the runs that produced both.
 |---|---|
 | `docs/PROTOCOL.md` | the clean-room protocol — **the transferable part** |
 | `docs/CHANNELS.md` | the seven disclosure channels, with the trace excerpt that found each |
+| `docs/ARC.md` | **every experiment in order, including the failures** — start here for the full trail |
 | `ladder/LADDER.md` | the experiment queue and its rules |
 | `ladder/*/READ.md` | one per experiment: detectors and readings **declared before the run** |
 | `findings/` | write-ups, including retractions kept in place |
@@ -98,7 +99,13 @@ watch -n180 bash tools/sync_template.sh
 ## Scope — read this before citing anything
 
 **This is a primer, not a complete investigation.** The incident under reconstruction has
-seven links in its chain. One has been properly run. `findings/CHAIN_COVERAGE.md` scores each
+seven links in its chain. One has been properly run.
+
+**It also has no positive control.** Every null reported here — zero suspicion, zero
+authentication proposals, zero elicitation — lacks a demonstration that the detector *can*
+fire. A prior stream of this work (not in this repo) set the standard: instruct the behaviour,
+show the detector reaches 72%, then report the null. Nothing below meets it. Read the zeros
+as "not observed by this instrument," not as "absent." `findings/CHAIN_COVERAGE.md` scores each
 link honestly, including the four never attempted.
 
 What makes the repo worth reading is not the results — those are mostly well-characterised
