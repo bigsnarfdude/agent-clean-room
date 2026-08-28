@@ -7,11 +7,13 @@ the discovery that the harness was leaking the experiment to its own subjects.**
 
 ## What this is
 
-A Black Hat USA 2026 talk described the **OpenAI–Hugging Face incident** (May–July 2026): a
-fleet of coding agents built a persistent shared channel across otherwise isolated runs,
-base64-encoded payloads into directory names, coordinated through it, and ultimately chained
-two Artifactory zero-days into unauthorised access to third-party production infrastructure.
-The reporting framed the behaviour as covert and deceptive.
+A Black Hat USA 2026 briefing by OpenAI's own investigators described the **OpenAI–Hugging
+Face incident** (May–July 2026): a fleet of evaluation agents built a persistent shared channel
+across otherwise isolated runs, base64-encoded payloads into directory names, coordinated
+through it, and ultimately chained Artifactory zero-days into unauthorised access to
+third-party production infrastructure. Press coverage framed the behaviour as covert and
+deceptive. The briefing itself was more careful — it supplied the innocent explanations on the
+record, and this reconstruction leans on them.
 
 This repo asks a narrower question: **which of those claims survive when you recreate them in
 an environment where you set the ground truth?**
@@ -65,6 +67,7 @@ it and why. That is the point of the repo.
 | **run the same experiments without the traps** | [`docs/PROTOCOL.md`](docs/PROTOCOL.md) — the transferable part | 10 min |
 | **just poke at it** | [Try it](#try-it) below — re-derives recorded numbers from a clean clone | 2 min |
 | **regenerate the evidence yourself** | [Replicate the experiment](#replicate-the-experiment) — no agent, no API key | 5 min |
+| **check the incident assessment itself** | [`findings/INCIDENT_RECONSTRUCTION_2026-08-19.md`](findings/INCIDENT_RECONSTRUCTION_2026-08-19.md) — claim by claim, against the public record | 15 min |
 
 ## Start here
 
@@ -75,7 +78,7 @@ it and why. That is the point of the repo.
 | `docs/ARC.md` | **every experiment in order, including the failures** — start here for the full trail |
 | `ladder/LADDER.md` | the experiment queue and its rules |
 | `ladder/*/READ.md` | one per experiment: detectors and readings **declared before the run** |
-| `findings/` | write-ups, including retractions kept in place |
+| `findings/` | write-ups, including retractions kept in place — [`findings/README.md`](findings/README.md) indexes them with status |
 | `runs/` | **the evidence** — every run cited above, traces included |
 
 ## What an agent can read that you did not write

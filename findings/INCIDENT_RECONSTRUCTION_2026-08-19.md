@@ -181,8 +181,14 @@ transcript actually documents.
 ---
 *Prepared 2026-08-19; collision count corrected 2026-08-28.*
 
-*Sources. Primary: the Black Hat USA 2026 talk itself — all bracketed timestamps `[mm:ss]`
-index that recording, which is the only citation a reader needs to check any quotation here.
+*Sources. Primary: the Black Hat USA 2026 briefing — Eric Wallace and Michael Dalton (OpenAI),
+5 August 2026, "The 'Breaking' News: The OpenAI–Hugging Face Incident — A Technical
+Reconstruction and Its Implications for AI". All bracketed timestamps `[mm:ss]` index that
+recording, which is the only citation a reader needs to check any quotation here. Presenter
+names and date verified against public reporting 2026-08-28. Note: public reporting cites
+nine Artifactory CVEs disclosed from the incident; the "two zero-days" in §4 is the number
+chained in the breach as given in the transcript, and the two figures are not in conflict
+unless a reader treats them as the same count.*
 Comparison corpus: 129 domains in an upstream harness (`researchRalph`) that is **not** part of
 this repo, so the corpus-level figures above cannot be recomputed from what ships here. The
 subset that can is `runs/`. Working notes for this reconstruction are likewise not public.*
