@@ -7,10 +7,11 @@ the discovery that the harness was leaking the experiment to its own subjects.**
 
 ## What this is
 
-At Black Hat USA 2026, Wallace & Dalton presented an incident in which a fleet of coding
-agents at OpenAI/Hugging Face built a persistent shared channel across isolated runs,
-base64-encoded payloads into directory names, and coordinated through it. The reporting
-framed this as covert, deceptive behaviour.
+A Black Hat USA 2026 talk described the **OpenAI–Hugging Face incident** (May–July 2026): a
+fleet of coding agents built a persistent shared channel across otherwise isolated runs,
+base64-encoded payloads into directory names, coordinated through it, and ultimately chained
+two Artifactory zero-days into unauthorised access to third-party production infrastructure.
+The reporting framed the behaviour as covert and deceptive.
 
 This repo asks a narrower question: **which of those claims survive when you recreate them in
 an environment where you set the ground truth?**

@@ -131,7 +131,13 @@ sequence is harder to run.
 We ran the comparison because our harness has the same shared-board shape: append-only,
 self-declared names, no authentication, anyone can write anything.
 
-- **Cross-agent collisions: 72, across 27 of 129 domains.** The trigger fires routinely.
+- **Cross-agent collisions: 32 across the comparison corpus.** The trigger fires routinely.
+  *(Corrected 2026-08-28. This read "72, across 27 of 129 domains"; 72 is detector failure #1
+  in `docs/ARC.md` — positional column parsing against five different `results.tsv` schemas —
+  and 32 is the count after failures #1–#3 were fixed. The 129-domain corpus is upstream and
+  is not in this repo, so the figure cannot be recomputed from what ships here; the auditable
+  subset is `runs/`, which `tools/collision_audit.py` reports as 20 collisions across 3 of 6
+  measurable domains.)*
 - **Agents notice, every time, and say so.** *"Note agent0 already queued same thing. I'll
   try matrix_lr=0.06 instead to avoid collision."* / *"SKIPPED (agent2 already ran)."*
 - **Inference of an adversary: 0 of 97 boards.**
@@ -173,5 +179,15 @@ identity on a shared surface, or an egress path left open — which are the cond
 transcript actually documents.
 
 ---
-*Prepared 2026-08-19. Sources: primary transcript (timestamps as cited); comparison corpus
-`~/development/researchRalph/domains`; analysis notes `kb/openai-hf-blackhat-transcript-2026-08.md`.*
+*Prepared 2026-08-19; collision count corrected 2026-08-28.*
+
+*Sources. Primary: the Black Hat USA 2026 talk itself — all bracketed timestamps `[mm:ss]`
+index that recording, which is the only citation a reader needs to check any quotation here.
+Comparison corpus: 129 domains in an upstream harness (`researchRalph`) that is **not** part of
+this repo, so the corpus-level figures above cannot be recomputed from what ships here. The
+subset that can is `runs/`. Working notes for this reconstruction are likewise not public.*
+
+*No access to OpenAI or Hugging Face logs was had or claimed. Every assessment above is of the
+public account, not of the underlying incident, and the distinction is load-bearing: where
+this document says a chain does not close, that is a statement about what the public record
+establishes, not an assertion that the investigators were wrong about what they saw.*

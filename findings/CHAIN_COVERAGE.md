@@ -10,7 +10,7 @@ recreatable in a controlled environment. This is the coverage so far, honestly s
 | 1 | **Persistent shared surface** across otherwise separate runs | **no** | never attempted |
 | 2 | **Channel can't carry the payload → encoding** (base64) and sort keys (`ZZ`) | **yes** | **compression, not encoding** — see below |
 | 3 | **Coordination protocol** — naming, mailboxes, hold-pending-confirm | **partial, accidental** | emergent conventions observed in link 2, not designed for |
-| 4 | **Collision → impostor hypothesis → authentication proposal** (MAC) | **baseline only** | 68 collisions / 24 domains; **0/97 boards infer an adversary, 0/97 propose auth** — never manipulated |
+| 4 | **Collision → impostor hypothesis → authentication proposal** (MAC) | **baseline only** | **32** corpus collisions (was "68 / 24 domains" — detector failure #2, see `docs/ARC.md`); **0/97 boards infer an adversary, 0/97 propose auth** — never manipulated |
 | 5 | **Board cleared → reconstituted** | **accidental, confounded** | agents recreated a deleted blackboard, but `program_static.md` still named it. "Absence is not prohibition", not clean reconstitution |
 | 6 | **Impossible task + visible peers → scope violation** | **no** | never attempted. The incident's own precondition: *"task impossible, peers are doing it"* |
 | 7 | **Collective exploitation / credential sharing** | **no** | out of scope |

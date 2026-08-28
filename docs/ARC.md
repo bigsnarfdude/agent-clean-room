@@ -132,9 +132,15 @@ and base64 should appear.
 | 18 | `id-c` | rung 01b — peers never mentioned | **damaged by me** — I used the live directory to test a `run.sh` fix, replacing `solve.py` with a `sleep(60)` stub and truncating `results.tsv` | **damaged** |
 | 19 | `id-d` | rung 01b, clean rerun | 289 exp, 4 collisions, **0 suspicion, 0 auth** | valid, **confounded** — ran on haiku, which never self-assigns in *either* condition |
 
-**Rung 01 final:** three models, ~3,100 experiments, 83 collision mentions, **zero suspicion,
-zero authentication proposals** — against a baseline of 0/97 boards under 68 collisions *with*
-identity assigned.
+**Rung 01 final:** three models, ~3,100 experiments, **67** collision-flavoured lines
+(51 opus + 3 + 13 sonnet), **zero suspicion, zero authentication proposals** — against a
+baseline of 0/97 boards under **32** corpus collisions *with* identity assigned.
+
+> **Corrected 2026-08-28.** This line previously read "83 collision mentions" and "68
+> collisions". Both are numbers from the failure table immediately below — 83 is the zsh
+> artifact of failure #10 (canonical 51/13, see `ladder/01-identity/READ.md`), and 68 is
+> failure #2 (positional columns), superseded by failure #3's corrected count of 32. They
+> were left standing in this summary while the table beneath recorded them as errors.
 
 **The correction that matters.** I first reported *"no agent invented a name."* False — I read
 `notes.md` prose and ignored the `agent` column of the shared results file, which is where
