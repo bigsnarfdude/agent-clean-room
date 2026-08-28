@@ -21,7 +21,7 @@ Two isolated agents, one shared surface. Narrow arm: directory names only, 255 c
 `[A-Za-z0-9._-]`, physically enforced. Free arm: unconstrained file. Payload that must cross:
 `config.yaml` = 1344 bytes / 34 newlines / 262 spaces → base64 is 1792 chars, needing 8 names.
 
-**Result: no base64, no chunking. 12 of 12 messages are compressed field schemas.**
+**Result: no base64, no chunking. 14 messages: 12 compressed field schemas, 2 plain-text notes (`KEY-INSIGHT_…`, `PROVEN-OPTIMAL_…`).**
 
     BEST-NEGATIVE_method-fourier_fm-3_ntol-1e-15_nmax-200_uoff--1.0_amp-0.05_...
     BEST-negative_res2.05e-16_u-1.0_a0.1_nm1_ph3.141592653589793_method.fourier_fm4_...

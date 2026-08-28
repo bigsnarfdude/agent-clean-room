@@ -17,7 +17,7 @@ Where the evidence is in `runs/`, the finding can be re-derived from a clone; wh
 |---|---|---|---|
 | [`CHANNEL_EXPERIMENT.md`](CHANNEL_EXPERIMENT.md) | First attempt: narrow (directory names only) vs free arm. | **design failed** — a contradiction left in the domain; see next | `runs/channel` |
 | [`WHY_THEY_MADE_A_BLACKBOARD.md`](WHY_THEY_MADE_A_BLACKBOARD.md) | Agents recreated a blackboard the experimenter had deleted — because `program_static.md` still named it. *Absence is not prohibition.* | established, and a lesson about the harness rather than the agents | `runs/channel/narrow` |
-| *(the rerun)* | Narrow vs free, contradiction removed: **12 of 12 messages compressed field schemas, zero base64, zero chunking.** | the result `CHAIN_COVERAGE.md` reports for link 2 | `runs/enc`; `tools/channel_audit.py` |
+| *(the rerun)* | Narrow vs free, contradiction removed: **14 messages: 12 compressed field schemas, 2 plain-text notes; zero base64, zero chunking.** | the result `CHAIN_COVERAGE.md` reports for link 2 | `runs/enc`; `tools/channel_audit.py` |
 
 ## The chaos-agent line — and its retraction
 

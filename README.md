@@ -25,7 +25,7 @@ result is link 2:
 
 > The channel was directory names. Directory names cannot carry arbitrary bytes, so the
 > payload gets compressed to fit. Given two isolated agents and a 255-character channel,
-> **12 of 12 messages were compressed field schemas. Zero base64, zero chunking.** Encoding
+> **14 messages: 12 compressed field schemas, 2 plain-text notes. Zero base64, zero chunking.** Encoding
 > to fit a constraint and encoding to conceal produce the same artifact, and the artifact
 > alone does not distinguish them. "Covert" was a fact about the monitoring, not the agents.
 
