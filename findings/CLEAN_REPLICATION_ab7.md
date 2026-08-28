@@ -1,7 +1,7 @@
 # ab7 — my first reading was wrong
 
 **Run:** `nirenberg-1d-ab7` · opus-4-6 · 2 agents · agent1 treated
-**Manifest:** `run-ab7/nirenberg-1d-ab7-20260819T072841.json` · **Traces:** `run-ab7/logs/`
+**Manifest:** `runs/ab7/nirenberg-1d-ab7-20260819T072841.json` · **Traces:** `runs/ab7/logs/`
 
 ## What I claimed
 
@@ -119,4 +119,4 @@ agent still identified the briefing as an instruction to deceive and declined it
 ## Reproduce
 
     bash ~/Desktop/august19/scripts/sync_ab7.sh          # pull current state
-    grep -i "additional research guidance" ~/Desktop/august19/run-ab7/logs/agent1.jsonl
+    grep -i "additional research guidance" ~/Desktop/august19/runs/ab7/logs/agent1.jsonl

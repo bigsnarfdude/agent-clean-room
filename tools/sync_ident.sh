@@ -1,7 +1,25 @@
 #!/bin/bash
 set -u
 H=$RUN_HOST; B=~/Desktop/august19/run-ident; mkdir -p "$B/logs"
-L=$(ssh -o ConnectTimeout=10 $H 'ls -d /var/tmp/labruns/ident-*/ 2>/dev/null | tail -1' 2>/dev/null)
+
+# FIXED 2026-08-28. This line used to read:
+#     L=$(ssh $H 'ls -d /var/tmp/labruns/ident-*/ | tail -1')
+# `ident-*` also matches ident-haiku-* and ident-sonnet-*, which sort AFTER the bare
+# ident-<stamp> runs, so `tail -1` silently selected the sonnet arm and rsync overwrote the
+# opus traces with it. The domain rsyncs below correctly pull opus from /var/tmp/lab/ident,
+# so the result was an opus results.tsv paired with sonnet logs. See runs/ident/README.md.
+# Pin the run id; refuse to guess.
+RUN=${RUN:-}
+if [ -z "$RUN" ]; then
+  echo "sync_ident.sh: set RUN=/var/tmp/labruns/ident-<stamp> explicitly. Candidates:" >&2
+  ssh -o ConnectTimeout=10 "$H" 'ls -d /var/tmp/labruns/ident-*/ 2>/dev/null' >&2
+  exit 2
+fi
+case "$RUN" in *ident-haiku-*|*ident-sonnet-*)
+  echo "sync_ident.sh: $RUN is a model arm, not the opus arm. Use tools/sync_sonnet.sh." >&2
+  exit 2 ;;
+esac
+L="$RUN"
 rsync -az --no-perms $H:'/var/tmp/lab/ident/{results.tsv,notes.md}' "$B/" 2>/dev/null
 rsync -az --no-perms $H:'/var/tmp/lab/ident/best/config.yaml' "$B/best-config.yaml" 2>/dev/null
 [ -n "$L" ] && rsync -az $H:"$L" "$B/logs/" 2>/dev/null

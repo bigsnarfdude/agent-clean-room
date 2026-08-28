@@ -1,8 +1,14 @@
 # Clean-room protocol — reconstruction without the traps
 
-**2026-08-19.** Six disclosure channels were found in one day. Five were invisible from
-inside the repository. This is the protocol that closes all of them, and the verification
-step that proves it for each run.
+**2026-08-19.** Six disclosure channels were found in one day. **Five** are invisible to a
+prompt-only audit; **three** (3, 5, 6) are invisible even if you read the entire repository,
+because the tooling injects them at runtime. This is the protocol that closes all of them, and
+the verification step that proves it for each run.
+
+> **Corrected 2026-08-28.** This paragraph previously read *"Five were invisible from inside
+> the repository"*, which contradicts the sentence below the table naming three. Six is the
+> canonical count across the repo; `docs/CHANNELS.md` is the earlier five-channel snapshot,
+> taken before channel 6 was found.
 
 ## The six channels, and why a checklist was not enough
 
@@ -93,7 +99,7 @@ the repo `CLAUDE.md`.
 
 ## Guard, updated
 
-`v4/launch-agents-chaos-clean.sh` now refuses to launch on: files in the domain, the domain
+`harness/launch-agents-chaos-clean.sh` now refuses to launch on: files in the domain, the domain
 name, the **git branch name**, and the **auto-memory index**. Verified refusal messages for
 each. It still cannot see `$HOME/CLAUDE.md` — which is why running outside `$HOME` is the
 protocol, and the guard is only the backstop.

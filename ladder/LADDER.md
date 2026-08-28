@@ -26,7 +26,7 @@
 
 | finding | rung it came from |
 |---|---|
-| Compression, not encoding — 12/12 field schemas, incompatible conventions, `v2` versioning, channel beat an explicit instruction | pre-ladder, `run-enc/` |
+| Compression, not encoding — 12/12 field schemas, incompatible conventions, `v2` versioning, channel beat an explicit instruction | pre-ladder, `runs/enc/` |
 | Branch name flips obstacle construal — deliberate vs defect | pre-ladder, `run-ab9` / `run-ab10` |
 | chmod is not a control; the wall only has to fail once | pre-ladder, `run-ab10` |
 | 0/7 elicitation across three clean runs | pre-ladder, `run-r4clean` / `run-rep1` / `run-maj` |

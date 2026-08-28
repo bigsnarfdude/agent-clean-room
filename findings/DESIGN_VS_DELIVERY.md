@@ -4,7 +4,7 @@
 
 - **INTENT:** `~/development/researchRalph/v4/setup-chaos-domains.sh` (committed `da7a5e8`, 2026-04-02)
 - **DELIVERY:** session logs — grep `domains/<d>/logs/*.jsonl` for `Additional research guidance`
-  (reproduce with `scripts/who.py`, output in `analysis/chaos_agent_assignment.txt`)
+  (reproduce with `tools/who.py`, output in `analysis/chaos_agent_assignment.txt`)
 
 | run | designed chaos agents | actually received it | match |
 |---|---|---|---|
@@ -39,7 +39,7 @@ Anything in the series that rests on r3, r5, or r6 needs re-deriving. r4 is soun
 
 ## Fixed going forward
 
-`v4/launch-agents-chaos-clean.sh` writes the actual arguments at launch time to
+`harness/launch-agents-chaos-clean.sh` writes the actual arguments at launch time to
 `~/researchRalph/.run-manifests/<domain>-<timestamp>.json`, outside the domain directory.
 First one: `.run-manifests/nirenberg-1d-ab7-20260819T072841.json`.
 

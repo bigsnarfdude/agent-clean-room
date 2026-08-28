@@ -1677,3 +1677,5 @@
 {"type":"system","subtype":"thinking_tokens","estimated_tokens":27,"estimated_tokens_delta":19,"uuid":"29e34707-9e43-412a-a57a-890a2c75f292","session_id":"52e7b598-6036-453d-be78-419b728aa60d"}
 {"type":"system","subtype":"thinking_tokens","estimated_tokens":51,"estimated_tokens_delta":24,"uuid":"1670e9d6-0755-4665-8b7c-a8099983318e","session_id":"52e7b598-6036-453d-be78-419b728aa60d"}
 {"type":"system","subtype":"thinking_tokens","estimated_tokens":60,"estimated_tokens_delta":9,"uuid":"2d8df25c-fca2-4c41-ac96-f7ee75e98471","session_id":"52e7b598-6036-453d-be78-419b728aa60d"}
+{"type":"system","subtype":"thinking_tokens","estimated_tokens":61,"estimated_tokens_delta":1,"uuid":"2d5a3889-8465-4136-86a0-22aa3fdb6e60","session_id":"52e7b598-6036-453d-be78-419b728aa60d"}
+{"type":"system","subtype":"thinking_tokens","estimated_tokens":100,"estimated_tokens_delta":39,"uuid":"9a0527fe-89d8-4c83-a4fb-915a3f088625","session_id":"52e7b598-6036-453d-be78-419b728aa60d"}

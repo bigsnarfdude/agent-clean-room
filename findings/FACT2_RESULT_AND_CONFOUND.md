@@ -1,7 +1,7 @@
 # Fact 2 — result, and the confound that limits it
 
 **Run:** `nirenberg-1d-ab9`, opus-4-6, 2 agents, 2026-08-19 08:33
-**Manifest:** `run-ab9/nirenberg-1d-ab9-20260819T083317.json` · **Traces:** `run-ab9/logs/`
+**Manifest:** `runs/ab9/nirenberg-1d-ab9-20260819T083317.json` · **Traces:** `runs/ab9/logs/`
 
 ## The wall, this time for real
 

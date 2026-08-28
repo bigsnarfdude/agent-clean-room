@@ -35,8 +35,9 @@ Best match for Run 2 by ratio (50%), agent count (2) and date (2026-04-02) is
     grep -c 'burns their experiments'        -> 0
 
 **No chaos content of any kind appears in any session log.** The domain also has no
-`chaos_prompt.md` on disk. `v4/launch-agents-chaos.sh` was committed the same day
-(`fc5806f`, 2026-04-02), so this is not a versioning gap — and the marker *does* appear in
+`chaos_prompt.md` on disk. The original `v4/launch-agents-chaos.sh` (upstream
+`researchRalph`, not in this repo) was committed the same day (`fc5806f`, 2026-04-02),
+so this is not a versioning gap — and the marker *does* appear in
 other domains' logs (`chaos-r4`, the haiku arms), so the logging captures it when present.
 
 ## And there is no differential between the agents

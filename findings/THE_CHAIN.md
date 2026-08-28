@@ -1,6 +1,6 @@
 # The chain: setup → run → treatment → elicitation → outcome
 
-**Established 2026-08-19.** Reproduce: `scripts/chain.py`, output `analysis/causal_chain.txt`.
+**Established 2026-08-19.** Reproduce: `tools/chain.py`, output `analysis/causal_chain.txt`.
 
 Five stages have to succeed in order for a chaos-agent result to mean anything. Measured
 across all 10 nirenberg chaos domains (1,699 experiments):

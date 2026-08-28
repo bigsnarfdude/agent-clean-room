@@ -22,3 +22,17 @@ observation but cannot be attributed to model, since "haiku" was in its path and
 plausibly inferred from nothing.
 
 Rebuilt as `id-a` / `id-b` with neutral names.
+
+## Where the voided traces live (corrected 2026-08-28)
+
+Until this correction the voided arms existed **twice**: once here, and once unlabelled at
+`models/haiku/` and `models/sonnet/` — where a reader browsing `models/` would meet them
+beside the clean `haiku-neutral/` and `sonnet-neutral/` arms with nothing marking them void.
+
+Both copies were the same sessions (`cc89701c/ff63be72/d5ea8aea/ecb94c2c` for haiku,
+`5520c59c/d420a16e/52e7b598/c4d3401d` for sonnet); `models/haiku/` was byte-identical to
+this directory, and `models/sonnet/` was a **later, more complete sync** of the same four
+sessions (2 more lines in w1–w3, 91 vs 90 result rows).
+
+The complete snapshot has been promoted into this directory and the unlabelled copies
+removed. `models/` now contains only the clean arms and this quarantine.

@@ -3,9 +3,10 @@
 Tooling and evidence for running **multi-agent experiments that the agents cannot read**.
 
 Agents in a coding harness see far more than the prompt you wrote. Over one day of trying to
-reconstruct a real multi-agent incident, seven separate channels were found leaking the
-experiment to its own subjects — and five of them are invisible if you only audit the prompt
-and the repository.
+reconstruct a real multi-agent incident, six separate channels were found leaking the
+experiment to its own subjects. Five are invisible if you audit only the prompt; three are
+invisible even if you read the entire repository, because the harness injects them at
+runtime.
 
 This repo is the protocol that closes them, the tools that measure without lying, and the
 evidence from the runs that produced both.
@@ -17,7 +18,7 @@ evidence from the runs that produced both.
 | file | what |
 |---|---|
 | `docs/PROTOCOL.md` | the clean-room protocol — **the transferable part** |
-| `docs/CHANNELS.md` | the seven disclosure channels, with the trace excerpt that found each |
+| `docs/CHANNELS.md` | the six disclosure channels, with the trace excerpt that found each |
 | `docs/ARC.md` | **every experiment in order, including the failures** — start here for the full trail |
 | `ladder/LADDER.md` | the experiment queue and its rules |
 | `ladder/*/READ.md` | one per experiment: detectors and readings **declared before the run** |
@@ -72,6 +73,9 @@ in the experimenter's own prompt.
 Requires the Claude Code CLI and a scoreable task with a harness that logs to a results file.
 
 ```bash
+# 0. the run host — a separate machine the agents run on. Nothing here hardcodes it.
+export RUN_HOST=user@host                # ssh/rsync target; see tools/README.md
+
 # 1. build outside the repo AND outside $HOME
 LAB=/var/tmp/lab/<neutral-name>          # not /tmp — tmpfiles-clean deletes it unconditionally
 
@@ -81,8 +85,10 @@ bash harness/preflight_probe.sh "$LAB"
 # 3. launch; the guard refuses on leaky paths, names, branches, or memory
 PREFIX=r1 bash harness/id_launch.sh <model> <tag> <n_agents> <max_turns>
 
-# 4. pull evidence continuously, never at the end
-watch -n180 bash tools/sync_template.sh
+# 4. pull evidence continuously, never at the end. RUN is pinned, never a glob —
+#    an unpinned `ident-*/ | tail -1` once overwrote one arm's traces with another's
+#    (runs/ident/README.md).
+watch -n180 "DOMAIN=$LAB RUN=/var/tmp/labruns/<run-id> bash tools/sync_template.sh <tag>"
 ```
 
 ## Conventions worth stealing
@@ -91,8 +97,14 @@ watch -n180 bash tools/sync_template.sh
   positives. Nothing is quoted as a finding until it appears there.
 - **Commit the readings in advance** — what each possible outcome would mean, including the
   outcome "the setup failed, redesign rather than conclude."
-- **Pin run directories. Never glob them.** A glob over run ids silently started matching a
-  later run and overwrote one experiment's traces with another's.
+- **Pin run directories. Never glob them.** `ident-*/ | tail -1` also matched
+  `ident-sonnet-*`, which sorts last — so one arm's traces overwrote another's, leaving an
+  opus `results.tsv` paired with sonnet logs. Caught only because a collision count moved
+  *down* (`runs/ident/README.md`).
+- **Check the trace, not the directory name.** Every `.jsonl` declares its `model` and `cwd`
+  in line 1. One `head -1` per file at sync time is the whole defence against the above.
+- **Fixing the tool is not fixing the data.** The glob above was pinned the same day and the
+  lesson written up — and the corrupted directory still shipped, because nobody re-synced it.
 - **Retract in place.** Corrected files keep the original below the correction.
 - **Never touch a directory with a live run in it.** Test fixes in a throwaway.
 
@@ -109,9 +121,9 @@ as "not observed by this instrument," not as "absent." `findings/CHAIN_COVERAGE.
 link honestly, including the four never attempted.
 
 What makes the repo worth reading is not the results — those are mostly well-characterised
-nulls in a benign, cheap-verification regime. It is the trail: seven disclosure channels,
-ten detector failures, two data-loss incidents, three retractions, and the protocol that
-came out of them.
+nulls in a benign, cheap-verification regime. It is the trail: six disclosure channels,
+ten detector failures, three data-integrity incidents, three retractions, and the protocol
+that came out of them.
 
 ## Status
 

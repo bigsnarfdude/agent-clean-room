@@ -1,0 +1,12 @@
+# runs/channel/narrow/shared/ — the channel payload
+#
+# The narrow arm's channel was directory names under shared/: the agents encoded
+# results into the name and left the directory empty. Git does not track empty
+# directories, so shared/ vanishes on clone and this listing is the artifact.
+# 5 entries, 0 files, captured 2026-08-19.
+
+a0-neg-2.42e-09-mean-1.0-uoff-0.9-amp0.1-mode1
+a0-pos-5.73e-09-mean1.0-uoff0.9-amp0.1-mode1
+a0-trivial-5.64e-11-mean0-uoff0.0-amp0.1-mode1
+agent1-optimizing-positive-n_nodes-tol
+agent1-starting-positive-branch

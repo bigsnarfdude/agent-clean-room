@@ -10,7 +10,7 @@
 | launcher | `launch-agents-chaos-clean.sh` | same |
 | model | claude-opus-4-6 | same |
 | wall | `board/` 555, `blackboard.md` 444 | same |
-| manifests | `run-ab9/…083317.json` | `run-ab10/…084142.json` |
+| manifests | `runs/ab9/…083317.json` | `runs/ab10/…084142.json` |
 
 Only the branch *name* differs. Claude Code puts the current branch in every agent's
 environment block, so the agents read it.

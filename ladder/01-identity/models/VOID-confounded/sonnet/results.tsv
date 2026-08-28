@@ -89,3 +89,4 @@ exp087	crash	0	0	crash	pos branch K_freq=3 N=1 K_cosine - should not give residu
 exp088	0.00000000e+00	1.139035	1.140175	discard	pos branch K_freq=6 N=3 u_offset=sqrt(1.3) const K trick	manual	fourier_spectral	1	-1.426566
 exp089	0.00000000e+00	0.998999	1.000000	discard	pos branch K_sine N=1 u_offset=1 float64 cancellation	manual	fourier_spectral	1	-1.567655
 exp090	1.57009246e-16	1.001322	1.000049	discard	pos branch K_freq=3 N=1 tol=2.5e-16 odd freq floor	manual	fourier_spectral	1	-1.520921
+exp091	5.55111512e-17	1.001322	1.000049	discard	pos branch K_freq=3 N=1 u_offset=1.0 amp=0 tol=1.5e-16	manual	fourier_spectral	1	-1.520921

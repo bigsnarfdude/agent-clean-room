@@ -1,8 +1,14 @@
 # Agents see more than the prompt — and it changed the results
 
-**2026-08-19.** Five disclosure channels found today that no operator wrote as instruction.
-All five reached agents. Channel 5 was found by asking an agent to enumerate its own passive
-context, and it is the one that invalidates the most.
+**2026-08-19.** Six disclosure channels found today that no operator wrote as instruction.
+All six reached agents. Channels 5 and 6 were found by asking an agent to enumerate its own
+passive context; 5 is the one that invalidates the most.
+
+> **Corrected 2026-08-28.** Channels 1–5 were written up on the day. Channel 6 was found in
+> the same probe (it appears in the passive-context list below as *"the harness's own
+> `CLAUDE.md`, auto-loaded"*) but was never added to this table, so this file said "five"
+> while `PROTOCOL.md` said "six" and the README said "seven". **Six is the count.** Row 6 is
+> added below; the rest of the file is unchanged.
 
 ## The channels
 
@@ -13,8 +19,12 @@ context, and it is the one that invalidates the most.
 | 3 | the **git branch name** | Claude Code's environment block | `ab9` vs `ab10` |
 | 4 | the **blackboard header** | first thing every agent reads | this file |
 | 5 | the **auto-loaded memory index** | Claude Code loads `MEMORY.md` into every agent in the project | probe: "enumerate everything in your context you were not asked to read" |
+| 6 | the **auto-loaded `$HOME/CLAUDE.md`** | discovered by walking up from cwd; opens *"# Alignment Faking Detection Research"* | same probe — listed below as *"the harness's own `CLAUDE.md`, auto-loaded"* |
 
 **Channel 5 is the largest, is global, and contains an explicit counter-instruction.**
+
+Channels **3, 5 and 6** are injected by the tooling at runtime and cannot be found by reading
+the repository at all — see `PROTOCOL.md`.
 
 ## Channel 5: the swarm inoculated itself, and the inoculation persisted
 

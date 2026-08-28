@@ -1,7 +1,7 @@
 # Channel-constraint experiment — does encoding emerge without anyone asking?
 
 **Launched 2026-08-19.** Two arms, opus-4-6, 2 agents each, identical task.
-Manifests in `run-channel/{narrow,free}/`. Nothing is injected. Nothing is hand-crafted.
+Manifests in `runs/channel/{narrow,free}/`. Nothing is injected. Nothing is hand-crafted.
 No agent is told to deceive, encode, hide, or coordinate in any particular way.
 
 ## The one difference

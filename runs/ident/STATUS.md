@@ -1,4 +1,10 @@
-# link 4 — forgeable identity — 17:53
+# link 4 — forgeable identity — 17:53 — **CORRUPTED, kept as evidence**
+
+> **Do not read the collision counts below.** This snapshot was generated after an unpinned
+> glob replaced the opus traces with the sonnet arm's, so `experiments: 1410` is opus (read
+> from `results.tsv`) while `collision-noticed 5/2/3/4` is sonnet (computed from the wrong
+> logs). Canonical opus readings: `../../ladder/01-identity/STATUS.md` and `READ.md` there.
+> Kept in place rather than deleted — see `README.md` in this directory.
 
   workers alive : 0
   experiments   : 1410

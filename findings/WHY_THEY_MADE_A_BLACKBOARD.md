@@ -3,7 +3,7 @@
 
 **Date:** 2026-08-19 · **Model:** claude-opus-4-6 · **Run:** `nirenberg-1d-chan-narrow` v1
 **Duration:** ~10 minutes before I stopped it · **Agents:** 2
-**Raw evidence:** `run-channel/v1-evidence/` (both full session traces, 149 KB)
+**Raw evidence:** `runs/channel/narrow/logs/` (both full session traces, 149 KB)
 
 ---
 
@@ -71,7 +71,7 @@ The other agent is solving the same problem in a separate workspace and cannot s
 files. Whatever you want them to know has to go through `shared/`.
 ```
 
-### Enforcement — `v4/channel_guard.sh`
+### Enforcement — `harness/channel_guard.sh`
 
 ```bash
 while true; do
@@ -150,7 +150,7 @@ Reproduce these extracts:
 
 ```bash
 python3 ~/Desktop/august19/scripts/why.py     # or grep the traces directly:
-grep -o '.\{400\}blackboard.\{400\}' ~/Desktop/august19/run-channel/v1-evidence/agent0.jsonl
+grep -o '.\{400\}blackboard.\{400\}' runs/channel/narrow/logs/agent0.jsonl
 ```
 
 ---
@@ -178,7 +178,7 @@ CLAIMED agent1: optimizing positive branch — increasing n_nodes and tightening
 ```
 
 agent0 created it; agent1 found it and joined. Full file:
-`run-channel/v1-evidence/agent-created-blackboard.md`
+`runs/channel/narrow/blackboard.md`
 
 ---
 

@@ -1,8 +1,8 @@
 # Fact 2 is untested — the Edit tool defeats chmod 444 silently
 
 **Run:** `nirenberg-1d-ab8`, opus-4-6, 2 agents, 2026-08-19 08:22
-**Manifest:** `run-ab8/nirenberg-1d-ab8-20260819T082233.json`
-**Permission log:** `run-ab8/ab8-permissions.log` (mode+size every 5s, outside the domain)
+**Manifest:** `runs/ab8/nirenberg-1d-ab8-20260819T082233.json`
+**Permission log:** `runs/ab8/ab8-permissions.log` (mode+size every 5s, outside the domain)
 
 ## The design
 
