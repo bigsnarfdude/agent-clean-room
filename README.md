@@ -50,7 +50,7 @@ Not the results — those are mostly well-characterised nulls in a benign regime
 | | |
 |---|---|
 | **6** | disclosure channels found leaking an experiment to its subjects |
-| **10** | detector failures recorded, each with the false positive that caused it |
+| **11** | detector failures recorded, each with the false positive that caused it |
 | **3** | data-integrity incidents, including one whose corrupted output shipped anyway |
 | **3** | retractions, kept in place with the original below the correction |
 
@@ -179,10 +179,12 @@ They run without error and print zeros here. They are kept for provenance: they 
 scripts that produced the findings that cite them. `tools/README.md` says which is which.
 
 Every tool carries its known false positives in its docstring, because every one of them was
-wrong at least once. Ten detector failures are recorded across the evidence — regexes matching
-substrings of identifiers, base64 blobs that happened to spell `HMAC`, a priming word in the
-experimenter's own prompt, and one "fix" that raised `TypeError` the first time a token
-reached it, so the thing it fixed was never actually measured until 2026-08-28.
+wrong at least once. **Eleven** detector failures are recorded across the evidence — regexes
+matching substrings of identifiers, base64 blobs that happened to spell `HMAC`, a priming word
+in the experimenter's own prompt, and one "fix" that raised `TypeError` the first time a token
+reached it, so the thing it claimed to fix was never measured at all until 2026-08-28. That
+last one was found by cloning this repo and running it, which is why the commands above are
+ones you can run rather than output pasted into a file.
 
 ## Replicate the experiment
 

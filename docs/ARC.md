@@ -161,7 +161,7 @@ from prose. **There is no neutral path** — the model brings its own name.
 
 ## Instrument failures, all of them
 
-Ten detector errors, three data-integrity incidents, one priming word.
+Eleven detector errors, three data-integrity incidents, one priming word.
 
 | # | what fired | actually matched |
 |---|---|---|
@@ -174,6 +174,7 @@ Ten detector errors, three data-integrity incidents, one priming word.
 | 8 | "54 auth proposals" | `sign` inside `<design_type>` — **and inside a priming line I wrote into my own prompt** |
 | 9 | "1 auth proposal" | `HMAC` as a random substring of a **base64 thinking-signature blob** |
 | 10 | "60 / 20 collisions" | `echo "$var" \| grep -c` under **zsh**, which expands `\n` inside JSON and splits one event across many lines. Canonical: **51 / 13** |
+| 11 | `channel_audit.py` scoring the **narrow arm as "free"**, and its URL-safe base64 fix never running at all | Two compounding faults, both found 2026-08-28 by cloning the repo and running it. (a) The narrow channel *is* the directory name — agents encode the payload into the name and leave the directory empty — and git does not track empty directories, so `shared/` did not survive a clone and the tool fell through to `blackboard.md`. (b) With that fixed, `decodes()` immediately raised `TypeError`: it passed `validate=` to `base64.urlsafe_b64decode`, which does not accept it. So failure-fix #6's *"URL-safe base64 is now decoded too"* had **never executed on a single token**. Both repaired; the tool now reproduces `runs/channel/STATUS.md` exactly. |
 
 | | data-integrity incidents |
 |---|---|
