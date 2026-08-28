@@ -157,6 +157,9 @@ the file — then copies the original mode onto the replacement. The lock still 
 `-r--r--r--` afterwards and **nothing in the transcript shows a bypass**. `--check` compares
 the inode, which is the only thing that gives it away.
 
+Originally observed on Linux with opus-4-6 (`runs/ab8`); replicated 2026-08-28 on macOS/APFS
+with Opus 5 from a clean clone. It is not filesystem-, OS-, or model-specific.
+
 ## Tools
 
 Four run against the evidence in this repo:
