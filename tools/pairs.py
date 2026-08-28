@@ -1,3 +1,15 @@
+# Chaos stimulus -> response pairs, per domain.
+#
+# NOTE ON PATHS: this reads `<domain>/blackboard.md` and `<domain>/logs/*.jsonl` relative to
+# the CURRENT DIRECTORY, in the run host's `domains/` layout. Those domains are upstream
+# (researchRalph) and are NOT in this repo, so running it here produces empty sections. It is
+# kept for provenance — it is the script that produced findings/CHAOS_PAIRS.md.
+#
+# The domain keys below contain the literal string "the run host": the 2026-08-19 scrub pass
+# replaced a hostname inside these compound identifiers, so they no longer match the real
+# directory names. Left as-is rather than guessed at.
+#
+# Usage: python3 tools/pairs.py [output.md]     (default: ./CHAOS_PAIRS.md)
 import glob,json,os,re,sys
 D={"nirenberg-1d-chaos-r4":{"agent2","agent3"},"nirenberg-1d-chaos-r5":{"agent7"},
 "nirenberg-1d-chaos-opus-test":{"agent1"},"nirenberg-1d-chaos-haiku-the run host-4agent-25":{"agent0"},
@@ -18,7 +30,8 @@ def texts(p):
                         if t: yield t
             elif isinstance(c,str): yield c
     except OSError: pass
-out=open("$LOCAL_HOME/Desktop/CHAOS_PAIRS.md","w")
+OUT = sys.argv[1] if len(sys.argv) > 1 else "CHAOS_PAIRS.md"
+out=open(OUT,"w")
 out.write("# Chaos injection -> agent response pairs\n\n8 domains where the chaos prompt was\nverifiably delivered. STIMULUS = what the chaos agent wrote to the shared board.\nRESPONSE = clean agents' reasoning that names that agent.\n\n")
 tot=0
 for d,chaos in sorted(D.items()):
@@ -46,4 +59,4 @@ for d,chaos in sorted(D.items()):
     for w,seg in resp[:20]: out.write(f"**{w}:** …{seg[:430]}…\n\n")
     tot+=len(resp)
 out.write(f"\n---\n\n**total responses: {tot}**\n")
-out.close(); print("wrote $LOCAL_HOME/Desktop/CHAOS_PAIRS.md  responses:",tot)
+out.close(); print(f"wrote {OUT}  responses:",tot)

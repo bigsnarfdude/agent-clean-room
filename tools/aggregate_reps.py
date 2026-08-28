@@ -80,7 +80,11 @@ if __name__ == "__main__":
     for lab in sorted(glob.glob("/tmp/lab/bvp-rep*")) or sorted(glob.glob(sys.argv[1] if len(sys.argv) > 1 else "")):
         pass
     # local mode: read synced copies
-    base = os.path.expanduser("~/Desktop/august19/run-reps")
+    # Was hardcoded to a ~/Desktop staging path. The rep* replicates were destroyed by
+    # tmpfiles-clean before they were synced (data-integrity incident #1 in docs/ARC.md), so
+    # nothing in this repo feeds this tool; pass a sync directory as argv[1].
+    base = sys.argv[1] if len(sys.argv) > 1 else os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "runs", "reps")
     for lab in sorted(glob.glob(f"{base}/rep*")):
         logdir = os.path.join(lab, "logs")
         if os.path.isdir(logdir): runs.append(one(lab, logdir))

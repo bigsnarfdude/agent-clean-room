@@ -40,6 +40,28 @@ script now refuses to run without a pinned `RUN`.
 sibling tag can match — but they still silently take the *latest* run of that tag, which is
 wrong the moment a tag is re-run. `sync_template.sh` is the fixed pattern.
 
+## Which tools run on the evidence in this repo
+
+**These four work from a clean clone** — no run host, no API key:
+
+    python3 tools/channel_audit.py runs/channel/narrow runs/channel/free
+    python3 tools/channel_audit.py --notes runs/channel/narrow     # its own false positives
+    python3 tools/collision_audit.py    --glob 'runs/*/results.tsv'
+    python3 tools/coordination_audit.py --glob 'runs/*'
+    python3 tools/encoding_audit.py                                # defaults to runs/enc
+
+**These hardcode the upstream `researchRalph` chaos domains**, which are not in this repo.
+They exit 0 and print zeros here. Kept for provenance — they are the scripts that produced the
+findings that cite them, and each finding names the one that made it:
+
+    chain.py  detect.py  who.py  scan.py  stim.py  gem.py  pairs.py  aggregate_reps.py
+
+`pairs.py` and `aggregate_reps.py` take an output/input path as `argv[1]`; the rest read a
+domain dict defined at the top of the file. `pairs.py` also carries a scrub artifact in those
+domain keys — the 2026-08-19 pass replaced a hostname *inside* compound identifiers, so
+`nirenberg-1d-chaos-haiku-the run host-h1` no longer matches any real directory. Left rather
+than guessed at.
+
 ## Analysis tools
 
 `collision_audit.py`, `coordination_audit.py` and `channel_audit.py` are documented in the

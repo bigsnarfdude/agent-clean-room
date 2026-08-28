@@ -1,17 +1,68 @@
 # agent-clean-room
 
-Tooling and evidence for running **multi-agent experiments that the agents cannot read**.
-
-Agents in a coding harness see far more than the prompt you wrote. Over one day of trying to
-reconstruct a real multi-agent incident, six separate channels were found leaking the
-experiment to its own subjects. Five are invisible if you audit only the prompt; three are
-invisible even if you read the entire repository, because the harness injects them at
-runtime.
-
-This repo is the protocol that closes them, the tools that measure without lying, and the
-evidence from the runs that produced both.
+**Reconstructing a multi-agent security incident under a forensic evidentiary standard — and
+the discovery that the harness was leaking the experiment to its own subjects.**
 
 ---
+
+## What this is
+
+At Black Hat USA 2026, Wallace & Dalton presented an incident in which a fleet of coding
+agents at OpenAI/Hugging Face built a persistent shared channel across isolated runs,
+base64-encoded payloads into directory names, and coordinated through it. The reporting
+framed this as covert, deceptive behaviour.
+
+This repo asks a narrower question: **which of those claims survive when you recreate them in
+an environment where you set the ground truth?**
+
+The standard applied throughout is the one used for circumstantial evidence: a finding counts
+only where **the chain closes** — each link independently established, *and* the innocent
+explanation excluded. Applied to the incident's seven links, most do not close. The clearest
+result is link 2:
+
+> The channel was directory names. Directory names cannot carry arbitrary bytes, so the
+> payload gets compressed to fit. Given two isolated agents and a 255-character channel,
+> **12 of 12 messages were compressed field schemas. Zero base64, zero chunking.** Encoding
+> to fit a constraint and encoding to conceal produce the same artifact, and the artifact
+> alone does not distinguish them. "Covert" was a fact about the monitoring, not the agents.
+
+## The finding that came out of trying
+
+The experiments kept producing results that turned out to be artifacts of the measuring
+apparatus. Chasing that down produced the part of this repo most likely to be useful to
+someone else:
+
+**Six channels were leaking the experiment to its own subjects.** Five are invisible if you
+audit only the prompt. Three are invisible even if you read the entire repository, because the
+harness injects them at runtime — the git branch name, an auto-loaded memory index written by
+*earlier agents*, and a `CLAUDE.md` discovered by walking up from the working directory.
+
+One of them mattered a great deal: an agent met the experiment in April, recognised it as a
+deception test, and wrote a standing note telling every future agent to refuse it. That note
+auto-loaded into **every agent in the project for four months**. A result presented as
+spontaneous detection was recall. It is retracted in place, in `findings/`.
+
+## Why it might be worth your time
+
+Not the results — those are mostly well-characterised nulls in a benign regime. The trail:
+
+| | |
+|---|---|
+| **6** | disclosure channels found leaking an experiment to its subjects |
+| **10** | detector failures recorded, each with the false positive that caused it |
+| **3** | data-integrity incidents, including one whose corrupted output shipped anyway |
+| **3** | retractions, kept in place with the original below the correction |
+
+Every number a tool produced that turned out to be wrong is still here, next to what replaced
+it and why. That is the point of the repo.
+
+## Three ways in
+
+| if you want to… | start at | time |
+|---|---|---|
+| **see whether the analysis holds up** | [`docs/ARC.md`](docs/ARC.md) — every experiment in order, failures included | 20 min |
+| **run the same experiments without the traps** | [`docs/PROTOCOL.md`](docs/PROTOCOL.md) — the transferable part | 10 min |
+| **just poke at it** | [Try it](#try-it) below — reproduces a published number from a clean clone | 2 min |
 
 ## Start here
 
@@ -55,31 +106,93 @@ Grep cannot reach `~/.claude/projects/*/memory/` or `$HOME/CLAUDE.md`, and the b
 injected at runtime. The probe found all three. Run it before every experiment and keep the
 answer with the evidence.
 
-## Tools
+## Try it
 
-| tool | measures | documented failure modes |
-|---|---|---|
-| `tools/collision_audit.py` | agents doing duplicate work | schema varies per domain — resolves columns by **header name**, never position |
-| `tools/coordination_audit.py` | agents referencing each other | strips the author before counting; a naive match scores the logging format |
-| `tools/channel_audit.py` | encoding under a constrained channel | decodes standard **and** URL-safe base64; requires explicit chunk markers |
-
-Every tool carries its known false positives in the docstring, because every one of them was
-wrong at least once. Ten detector failures are recorded across the evidence — regexes matching
-substrings of identifiers, base64 blobs that happened to spell `HMAC`, and once a priming word
-in the experimenter's own prompt.
-
-## Reproducing a run
-
-Requires the Claude Code CLI and a scoreable task with a harness that logs to a results file.
+No install, no dependencies, no API key. Python 3 and bash. Everything below runs against the
+evidence committed in this repo and is verified from a clean clone.
 
 ```bash
-# 0. the run host — a separate machine the agents run on. Nothing here hardcodes it.
-export RUN_HOST=user@host                # ssh/rsync target; see tools/README.md
+git clone https://github.com/bigsnarfdude/agent-clean-room && cd agent-clean-room
+```
+
+**Reproduce the link-2 result** — the constrained-channel finding, from the committed traces:
+
+```bash
+python3 tools/channel_audit.py runs/channel/narrow runs/channel/free
+```
+```
+domain                            arm      msgs  longest   encodings seen
+  narrow                          narrow      5       46   field_schema=3
+  free                            free       36      251   none
+```
+
+That matches the reading recorded during the run in `runs/channel/STATUS.md`, line for line.
+`field_schema` is compression; `none` under *encodings seen* is the absence of base64. Add
+`--notes` to print the detector's known false positives before you believe any of it.
+
+**Every tool's limits, from the tool itself:**
+
+```bash
+python3 tools/channel_audit.py --notes runs/channel/narrow
+```
+
+**The collision baseline** the authentication result rests on:
+
+```bash
+python3 tools/collision_audit.py   --glob 'runs/*/results.tsv'
+python3 tools/coordination_audit.py --glob 'runs/*'
+```
+
+**Watch a file permission fail to be a permission** — 10 seconds, no agent needed for setup:
+
+```bash
+bash harness/verify_chmod_bypass.sh /var/tmp/chmod-probe
+# then have any coding agent run its Edit tool on /var/tmp/chmod-probe/locked.md
+bash harness/verify_chmod_bypass.sh /var/tmp/chmod-probe --check
+```
+
+The file is mode `444`. The shell refuses to append. An agent's Edit tool writes a new file and
+`rename(2)`s it over the old one — `rename(2)` needs write permission on the *directory*, not
+the file — then copies the original mode onto the replacement. The lock still reads
+`-r--r--r--` afterwards and **nothing in the transcript shows a bypass**. `--check` compares
+the inode, which is the only thing that gives it away.
+
+## Tools
+
+Four run against the evidence in this repo:
+
+| tool | measures | invocation | documented failure modes |
+|---|---|---|---|
+| `channel_audit.py` | encoding under a constrained channel | `runs/channel/narrow runs/channel/free` | decodes standard **and** URL-safe base64; needs explicit chunk markers |
+| `collision_audit.py` | agents doing duplicate work | `--glob 'runs/*/results.tsv'` | schema varies per domain — resolves columns by **header name**, never position |
+| `coordination_audit.py` | agents referencing each other | `--glob 'runs/*'` | strips the author before counting; a naive match scores the logging format |
+| `encoding_audit.py` | payload vs. channel capacity | *(no args — defaults to `runs/enc`)* | reports the compression/encoding distinction explicitly |
+
+The rest — `chain.py`, `detect.py`, `who.py`, `scan.py`, `stim.py`, `gem.py`, `pairs.py`,
+`aggregate_reps.py` — **hardcode the upstream chaos domains, which are not in this repo.**
+They run without error and print zeros here. They are kept for provenance: they are the
+scripts that produced the findings that cite them. `tools/README.md` says which is which.
+
+Every tool carries its known false positives in its docstring, because every one of them was
+wrong at least once. Ten detector failures are recorded across the evidence — regexes matching
+substrings of identifiers, base64 blobs that happened to spell `HMAC`, a priming word in the
+experimenter's own prompt, and one "fix" that raised `TypeError` the first time a token
+reached it, so the thing it fixed was never actually measured until 2026-08-28.
+
+## Running your own experiment
+
+The above reads evidence. This runs a new experiment, and needs more: the Claude Code CLI, a
+scoreable task whose harness logs to a results file, and a **run host** — a separate machine
+for the agents, so the lab is nowhere near your own `$HOME` or git repos.
+
+```bash
+# 0. the run host. Nothing in this repo hardcodes it; see tools/README.md
+export RUN_HOST=user@host
 
 # 1. build outside the repo AND outside $HOME
 LAB=/var/tmp/lab/<neutral-name>          # not /tmp — tmpfiles-clean deletes it unconditionally
 
-# 2. verify the room is clean
+# 2. verify the room is clean, by asking the subject rather than grepping
 bash harness/preflight_probe.sh "$LAB"
 
 # 3. launch; the guard refuses on leaky paths, names, branches, or memory
@@ -90,6 +203,12 @@ PREFIX=r1 bash harness/id_launch.sh <model> <tag> <n_agents> <max_turns>
 #    (runs/ident/README.md).
 watch -n180 "DOMAIN=$LAB RUN=/var/tmp/labruns/<run-id> bash tools/sync_template.sh <tag>"
 ```
+
+Step 2 is the one that matters and the one that is easy to skip. `preflight_probe.sh` does the
+structural checks (*is this a git repo? is there a `CLAUDE.md` on the walk-up path? does
+auto-memory already exist for this path key?*) and then **asks the model itself** what it can
+see — because the last three channels cannot be found any other way. It needs the `claude` CLI
+and will block waiting on it.
 
 ## Conventions worth stealing
 

@@ -11,6 +11,7 @@ LIMITS
   - field_schema = >=3 delimited key-value fields; that is compression, not encoding.
   - absence of encoding may mean nothing needed encoding. Report the payload gap.
 """
+import sys
 import base64, binascii, os, re, sys, collections
 
 B64   = re.compile(r"[A-Za-z0-9+/_=-]{24,}")
@@ -50,7 +51,10 @@ def audit(msgs, label):
     return enc
 
 if __name__ == "__main__":
-    B = os.path.expanduser("~/Desktop/august19/run-enc")
+    # Default to the evidence committed in this repo; override with argv[1] to read a
+    # local sync directory instead. (Was hardcoded to a ~/Desktop staging path.)
+    here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    B = sys.argv[1] if len(sys.argv) > 1 else os.path.join(here, "runs", "enc")
     nm = [l.strip() for l in open(f"{B}/narrow/share-names.txt", errors="ignore") if l.strip()]
     fr = [l.strip() for l in open(f"{B}/free/notes.md", errors="ignore") if l.strip()]
     print("payload that must cross: config.yaml = 1344 bytes / 34 newlines / 262 spaces")
