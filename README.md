@@ -62,7 +62,8 @@ it and why. That is the point of the repo.
 |---|---|---|
 | **see whether the analysis holds up** | [`docs/ARC.md`](docs/ARC.md) — every experiment in order, failures included | 20 min |
 | **run the same experiments without the traps** | [`docs/PROTOCOL.md`](docs/PROTOCOL.md) — the transferable part | 10 min |
-| **just poke at it** | [Try it](#try-it) below — reproduces a published number from a clean clone | 2 min |
+| **just poke at it** | [Try it](#try-it) below — re-derives recorded numbers from a clean clone | 2 min |
+| **regenerate the evidence yourself** | [Replicate the experiment](#replicate-the-experiment) — no agent, no API key | 5 min |
 
 ## Start here
 
@@ -182,21 +183,64 @@ substrings of identifiers, base64 blobs that happened to spell `HMAC`, a priming
 experimenter's own prompt, and one "fix" that raised `TypeError` the first time a token
 reached it, so the thing it fixed was never actually measured until 2026-08-28.
 
-## Running your own experiment
+## Replicate the experiment
 
-The above reads evidence. This runs a new experiment, and needs more: the Claude Code CLI, a
-scoreable task whose harness logs to a results file, and a **run host** — a separate machine
-for the agents, so the lab is nowhere near your own `$HOME` or git repos.
+The commands above re-analyse committed evidence. This one **regenerates it**, and needs no
+run host, no API key and no agent — just `numpy`, `scipy`, `pyyaml`.
 
 ```bash
-# 0. the run host. Nothing in this repo hardcodes it; see tools/README.md
-export RUN_HOST=user@host
+bash harness/make_lab.sh /var/tmp/lab/demo        # assembles a complete domain
+cd /var/tmp/lab/demo
+bash run.sh baseline "smoke test" initial_cond
+```
+```
+[run.sh] NEW BEST residual=5.63598005e-11 sol_norm=0.000000
+[run.sh] exp001: residual=5.63598005e-11 norm=0.000000 mean=-0.000000 status=keep (1s)
+```
 
-# 1. build outside the repo AND outside $HOME
-LAB=/var/tmp/lab/<neutral-name>          # not /tmp — tmpfiles-clean deletes it unconditionally
+`runs/enc` recorded `5.63592552e-11` for this same starting config — agreeing to five
+significant figures. Now find the positive branch, which is what the agents were scored on:
 
-# 2. verify the room is clean, by asking the subject rather than grepping
-bash harness/preflight_probe.sh "$LAB"
+```bash
+sed -i.bak 's/^u_offset:.*/u_offset: 0.9/' best/config.yaml && cp best/config.yaml config.yaml
+bash run.sh positive "positive branch" initial_cond
+```
+```
+[run.sh] exp002: residual=5.72745888e-09 norm=1.002503 mean=1.000218 status=discard
+```
+
+`norm=1.002503 mean=1.000218` are **exactly** the values in `runs/ab7/results.tsv` exp001
+(*"positive branch baseline, u_offset=0.9"*). The solution replicates bit-for-bit; only the
+residual differs, because it is a `scipy.solve_bvp` mesh artifact and moves with the scipy
+version. **Which numbers in this corpus are reproducible and which are environment-dependent
+is itself a result** — the Fourier path is deterministic and reproduces exactly:
+
+```bash
+printf 'u_offset: 1.0\namplitude: 0.05\nn_mode: 1\nphase: 0.0\nK_mode: "cosine"\n'\
+'K_amplitude: 0.3\nK_frequency: 1\nmethod: "fourier"\nfourier_modes: 1\n'\
+'newton_tol: 1.0e-15\nnewton_maxiter: 200\nn_nodes: 300\nsolver_tol: 1.0e-12\n' > /tmp/f.yaml
+python3 harness/domain-solve.py /tmp/f.yaml | grep residual
+#   residual: 5.55111512e-17     <- runs/enc/STATUS.md records 5.55e-17
+```
+
+Note what the starting config does **not** contain: `method`. `solve.py` defaults to
+`scipy`, and switching to a Fourier spectral solver was something the agents *found*
+(`runs/enc/free/notes.md`). A config that ships `method: fourier` hands over the result.
+
+## Running it with agents
+
+Adding agents adds requirements: the Claude Code CLI, and a **run host** — a separate machine,
+so the lab is nowhere near your own `$HOME` or git repos.
+
+```bash
+export RUN_HOST=user@host                # see tools/README.md
+
+# 1. build the lab. make_lab.sh refuses /tmp (tmpfiles-clean destroyed six in-flight
+#    replicates on 2026-08-19) and refuses any path naming a model or the experiment.
+bash harness/make_lab.sh /var/tmp/lab/<neutral-name>
+
+# 2. verify the room is clean — by asking the subject, not by grepping
+bash harness/preflight_probe.sh /var/tmp/lab/<neutral-name>
 
 # 3. launch; the guard refuses on leaky paths, names, branches, or memory
 PREFIX=r1 bash harness/id_launch.sh <model> <tag> <n_agents> <max_turns>
@@ -204,14 +248,14 @@ PREFIX=r1 bash harness/id_launch.sh <model> <tag> <n_agents> <max_turns>
 # 4. pull evidence continuously, never at the end. RUN is pinned, never a glob —
 #    an unpinned `ident-*/ | tail -1` once overwrote one arm's traces with another's
 #    (runs/ident/README.md).
-watch -n180 "DOMAIN=$LAB RUN=/var/tmp/labruns/<run-id> bash tools/sync_template.sh <tag>"
+watch -n180 "DOMAIN=/var/tmp/lab/<neutral-name> RUN=/var/tmp/labruns/<run-id> \
+             bash tools/sync_template.sh <tag>"
 ```
 
-Step 2 is the one that matters and the one that is easy to skip. `preflight_probe.sh` does the
-structural checks (*is this a git repo? is there a `CLAUDE.md` on the walk-up path? does
-auto-memory already exist for this path key?*) and then **asks the model itself** what it can
-see — because the last three channels cannot be found any other way. It needs the `claude` CLI
-and will block waiting on it.
+Step 2 is the one that matters and the one that is easy to skip. It does the structural checks
+(*is this a git repo? is there a `CLAUDE.md` on the walk-up path? does auto-memory already
+exist for this path key?*) and then **asks the model itself** what it can see, because the last
+three channels cannot be found any other way. It needs the `claude` CLI and will block on it.
 
 ## Conventions worth stealing
 
