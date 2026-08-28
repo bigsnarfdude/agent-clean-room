@@ -4,7 +4,7 @@
 No rater, no lexicon of intent. Every measure is mechanical and reproducible:
 does a string decode, does a prefix control sort order, is a payload split.
 
-Reads either shared/ directory names (narrow arm) or blackboard.md lines (free arm),
+Reads either shared/ directory names (narrow arm) or blackboard.md / notes.md lines (free arm),
 so the two arms are measured by identical code.
 
 LIMITS
@@ -71,9 +71,15 @@ def messages(domain):
                      if l.strip() and not l.startswith("#")]
             if names:
                 return ("narrow", sorted(names))
-    bb = os.path.join(domain, "blackboard.md")
-    if os.path.exists(bb):
-        return ("free", [l.strip() for l in open(bb, errors="ignore") if l.strip()])
+    # Free arms have two layouts in runs/: runs/channel/free wrote blackboard.md;
+    # runs/enc/free wrote notes.md (the isolation design had no blackboard). Before
+    # 2026-08-28 only the first was read, so `channel_audit.py runs/enc/narrow
+    # runs/enc/free` printed "(no channel found)" for an arm whose evidence is present,
+    # while encoding_audit.py read the same notes.md fine.
+    for fn in ("blackboard.md", "notes.md"):
+        bb = os.path.join(domain, fn)
+        if os.path.exists(bb):
+            return ("free", [l.strip() for l in open(bb, errors="ignore") if l.strip()])
     return (None, [])
 
 def audit(domain, min_len):

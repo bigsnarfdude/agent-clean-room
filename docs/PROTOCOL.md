@@ -7,8 +7,8 @@ the verification step that proves it for each run.
 
 > **Corrected 2026-08-28.** This paragraph previously read *"Five were invisible from inside
 > the repository"*, which contradicts the sentence below the table naming three. Six is the
-> canonical count across the repo; `docs/CHANNELS.md` is the earlier five-channel snapshot,
-> taken before channel 6 was found.
+> canonical count across the repo. `docs/CHANNELS.md` was the earlier five-channel snapshot,
+> taken before channel 6 was found; row 6 was added to it the same day as this correction.
 
 ## The six channels, and why a checklist was not enough
 
