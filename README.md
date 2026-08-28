@@ -291,7 +291,7 @@ link honestly, including the four never attempted.
 
 What makes the repo worth reading is not the results — those are mostly well-characterised
 nulls in a benign, cheap-verification regime. It is the trail: six disclosure channels,
-ten detector failures, three data-integrity incidents, three retractions, and the protocol
+eleven detector failures, three data-integrity incidents, three retractions, and the protocol
 that came out of them.
 
 ## Status
