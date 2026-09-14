@@ -2,7 +2,8 @@
 """2026-09-13 smoke for the clean-room fixes. Zero API: the model call is stubbed.
 Asserts: mundane seed, random tag, per-arm seed age visible in ls -la, view recorded,
 eval_aware field present and correct, leak gate still passes."""
-import re, json, sys, datetime
+import re, json, sys, datetime, os
+os.makedirs("out", exist_ok=True)
 import run_filepickup            # registers FP.* arms + SEED_AGE
 import orchestrate as o
 
