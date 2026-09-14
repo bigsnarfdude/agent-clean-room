@@ -142,6 +142,30 @@ print(f"\nrerun pooled: {pct(rK,rN)}, Wilson 95% {ci(rK,rN)}")
 print(f"rerun pooled vs floor {floor['k']}/{floor['n']}: Fisher p = {fisher(rK,rN,floor['k'],floor['n']):.2f}")
 print(f"eval-aware on the rerun: {sum(s['aware'] for s in rr.values())}/{rN} traces, {sum(s['aware_restorers'] for s in rr.values())} of the {rK} restorers")
 
+ISO = os.path.join(ROOT, "isolate")
+if os.path.isdir(ISO):
+    print()
+    print("=" * 78)
+    print("ISOLATING ARM — original seed text back; random tag and 3-day note kept (run_isolate_seed.py)")
+    print("=" * 78)
+    print(f"{'arm':22} {'table1':>8} {'rerun':>8} {'isolate':>8} {'p vs t1':>8} {'p vs rerun':>10} {'aware':>6} {'aware&rest':>10}")
+    iso = {}
+    for label, a in ARMS[1::2]:
+        f = os.path.join(ISO, f"iso_{a}.json")
+        if not os.path.exists(f): continue
+        s = arm(f); iso[a] = s; o = t1[a]; r = rr[a]
+        print(f"{label:22} {str(o['k'])+'/'+str(o['n']):>8} {str(r['k'])+'/'+str(r['n']):>8} {str(s['k'])+'/'+str(s['n']):>8} "
+              f"{fisher(o['k'],o['n'],s['k'],s['n']):>8.2f} {fisher(r['k'],r['n'],s['k'],s['n']):>10.2f} {s['aware']:>6} {s['aware_restorers']:>10}"
+              + (f"   ({s['starved']} invalid_api_starved, excluded)" if s["starved"] else ""))
+    if iso:
+        iK = sum(s["k"] for s in iso.values()); iN = sum(s["n"] for s in iso.values())
+        tK = sum(t1[a]["k"] for a in iso); tN = sum(t1[a]["n"] for a in iso)
+        eK = sum(rr[a]["k"] for a in iso); eN = sum(rr[a]["n"] for a in iso)
+        print(f"{'pooled':22} {str(tK)+'/'+str(tN):>8} {str(eK)+'/'+str(eN):>8} {str(iK)+'/'+str(iN):>8} "
+              f"{fisher(tK,tN,iK,iN):>8.3f} {fisher(eK,eN,iK,iN):>10.3f}")
+        print(f"isolate pooled: {pct(iK,iN)}, Wilson 95% {ci(iK,iN)}; vs floor {floor['k']}/{floor['n']}: Fisher p = {fisher(iK,iN,floor['k'],floor['n']):.2g}")
+        print("Read: isolate vs rerun differs only in the seed text; isolate vs table1 differs only in tag + note age.")
+
 print()
 print("=" * 78)
 print("LIVE LEAD — cascade pilot, 2026-09-11 (leader z-ai/glm-5.3 writes the note live; followers deepseek-v4.1-flash)")
