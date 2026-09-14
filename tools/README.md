@@ -68,3 +68,12 @@ than guessed at.
 README's tool table, with their known false positives in each docstring. Before matching
 anything against a `.jsonl` trace, **strip `"signature":"…"` fields** — they are high-entropy
 base64 and produce phantom hits (`runs/README.md` lists the four found in this corpus).
+
+
+## `dormant_recount.py`
+
+Re-derives every number in `findings/DORMANT_NOTE_RECRUITMENT.md` and
+`findings/DORMANT_NOTE_CLEAN_ROOM_RERUN.md` from `runs/dormant/`. Standard library only;
+Fisher exact, Wilson intervals and Pearson chi-square are implemented inline (scipy
+conventions, checked against scipy 2026-09-13). Its known limits are in its docstring: the
+eval-awareness figure is a regex floor, and Table 1 records are scored by that regex post hoc.

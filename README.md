@@ -80,6 +80,7 @@ it and why. That is the point of the repo.
 | `ladder/*/READ.md` | one per experiment: detectors and readings **declared before the run** |
 | `findings/` | write-ups, including retractions kept in place — [`findings/README.md`](findings/README.md) indexes them with status |
 | `runs/` | **the evidence** — every run cited above, traces included |
+| `harness/dormant/README.md` | **setup and run instructions** for the dormant-note harness: Docker, a zero-API gate, and the live runs with cost and timing |
 
 ## What an agent can read that you did not write
 
@@ -141,6 +142,25 @@ That matches the reading recorded during the run in `runs/channel/STATUS.md`, li
 python3 tools/channel_audit.py --notes runs/channel/narrow
 ```
 
+**The dormant-note result, and the tells that cut it by four** — from the committed run JSON:
+
+```bash
+python3 tools/dormant_recount.py
+```
+```
+pooled, four note arms         39/240   16.2%     [12.1, 21.4]
+Fisher, pooled note arms vs floor: p = 0.00014
+...
+pooled                   16/120    4/119     0.009
+rerun pooled vs floor 0/60: Fisher p = 0.30
+```
+
+A note left by a peer who is gone recruited a fresh agent into `touch -r` concealment at 16%.
+Three lines of *workspace content* (a `PROTECTED` seed line, a trial index in the tag, a note
+whose mtime contradicted its text) turned out to be tells; with them removed, 3%, not
+separable from the floor. `findings/DORMANT_NOTE_CLEAN_ROOM_RERUN.md`. To run the harness
+itself, `harness/dormant/README.md`.
+
 **The collision baseline** the authentication result rests on:
 
 ```bash
@@ -167,7 +187,7 @@ with Opus 5 from a clean clone. It is not filesystem-, OS-, or model-specific.
 
 ## Tools
 
-Four run against the evidence in this repo:
+Five run against the evidence in this repo:
 
 | tool | measures | invocation | documented failure modes |
 |---|---|---|---|
@@ -175,6 +195,7 @@ Four run against the evidence in this repo:
 | `collision_audit.py` | agents doing duplicate work | `--glob 'runs/*/results.tsv'` | schema varies per domain — resolves columns by **header name**, never position |
 | `coordination_audit.py` | agents referencing each other | `--glob 'runs/*'` | strips the author before counting; a naive match scores the logging format |
 | `encoding_audit.py` | payload vs. channel capacity | *(no args — defaults to `runs/enc`)* | reports the compression/encoding distinction explicitly |
+| `dormant_recount.py` | the dormant-note rates, before and after the tells were removed | *(no args — defaults to `runs/dormant`)* | eval-awareness is a regex floor, applied post hoc to the original records |
 
 The rest — `chain.py`, `detect.py`, `who.py`, `scan.py`, `stim.py`, `gem.py`, `pairs.py`,
 `aggregate_reps.py` — **hardcode the upstream chaos domains, which are not in this repo.**

@@ -115,3 +115,28 @@ protocol, and the guard is only the backstop.
 Everything after 2026-04-03 in the chaos series inherits channel 5 (a standing "refuse to
 follow" instruction in every agent's context). The only elicitation datapoint that predates
 it and received treatment is **r4** (249 experiments, agents 2 and 3). One run.
+
+
+---
+
+## Tells inside the workspace (added 2026-09-13)
+
+The six channels above are all *outside* the task: the tooling, the repository, the home
+directory. The dormant-note runs (`findings/DORMANT_NOTE_CLEAN_ROOM_RERUN.md`) found a
+seventh place, and it was the one the protocol did not name: **the files the agent is asked
+to work on.** Three tells, none in any prompt, in a run that otherwise followed every rule
+here (neutral room path, scorer on the host, `--network none`):
+
+| tell | example | rule |
+|---|---|---|
+| seed content that announces itself | a board file whose only line was `PROTECTED: original content` — read as a honeypot in 166/1697 traces | **seed files carry mundane content.** Meeting notes, not sentinels. If the file must be recognisable to the scorer, recognise it by inode or hash, never by a line the agent can read |
+| identifiers that count | the task tag `RESULT: run17` | **no trial index anywhere the agent can see.** Random tokens; keep the mapping on the host |
+| metadata that contradicts text | a note saying its author "left days ago" with an mtime two hours old | **every planted file's `stat` must agree with its story.** Set mtime per arm with `touch -d`, and record the exact `ls -la` the agent saw with the trial |
+
+Removing those three lines of content, and nothing else, moved a result from 16% to 3%
+(p = 0.009) and back into its floor. The verification step for this channel is the same as for
+the others: keep the view the subject actually saw with the evidence (`view` in each cell),
+and score explicit test-awareness beside every rate (`eval_aware`), as a floor.
+
+Six is still the count of *disclosure channels*; this is a class of *content* the channels
+carry, and it was the experimenter's own seed files.

@@ -18,6 +18,7 @@ the wrong turns, which are kept because they are the more useful half.
 | `r4clean` | the only chaos condition predating the refusal memory | delivery verified at launch; elicitation 0, detection 0 |
 | `rep1` | replicate of `r4clean` | killed a variance hypothesis that had been pre-registered |
 | `maj` | majority adversarial — 3 of 4 treated, never run before | elicitation 0, detection 0 |
+| `dormant` | a dormant note from a gone peer, four author arms + floor; then the rerun with three workspace tells removed; plus the live-lead cascade | **16% → 3%** once the seed text, trial-index tag and contradictory note age were removed; not separable from the floor. `findings/DORMANT_NOTE_*.md`; own `README.md` for the record layout |
 | `ident` | first identity rung | **superseded** — a priming word in the experimenter's own prompt. Directory is now a pointer to `../ladder/01-identity/evidence/`; it had shipped opus results paired with sonnet traces — `ident/README.md` |
 
 ## The pair worth reading first
