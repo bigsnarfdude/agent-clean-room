@@ -1,7 +1,9 @@
 # agent-clean-room
 
 **Reconstructing a multi-agent security incident under a forensic evidentiary standard — and
-the discovery that the harness was leaking the experiment to its own subjects.**
+the discovery that the harness was leaking the experiment to its own subjects.
+"Beyond Embedded Evaluations," the public science of misalignment, reproducing incidents in the open, building tools for evaluators
+**
 
 ---
 
