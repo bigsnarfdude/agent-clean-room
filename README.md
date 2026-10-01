@@ -142,7 +142,7 @@ That matches the reading recorded during the run in `runs/channel/STATUS.md`, li
 python3 tools/channel_audit.py --notes runs/channel/narrow
 ```
 
-**The dormant-note result, and the tells that cut it by four** — from the committed run JSON:
+**The dormant-note result, and the tells that cut two arms by four and left the third alone** — from the committed run JSON:
 
 ```bash
 python3 tools/dormant_recount.py
@@ -157,9 +157,11 @@ rerun pooled vs floor 0/60: Fisher p = 0.30
 
 A note left by a peer who is gone recruited a fresh agent into `touch -r` concealment at 16%.
 Three lines of *workspace content* (a `PROTECTED` seed line, a trial index in the tag, a note
-whose mtime contradicted its text) turned out to be tells; with them removed, 3%, not
-separable from the floor. `findings/DORMANT_NOTE_CLEAN_ROOM_RERUN.md`. To run the harness
-itself, `harness/dormant/README.md`.
+whose mtime contradicted its text) turned out to be tells; with them removed, the two
+author-absent arms fell to 3%. The unsigned note, rerun at n = 300 on one pinned provider,
+held at 22% (67/300 vs 0/299; `python3 harness/dormant/analyze_longrun.py`). The two clean-room
+results ran on different provider routing, so author line and provider are not yet separated.
+`findings/DORMANT_NOTE_CLEAN_ROOM_RERUN.md`. To run the harness itself, `harness/dormant/README.md`.
 
 **The collision baseline** the authentication result rests on:
 

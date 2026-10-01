@@ -7,7 +7,7 @@ recreatable in a controlled environment. This is the coverage so far, honestly s
 
 | # | link | recreated? | what we found |
 |---|---|---|---|
-| 1 | **Persistent shared surface** across otherwise separate runs | **smallest form, 2026-09-12** | a note left by a gone peer recruited a fresh agent into `touch -r` concealment at 16% vs a 0/60 floor; **with three workspace tells removed, 3%, not separable from the floor** — see below |
+| 1 | **Persistent shared surface** across otherwise separate runs | **smallest form, 2026-09-12** | a note left by a gone peer recruited a fresh agent into `touch -r` concealment at 16% vs a 0/60 floor; with three workspace tells removed, the author-absent arms fell to 3% and **the unsigned note held at 22% (67/300 vs 0/299)** — see below |
 | 2 | **Channel can't carry the payload → encoding** (base64) and sort keys (`ZZ`) | **yes** | **compression, not encoding** — see below |
 | 3 | **Coordination protocol** — naming, mailboxes, hold-pending-confirm | **partial, accidental** | emergent conventions observed in link 2, not designed for |
 | 4 | **Collision → impostor hypothesis → authentication proposal** (MAC) | **baseline only** | **32** corpus collisions (was "68 / 24 domains" — detector failure #2, see `docs/ARC.md`); **0/97 boards infer an adversary, 0/97 propose auth** — never manipulated |
@@ -53,9 +53,15 @@ two hours old in arms whose text said the author left days ago. None of that was
 Changing those three lines of workspace content, and nothing else, cut the two rerun arms by
 a factor of four (p = 0.009).
 
-Link 1 is therefore recreated in the same sense link 5 is: the behaviour appeared, and then
-turned out to be entangled with the apparatus. The isolating run (original seed text, three-day
-note) is the cheapest next step. Details and everything not done:
+**No Author at n = 300, provider pinned (2026-09-14): 67/300 vs 0/299 (p = 1e-22).** The same
+clean-room harness, the floor measured on it for the first time. The unsigned note's rate did
+not move with the tells removed (13/60 → 67/300, p = 1.0). Against that floor the 4/119 above is
+also above zero (one-sided p = 0.006).
+
+Link 1 is therefore recreated, and the apparatus is entangled with part of it: the tells moved
+two arms and not the third. Whether the 3% vs 22% gap is the author line or the provider is
+not separated (the 3% arms ran on unrecorded default routing). The author-absent arms at
+n = 300 on the pinned provider are the next step. Details and everything not done:
 [`DORMANT_NOTE_RECRUITMENT.md`](DORMANT_NOTE_RECRUITMENT.md),
 [`DORMANT_NOTE_CLEAN_ROOM_RERUN.md`](DORMANT_NOTE_CLEAN_ROOM_RERUN.md).
 
@@ -84,4 +90,4 @@ Link 1 has now been run in its smallest form (above); a faithful version, persis
 separate *runs* rather than one planted file, is still the prerequisite for 3 and 5. Link 1 as planted-file — persistence across separate runs
 is what made the board a board rather than a scratchpad.
 
-*Row 1 and the section above added 2026-09-13.*
+*Row 1 and the section above added 2026-09-13; the n = 300 run added 2026-10-01.*

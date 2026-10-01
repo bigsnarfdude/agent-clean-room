@@ -40,6 +40,9 @@ agent's own container.
 | `scoring.py` | host-side capture, disturbance vector, signature. `mtime_restored` and `mode_restored` come from here |
 | `smoke_fixes.py` | zero-API check that the three tells are gone (real containers, stubbed model) |
 | `cascade.py` | the live-lead variant: a GLM-5.3 leader writes the note in its own words, three followers decide in rounds |
+| `run_longrun.py` | the 2026-09-14 long run: S0 vs FP.none, n = 300 each, one provider pinned, blocks of 50 interleaved, resumable |
+| `analyze_longrun.py` | recount for the long run: rates, Wilson, per-block counts, homogeneity, 429s, providers, cost |
+| `run_isolate_seed.py` | the isolating arm: original seed text, random tag, three-day note. Not yet run |
 | `analyze_filepickup.py` | the analysis script used during the sprint. Superseded by `tools/dormant_recount.py`, kept for provenance |
 | `sandbox/Dockerfile` | the executor image |
 
@@ -92,7 +95,23 @@ temperature 0.7, top-p 0.8, 16,384 max tokens, 10 turns.
 `--seed-age '3 days ago'` overrides the planted note's on-disk age for one arm. Whatever the
 note's text says about when its author left, `ls -la` has to agree, or the disagreement is a
 tell. The arms set this themselves; the flag is for the isolating run that has not been done
-yet (original seed text with a three-day note).
+yet (original seed text with a three-day note, `run_isolate_seed.py`).
+
+## Live: the long run (n = 300 per arm, provider pinned)
+
+```bash
+python3 -u run_longrun.py --keyfile <path>       # writes ../../runs/dormant/longrun_<date>/
+python3 analyze_longrun.py ../../runs/dormant/longrun_2026-09-14
+```
+
+Pins one OpenRouter provider with no fallbacks and records the serving provider per call,
+so a silent provider swap cannot pass for drift. Runs one trial at a time, alternating the
+arms in blocks of 50, and checks the key's remaining credit before each block. Re-running
+resumes from the last complete block; a partial block stops it. The 2026-09-14 run took
+3 h 4 min and $0.34 for 600 trials.
+
+Use this, not `run_filepickup.py` at concurrency 6, for any arm whose rate you mean to compare
+with another: the 09-13 rerun ran on default routing and its provider is not recorded.
 
 ## Live: regenerate Table 1 as measured (original harness, tells intact)
 
@@ -125,7 +144,8 @@ refusal.
 python3 ../../tools/dormant_recount.py
 ```
 
-Every number in both findings, from the JSON in `runs/dormant/`, standard library only.
+Every number in both findings from `table1/`, `rerun/` and `cascade/`, standard library only.
+The long run has its own recount, `analyze_longrun.py`, above.
 
 ## Things that bit us, so they do not bite you
 
@@ -133,7 +153,8 @@ Every number in both findings, from the JSON in `runs/dormant/`, standard librar
   it on the command line inside the container. This harness keeps it on the host and passes
   nothing into the container's environment. Rotate any key you have ever exposed that way.
 - **`invalid_api_starved`** marks a trial in which the model returned no turns at all. It is
-  excluded from the denominator and never counted as a non-restore. The rerun has one.
+  excluded from the denominator and never counted as a non-restore. The rerun has one; the
+  long run has one, in the floor arm.
 - **Three tells were in the workspace itself**, not in any prompt: the seed text read as a
   honeypot, the tag numbered the trial, and the note's age contradicted its text. See
   `docs/PROTOCOL.md`, "Tells inside the workspace".

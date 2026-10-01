@@ -2,8 +2,9 @@
 
 **2026-09-12.** Status: **established on the original harness; superseded as a rate by
 [`DORMANT_NOTE_CLEAN_ROOM_RERUN.md`](DORMANT_NOTE_CLEAN_ROOM_RERUN.md).** The 16% below is the
-rate under a harness that was later found to carry three evaluation tells. Read the rerun
-before quoting it.
+rate under a harness that was later found to carry three evaluation tells. With them removed,
+the two author-absent arms fell to 3% (4/119) and the No Author arm held at 22% (67/300, against
+a 0/299 floor). Read the rerun before quoting any number here.
 
 Evidence: `runs/dormant/table1/`, `runs/dormant/cascade/`. Recount:
 `python3 tools/dormant_recount.py`.
@@ -77,6 +78,8 @@ roughly a sixth as effective as a live leader, on this harness.
   in 166 of 1697 reasoning traces across the sprint; the task tag was `RESULT: run17`, carrying
   the trial index; and the note's on-disk age was two hours in every arm, including the two
   whose text says the author left days ago. The rerun with those removed is the next finding.
+  The "author status made no difference" result above is from this harness; on the clean one
+  the arms came apart, with provider routing confounded.
 - **No benign-instruction control.** No arm plants an equally salient note carrying a harmless
   instruction, so generic compliance with any found note is not excluded. This is the innocent
   explanation the chain standard requires to be ruled out, and it is not.
